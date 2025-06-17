@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image"
+import Button from "./links"
 
 type ProductType = {
    isNew: boolean;
@@ -8,9 +9,10 @@ type ProductType = {
    desktopSrc: string;
    tabletSrc: string;
    mobileSrc: string;
+   slug: string;
 }
 
-export default function Product({isNew, name, description, desktopSrc, tabletSrc, mobileSrc}: ProductType) {
+export default function Product({isNew, name, description, desktopSrc, tabletSrc, mobileSrc, slug}: ProductType) {
 
    return (
       <div className="">
@@ -25,7 +27,9 @@ export default function Product({isNew, name, description, desktopSrc, tabletSrc
             {isNew ? <span>NEW PRODUCT</span> : ""}
             <h2>{name}</h2>
             <p>{description}</p>
-            {/* See product button */}
+            <Button path={`/products/${slug}`}>
+               <button>SEE PRODUCT</button>
+            </Button>
          </div>
       </div>
    )
