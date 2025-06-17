@@ -1,7 +1,6 @@
 
 "use client"
 
-import { error } from "console";
 import { createContext, useContext, useState } from "react";
 
 type CartItem = {
@@ -60,6 +59,34 @@ export function CartProvider({children}: {children: React.ReactNode}) {
          });
       });
    }
+   function addToCart(item: CartItem) {
+      setCartItems(prev => {
+         const existing = prev.find(p => p.id === item.id);
+         if (existing) {
+            return prev.map(p =>
+               p.id === item.id ? { ...p, quantity: p.quantity + item.quantity } : p
+            );
+         } else {
+            return [...prev, item];
+         }
+      });
+   }
+
+   function removeFromCart(id: number) {
+      setCartItems(prev => prev.filter(item => item.id !== id));
+   }
+
+   function clearCart() {
+      setCartItems([]);
+   }
+
+   return (
+      <CartContext.Provider
+         value={{ cartItems, addToCart, increment, decrement, getQuantity, removeFromCart, clearCart }}
+      >
+         {children}
+      </CartContext.Provider>
+   );
 }
    
    

@@ -6,7 +6,12 @@ import Button from "../components/links";
 export default function Home() {
    return (
       <div className="homePage">
-         <div className="home">
+         <div className="hero">
+            <picture>
+               <source media="(min-width: 1025)" srcSet="/assets/home/desktop/image-hero.jpg" />
+               <source media="(min-width: 769)" srcSet="/assets/home/tablet/image-hero.jpg" />
+               <Image width={50} height={50} src="/assets/home/mobile/image-hero.jpg" alt=""  />
+            </picture>
             <span>new product</span>
             <h1>XX99 Mark II Headphones</h1>
             <p>
