@@ -10,7 +10,6 @@ import { faCartShopping} from '@fortawesome/free-solid-svg-icons';
 export default function Header() {
    const [isCartOpen, setIsCartOpen] = useState(false);
    const {cartItems} = useCart()
-   console.log(cartItems);
 
    function useIsMobile(breakpoint = 768) {
       const [isMobile, setIsMobile] = useState(false); 

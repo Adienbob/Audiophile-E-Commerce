@@ -1,13 +1,13 @@
 
 import Button from "./links"
 import Image from "next/image"
-import QuantityButton from "./quantityButton";
+import QuantityButton from "./productBtn";
 import { useCart } from "../context/cartContext";
 import { useData } from "../context/dataContext";
 
 
 export default function Cart() {
-   const {cartItems, clearCart, increment, decrement} = useCart()
+   const {cartItems, clearCart} = useCart()
    const products = useData();
    const total = cartItems.reduce((acc, item) => {
       const product = products.find(p => p.id === item.id);
@@ -39,7 +39,7 @@ export default function Cart() {
                         <span>{product.name}</span>
                         <p>${product.price}</p>
                      </div>
-                     <QuantityButton quantity={item.quantity} id={product.id} increment={increment} decrement={decrement} />
+                     <QuantityButton id={product.id} />
                   </div>
                ) 
             })}
@@ -47,6 +47,9 @@ export default function Cart() {
                <p>TOTAL</p>
                <span>${total}</span>
             </div>
+            <Button path="/checkout">
+               CHECKOUT
+            </Button>
          </div>
       </div>
    )

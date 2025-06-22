@@ -7,7 +7,7 @@ import Category from "../../components/categories";
 import { useCart } from "@/app/context/cartContext";
 import { useData } from "../../context/dataContext";
 import Description from "../../components/description";
-import QuantityButton from "../../components/quantityButton";
+import QuantityButton from "../../components/productBtn";
 
 export default function ProductInner({ params }: { params: Promise<{ slug: string }> }) {
    const { slug } = use(params);
