@@ -1,0 +1,36 @@
+
+a {
+   padding: 1rem 2rem;
+   letter-spacing: 0.05rem;
+   text-decoration: none;
+   text-align: center;
+   font-size: 0.9rem;
+   letter-spacing: 1px;
+   &.btnOrange {
+      background-color: $dark-tan;
+      color: $white;
+   }
+   &.btnOrange:hover {
+      background-color: $light-tan;
+   }
+   &.btnDarkGrey {
+      color: $dark-grey;
+      font-weight: 600;
+   }
+   &.btnDarkGrey:hover {
+      color: $light-grey;
+   }
+   &.btnBlack {
+      background-color: $jet-black;
+      color: $white;
+   }
+   &.btnBlack:hover {
+      background-color: $lighter-black;
+   }
+   &.btnTransparent{
+      background-color: transparent;
+      color: $lighter-black;
+      border: 2px solid $jet-black;
+      font-weight: 800;
+   }
+}

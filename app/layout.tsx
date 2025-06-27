@@ -1,20 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../sass/main.css"
+import { Manrope } from "next/font/google";
 import { DataProvider } from "./context/dataContext";
 import { CartProvider } from "./context/cartContext";
 import Header from "./components/header";
 import Footer from "./components/footer"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-Manrope-sans",
+  weight: ['400', '600', '700'],
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Frontend Mentor | Audiophile e-commerce website",
@@ -28,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${manrope.variable}`}>
         <CartProvider>
           <DataProvider>
             <Header />

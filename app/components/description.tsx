@@ -7,9 +7,9 @@ export default function descrbtion() {
          <picture>
             <source media="(min-width: 1025px)" srcSet="/assets/shared/desktop/image-best-gear.jpg"/>
             <source media="(min-width: 769px)" srcSet="/assets/shared/tablet/image-best-gear.jpg"/>
-            <Image width={100} height={100} src="/assets/shared/mobile/image-best-gear.jpg" alt=""/>
+            <Image  width={654} height={600} src="/assets/shared/mobile/image-best-gear.jpg" alt=""/>
          </picture>
-         <h3>Bringing you the <span>best</span> audio gear</h3>
+         <h3>BRINGING YOU THE <span>BEST</span> AUDIO GEAR</h3>
          <p>
             Located at the heart of New York City, Audiophile is the premier
             store for high end headphones, earphones, speakers, and audio

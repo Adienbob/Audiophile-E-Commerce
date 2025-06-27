@@ -1,0 +1,452 @@
+.categories, .homePage .featuredProducts {
+  padding: 2rem 1rem;
+}
+
+.mobileLinks {
+  position: relative;
+  z-index: 10;
+  width: 1.5rem;
+}
+.mobileLinks .dropdownMenu {
+  position: relative;
+}
+.mobileLinks .dropdownMenu .toggleButton {
+  display: none;
+}
+.mobileLinks .dropdownMenu .hamburger {
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  position: relative;
+  z-index: 20;
+}
+.mobileLinks .dropdownMenu .hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  border-radius: 3px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.mobileLinks .dropdownMenu .menu {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #fff;
+  width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translate(127.5%, 7.5%);
+          transform: translate(127.5%, 7.5%);
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.mobileLinks .dropdownMenu .menu a {
+  text-align: left;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+}
+.mobileLinks .dropdownMenu .menu a:hover {
+  background-color: #eee;
+  border-radius: 4px;
+}
+.mobileLinks .dropdownMenu .toggleButton:checked ~ .menu {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobileLinks .dropdownMenu .toggleButton:checked + .hamburger .top {
+  -webkit-transform: translateY(8px) rotate(45deg);
+          transform: translateY(8px) rotate(45deg);
+}
+.mobileLinks .dropdownMenu .toggleButton:checked + .hamburger .mid {
+  opacity: 0;
+}
+.mobileLinks .dropdownMenu .toggleButton:checked + .hamburger .bot {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+          transform: translateY(-8px) rotate(-45deg);
+}
+
+.descrbtion {
+  margin-bottom: 6rem;
+  padding: 0 1rem;
+}
+.descrbtion img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+.descrbtion h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000;
+}
+.descrbtion h3 span {
+  color: #d87d4a;
+}
+.descrbtion p {
+  color: #979797;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+a {
+  padding: 1rem 2rem;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+a.btnOrange {
+  background-color: #d87d4a;
+  color: #fff;
+}
+a.btnOrange:hover {
+  background-color: #fbaf85;
+}
+a.btnDarkGrey {
+  color: #979797;
+  font-weight: 600;
+}
+a.btnDarkGrey:hover {
+  color: #eeeeee;
+}
+a.btnBlack {
+  background-color: #000;
+  color: #fff;
+}
+a.btnBlack:hover {
+  background-color: #101010;
+}
+a.btnTransparent {
+  background-color: transparent;
+  color: #101010;
+  border: 2px solid #000;
+  font-weight: 800;
+}
+
+.categories div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #eeeeee;
+  margin-bottom: 5rem;
+  border-radius: 10px;
+  position: relative;
+  padding-top: 6rem;
+}
+.categories div .productImage {
+  position: absolute;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  width: 50%;
+  height: 90%;
+  z-index: 1;
+}
+.categories div span {
+  font-weight: 600;
+  color: #101010;
+  font-size: 1.25rem;
+}
+.categories div .arrow {
+  margin-left: 0.5rem;
+}
+
+header {
+  background-color: #101010;
+  padding: 1.5rem 1rem;
+  border-bottom: 1px solid #4c4c4c;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav .logo {
+  width: 40%;
+  height: 40%;
+}
+header nav button {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+}
+header nav button img {
+  width: 100%;
+  height: 100%;
+  position: relative !important;
+}
+header nav button p {
+  position: absolute;
+  top: -15px;
+  left: 10px;
+  background-color: #d87d4a;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+}
+
+footer {
+  background-color: #101010;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3rem 1rem;
+  position: relative;
+  text-align: center;
+}
+footer .logo, footer ul, footer p, footer strong {
+  margin-bottom: 3rem;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  background-color: #d87d4a;
+  width: 25%;
+  height: 4px;
+  top: 0;
+}
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer ul a {
+  color: #eeeeee;
+  font-weight: 600;
+  padding: 0.75rem;
+  letter-spacing: 2px;
+}
+footer p {
+  color: #979797;
+  font-size: 16.5px;
+}
+footer strong {
+  color: #b9b9b9;
+}
+footer .socialIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  margin-bottom: 0;
+}
+footer .socialIcons a:hover .socialIcon {
+  color: #d87d4a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+.homePage {
+  text-align: center;
+}
+.homePage .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+.homePage .hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 12.5%;
+  margin-bottom: 4rem;
+  height: 85vh;
+}
+.homePage .hero span {
+  color: #979797;
+  letter-spacing: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.homePage .hero h1 {
+  color: #fff;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+}
+.homePage .hero p {
+  color: #b9b9b9;
+  margin-bottom: 2rem;
+}
+.homePage .featuredProducts div {
+  margin-bottom: 2rem;
+}
+.homePage .featuredProducts .ZX9-Product {
+  position: relative;
+  border-radius: 10px;
+  background-color: #d87d4a;
+}
+.homePage .featuredProducts .ZX9-Product .circles {
+  vertical-align: middle;
+  width: 167.5%;
+  height: 167.5%;
+  -webkit-transform: translate(-20%, -21%);
+          transform: translate(-20%, -21%);
+  z-index: 1;
+}
+.homePage .featuredProducts .ZX9-Product .productIamge {
+  position: absolute;
+  width: 45%;
+  height: 25%;
+  -webkit-transform: translate(60%, 35%);
+          transform: translate(60%, 35%);
+}
+.homePage .featuredProducts .ZX9-Product h2 {
+  color: #fff;
+  font-size: 2rem;
+  -webkit-transform: translate(0, -290%);
+          transform: translate(0, -290%);
+  letter-spacing: 0.05rem;
+  font-weight: 600;
+}
+.homePage .featuredProducts .ZX9-Product p {
+  color: #fff;
+  font-weight: 400;
+  opacity: 0.8;
+  -webkit-transform: translate(0, -340%);
+          transform: translate(0, -340%);
+}
+.homePage .featuredProducts .ZX9-Product .btnBlack {
+  position: absolute;
+  width: 55%;
+  -webkit-transform: translate(-50%, -300%);
+          transform: translate(-50%, -300%);
+}
+.homePage .featuredProducts .ZX7-Product {
+  background-image: url("/assets/home/mobile/image-speaker-zx7.jpg");
+  background-size: cover;
+  background-position: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.homePage .featuredProducts .ZX7-Product .details {
+  text-align: left;
+  padding: 7rem 0;
+  padding-left: 2rem;
+}
+.homePage .featuredProducts .ZX7-Product .details h2 {
+  margin-bottom: 2rem;
+  color: #101010;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+.homePage .featuredProducts .YX1-Product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[2];
+  grid-template-rows: repeat(2, 1fr);
+}
+.homePage .featuredProducts .YX1-Product img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.homePage .featuredProducts .YX1-Product .details {
+  background-color: #eeeeee;
+  border-radius: 10px;
+  padding-left: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.homePage .featuredProducts .YX1-Product .details h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+}

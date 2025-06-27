@@ -1,10 +1,9 @@
 "use client"
 import Cart from './cart';
 import Button from './links';
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { useCart } from "../context/cartContext";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping} from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Header() {
@@ -28,8 +27,9 @@ export default function Header() {
 
    function DesktopLinks() {
       return (
+         <>
+         <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='' />
          <div className='desktopLinks'>
-            <span>Audiophile</span>
             <ul>
                <Button className='HomeLink' path='/'>Home</Button>
                <Button className='headphonesLink' path='/headphones'>Headphones</Button>
@@ -37,11 +37,13 @@ export default function Header() {
                <Button className='earphonesLink' path='/earphones'>Earphones</Button>
             </ul>
          </div>
+         </>
       )
    }
 
    function MobileLinks() {
       return (
+         <>
          <div className="mobileLinks">
             <div className="dropdownMenu">
                <input type="checkbox" className='toggleButton' id='toggle' />
@@ -58,8 +60,9 @@ export default function Header() {
                   <Button className='earphonesLink' path='/earphones'>Earphones</Button>
                </div>
             </div>
-            <span>Audiophile</span>
          </div>
+         <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='' />
+         </>
       )
    }
 
@@ -69,7 +72,7 @@ export default function Header() {
          <nav>
             {isMobile ? <MobileLinks /> : <DesktopLinks />}
             <button onClick={() => setIsCartOpen(prev => !prev)} className="cartIconButton">
-               <FontAwesomeIcon icon={faCartShopping}/>
+               <Image fill={true} src="/assets/shared/desktop/icon-cart.svg" alt='' />
                {cartItems.length >= 1 && (
                   <p>{cartItems.length}</p>
                )}

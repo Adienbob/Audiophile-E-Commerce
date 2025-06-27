@@ -1,0 +1,30 @@
+
+.categories {
+   @extend %main-pads;
+      div {
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+         flex-direction: column;
+         background-color: $light-grey;
+         margin-bottom: 5rem;
+         border-radius: 10px;
+         position: relative;
+         padding-top: 6rem;
+         .productImage {
+            position: absolute;
+            transform: translate(-50%, -100%);
+            width: 50%;
+            height: 90%;
+            z-index: 1;
+         }
+         span {
+            font-weight: 600;
+            color: $lighter-black;
+            font-size: 1.25rem;
+         }
+         .arrow {
+            margin-left: 0.5rem;
+         }
+      }
+   }

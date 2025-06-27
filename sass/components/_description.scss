@@ -1,0 +1,24 @@
+
+.descrbtion {
+   margin-bottom: 6rem;
+   padding: 0 1rem;
+   img {
+      width: 100%;
+      height: 100%;
+      border-radius: $radius-10;
+      margin-bottom: 2rem;
+   }
+   h3 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: $jet-black;
+      span {
+         color: $dark-tan;
+      }
+   }
+   p {
+      color: $dark-grey;
+      font-weight: 600;
+      line-height: 1.75;
+   }
+}

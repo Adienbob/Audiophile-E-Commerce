@@ -1,0 +1,123 @@
+
+.homePage {
+   text-align: center;
+   .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+   }
+   .hero {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0 12.5%;
+      margin-bottom: 4rem;
+      height: 85vh;
+      span {
+         color: $dark-grey;
+         letter-spacing: 0.5rem;
+         font-size: 1rem;
+         margin-bottom: 1rem;
+      }
+      h1 {
+         color: $white;
+         letter-spacing: 0.1rem;
+         margin-bottom: 1rem;
+      }
+      p {
+         color: $grey;
+         margin-bottom: 2rem;
+      }
+   }
+   .featuredProducts {
+      @extend %main-pads;
+      div {
+         margin-bottom: 2rem;
+      }
+      
+      .ZX9-Product {
+         position: relative;
+         border-radius: $radius-10;
+         background-color: $dark-tan;
+         .circles {
+            vertical-align: middle;
+            width: 167.5%;
+            height: 167.5%;
+            transform: translate(-20%, -21%);
+            z-index: 1;
+         }
+         .productIamge {
+            position: absolute;
+            width: 45%;
+            height: 25%;
+            transform: translate(60%, 35%);
+         }
+         h2 {
+            color: $white;
+            font-size: 2rem;
+            transform: translate(0, -290%);
+            letter-spacing: 0.05rem;
+            font-weight: 600;
+         }
+         p {
+            color: $white;
+            font-weight: 400;
+            opacity: 0.8;
+            transform: translate(0, -340%);
+         }
+         .btnBlack {
+            position: absolute;
+            width: 55%;
+            transform: translate(-50%, -300%);
+         }
+      }
+      .ZX7-Product {
+         background-image: url("/assets/home/mobile/image-speaker-zx7.jpg");
+         background-size: cover;
+         background-position: 100%;
+         background-repeat: no-repeat;
+         position: relative;
+         border-radius: $radius-10;
+         display: flex;
+         align-items: center;
+         .details {
+            text-align: left;
+            padding: 7rem 0;
+            padding-left: 2rem;
+            h2{
+               margin-bottom: 2rem;
+               color: $lighter-black;
+               font-size: 2rem;
+               letter-spacing: 1px;
+            }
+         }
+      }
+      .YX1-Product {
+         display: grid; 
+         grid-template-rows: repeat(2, 1fr);
+         img {
+            width: 100%;
+            height: 100%;
+            border-radius: $radius-10;
+         }
+         .details {
+            background-color: $light-grey;
+            border-radius: $radius-10;
+            padding-left: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: space-evenly;
+            h2 {
+               font-size: 2rem;
+               letter-spacing: 1px;
+            }
+         }
+      }
+   }
+}
