@@ -7,13 +7,12 @@ import Descrbtion from "../components/description";
 
 
 export default function Headphones() {
-   
    const data = useData().filter((product) => product.category === "headphones");
 
    return (
       <div className="headphonesPage">
-         <h1><span>headphones</span></h1>
-         {data.map((product) => (
+         <h1>HEADPHONES</h1>
+         {data.toReversed().map((product, index) => (
             <Product 
                key={product.id}
                isNew={product.new} 
@@ -23,6 +22,7 @@ export default function Headphones() {
                tabletSrc={product.image.tablet}
                mobileSrc={product.image.mobile}
                slug={product.slug}
+               index={index}
             />
          ))
          }

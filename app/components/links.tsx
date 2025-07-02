@@ -9,7 +9,6 @@ type ButtonProps = {
 
 export default function Button({className, path, children }: ButtonProps) {
 
-
    return (
       <Link href={path} className={className}>{children}</Link>
    )

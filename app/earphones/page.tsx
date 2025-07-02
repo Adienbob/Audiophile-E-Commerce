@@ -12,8 +12,8 @@ export default function Earphones() {
 
    return (
       <div className="earphonesPage">
-         <h1><span>EARPHONES</span></h1>
-         {data.map((product) => (
+         <h1>EARPHONES</h1>
+         {data.map((product, index) => (
             <Product 
                key={product.id}
                isNew={product.new} 
@@ -23,6 +23,7 @@ export default function Earphones() {
                tabletSrc={product.image.tablet}
                mobileSrc={product.image.mobile}
                slug={product.slug}
+               index={index}
             />
          ))
          }

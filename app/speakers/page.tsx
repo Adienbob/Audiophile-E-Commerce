@@ -11,8 +11,8 @@ export default function Headphones() {
 
    return (
       <div className="speakerPage">
-         <h1><span>SPEAKER</span></h1>
-         {data.map((product) => (
+         <h1>SPEAKERS</h1>
+         {data.toReversed().map((product, index) => (
             <Product 
                key={product.id}
                isNew={product.new} 
@@ -22,6 +22,7 @@ export default function Headphones() {
                tabletSrc={product.image.tablet}
                mobileSrc={product.image.mobile}
                slug={product.slug}
+               index={index}
             />
          ))
          }
