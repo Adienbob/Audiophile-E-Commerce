@@ -1,9 +1,6 @@
 
 .productInner {
    padding: 1.5rem;
-   .backBtn {
-      padding: 0;
-   }
    section {
       @extend %sections-break;
       .imageContainer {
@@ -36,21 +33,7 @@
             }
          }
          .quantityButton {
-            background-color: $light-grey;
-            width: fit-content;
-            span {
-               padding: 0.45rem;
-               background-color: inherit;
-            }
-            button {
-               border: none;
-               background-color: $light-grey;
-               transition: 0.3s;
-               &:hover {
-                  background-color: $grey;
-                  color: $dark-tan;
-               }
-            }
+            @include quantityButton;
          }
       }
    }

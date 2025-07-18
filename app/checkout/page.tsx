@@ -5,6 +5,7 @@ import { useCart } from "../context/cartContext";
 import { useData } from "../context/dataContext";
 import Confirmation from "../components/confirmation";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 
 
@@ -14,6 +15,21 @@ export default function Checkout() {
    const router = useRouter();
    const {cartItems} = useCart();
    const [isCheckout, updateIsCheckout] = useState(false);
+
+   
+   useEffect(() => {
+      if (isCheckout) {
+         document.body.style.overflow = "hidden"; 
+      } else {
+         document.body.style.overflow = ""
+      }
+
+      return () => {
+         document.body.style.overflow = ""
+      }
+   }, [isCheckout])
+   
+
    const total = cartItems.reduce((acc, item) => {
       const product = products.find((p) => p.id === item.id)
       if(!product) return acc;
@@ -41,84 +57,88 @@ export default function Checkout() {
    }
 
    return (
-      <>
-      <button onClick={() => router.back}>GO BACK</button>
-      <div className="checkoutContainer">
-         <section className="checkout">
-            <h1>CHECKOUT</h1>
-            <span>Billing details</span>
-            <label htmlFor="name">Name</label>
-            <input type="text" id="name" placeholder="Alexei Ward"/>
-            <label htmlFor="email">Email Address</label>
-            <input type="email" id="email" placeholder="alexi@mail.com"/>
-            <label htmlFor="phoneNumber">Phone Number</label>
-            <input type="number" id="phoneNumber" placeholder="+1 202-555-0136"/>
+      <div className="checkoutPage">
+         <button className="backBtn" onClick={() => router.back}>Go Back</button>
+         <div className="checkoutContainer">
+            <section className="checkout">
+               <h1>CHECKOUT</h1>
+               <span>BILLING DETAILS</span>
+               <label htmlFor="name">Name</label>
+               <input type="text" id="name" placeholder="Alexei Ward"/>
+               <label htmlFor="email">Email Address</label>
+               <input type="email" id="email" placeholder="alexi@mail.com"/>
+               <label htmlFor="phoneNumber">Phone Number</label>
+               <input type="number" id="phoneNumber" placeholder="+1 202-555-0136"/>
 
-            <span>SHIPPTING INFO</span>
-            <label htmlFor="address">Your Address</label>
-            <input type="text" id="address" placeholder="1137 Williams Avenue"/>
-            <label htmlFor="zipCode">ZIP Code</label>
-            <input type="text" id="zipCode" placeholder="1001"/>
-            <label htmlFor="">City</label>
-            <input type="text" id="" placeholder="New York"/>
-            <label htmlFor="country">Country</label>
-            <input type="text" id="country" placeholder="United States"/>
-            <span>PAYMENT DETAILS</span>
-            <div className="paymentContainer">
-               <label htmlFor="payment"></label>
-               <div className="payment">
-                  <div className="paymentMethod">
-                     <label htmlFor="eMoney"></label>
-                     <input type="radio" name="payment" id="eMoney" onClick={() => setPayment("eMoney")} />
-                  </div>
-                  <div className="paymentMethod">
-                     <label htmlFor="cash"></label>
-                     <input type="radio" name="payment" id="cash" onClick={() => setPayment("cash")} />
+               <span>SHIPPTING INFO</span>
+               <label htmlFor="address">Your Address</label>
+               <input type="text" id="address" placeholder="1137 Williams Avenue"/>
+               <label htmlFor="zipCode">ZIP Code</label>
+               <input type="text" id="zipCode" placeholder="1001"/>
+               <label htmlFor="city">City</label>
+               <input type="text" id="city" placeholder="New York"/>
+               <label htmlFor="country">Country</label>
+               <input type="text" id="country" placeholder="United States"/>
+               <span>PAYMENT DETAILS</span>
+               <div className="paymentContainer">
+                  <div className="payment">
+                     <strong>Payment Method</strong>
+                     <div className="paymentMethod">
+                        <input type="radio" name="payment" id="eMoney" onClick={() => setPayment("eMoney")} />
+                        <label htmlFor="eMoney">e-Money</label>
+                     </div>
+                     <div className="paymentMethod">
+                        <input type="radio" name="payment" id="cash" onClick={() => setPayment("cash")} />
+                        <label htmlFor="cash">Cash on Delivery</label>
+                     </div>
                   </div>
                </div>
-            </div>
-            <div className="paymentDescription">
-               {payment === "eMoney" ? <EMoneyDescription /> : <CashDescription />}
-            </div>
-         </section>
-         <section className="summary">
-            <h2>SUMMARY</h2>
-            {cartItems.map((item) => {
-               const product = products.find((p) => p.id === item.id) 
-               if (!product) return null;
-               return (
-                  <div key={product.id} className="product">
-                     <picture>
-                        <source media="(min-width: 1025)" srcSet={product.image.desktop} />
-                        <source media="(min-width: 1025)" srcSet={product.image.tablet} />
-                        <Image width={50} height={50} src={product.image.mobile} alt="" />
-                     </picture>
-                     <span className="name">{product.name}</span>
-                     <p>{product.price}</p>
-                     <p>{item.quantity}</p>
-                  </div>
-               )
-            })}
-            <div className="totalPrice">
-               <p>TOTAL</p>
-               <span>{total}</span>
-            </div>
-            <div className="">
-               <p>SHIPPING</p>
-               <span>$50</span>
-            </div>
-            <div className="">
-               <p>VAT(INCLUDED)</p>
-               <span>{total / 5}</span>
-            </div>
-            <div className="grandTotal">
-               <p>GRAND TOTAL</p>
-               <span>{total + 50}</span>
-            </div>
-            <button onClick={() => updateIsCheckout(true)}>CONTINUE & PAY</button>
-         </section>
-         {isCheckout && <Confirmation total={total + 50} />}
+               <div className="paymentDescription">
+                  {payment === "eMoney" ? <EMoneyDescription /> : <CashDescription />}
+               </div>
+            </section>
+            <section className="summary">
+               <h2>SUMMARY</h2>
+               {cartItems.map((item) => {
+                  const product = products.find((p) => p.id === item.id) 
+                  if (!product) return null;
+                  return (
+                     <div key={product.id} className="product">
+                        <div className="detailsContainer">
+                           <picture>
+                              <source media="(min-width: 1025)" srcSet={product.image.desktop} />
+                              <source media="(min-width: 1025)" srcSet={product.image.tablet} />
+                              <Image width={64} height={64} src={product.image.mobile} alt="" />
+                           </picture>
+                           <div className="details">
+                              <span className="name">{product.name.split(" ", 1)}</span>
+                              <p>$ {product.price.toLocaleString()}</p>
+                           </div>
+                        </div>
+                        <p>x{item.quantity}</p>
+                     </div>
+                  )
+               })}
+               <div className="totalPrice">
+                  <p>TOTAL</p>
+                  <span>$ {total.toLocaleString()}</span>
+               </div>
+               <div className="shipping">
+                  <p>SHIPPING</p>
+                  <span>$ 50</span>
+               </div>
+               <div className="vat">
+                  <p>VAT(INCLUDED)</p>
+                  <span>$ {(total / 5).toLocaleString()}</span>
+               </div>
+               <div className="grandTotal">
+                  <p>GRAND TOTAL</p>
+                  <span>$ {(total + 50).toLocaleString()}</span>
+               </div>
+               <button className="btnOrange" onClick={() => updateIsCheckout(true)}>CONTINUE & PAY</button>
+            </section>
+            {isCheckout && <Confirmation total={total + 50} />}
+         </div>
       </div>
-      </>
    )
 }

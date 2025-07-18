@@ -1,11 +1,12 @@
 
-a, button {
+a, button:not(aside button, .items button, header button) {
    padding: 1rem 2rem;
    letter-spacing: 0.05rem;
    text-decoration: none;
    text-align: center;
    font-size: 0.9rem;
    letter-spacing: 1px;
+   cursor: pointer;
    &.btnOrange {
       background-color: $dark-tan;
       color: $white;
@@ -35,6 +36,12 @@ a, button {
       font-weight: 800;
    }
    &.backBtn {
+      background-color: transparent;
+      padding: 0;
       color: $dark-grey;
+      border: none;
+      &:hover {
+         text-decoration: underline;
+      }
    }
 }

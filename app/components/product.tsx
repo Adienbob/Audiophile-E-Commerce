@@ -20,7 +20,7 @@ export default function Product({isNew, name, description, desktopSrc, tabletSrc
             <picture>
                <source media="(min-width: 1025)" srcSet={desktopSrc} />
                <source media="(min-width: 769)" srcSet={tabletSrc} />
-               <Image width={654} height={240} src={mobileSrc} alt="" />
+               <Image width={654} height={654} src={mobileSrc} alt="" quality={100} />
             </picture>
          </div>
          <div className="productDetails">

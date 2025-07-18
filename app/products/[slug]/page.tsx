@@ -23,7 +23,7 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                <picture>
                   <source media="(min-width: 1025)" srcSet={product.image.desktop} />
                   <source media="(min-width: 769)" srcSet={product.image.tablet} />
-                  <Image width={654} height={654} src={product.image.desktop} alt="" />
+                  <Image width={654} height={654} src={product.image.desktop} alt="" quality={100} />
                </picture>
             </div>
             <div className="details">
@@ -75,7 +75,7 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                   <Image height={654} width={654} src={item.image.mobile} alt="" quality={100} />
                   </picture>
                   <h4>{item.name}</h4>
-                  <Button className="btnOrange" path={`/product/${item.slug}`}>SEE PRODUCT</Button>
+                  <Button className="btnOrange" path={`/products/${item.slug}`}>SEE PRODUCT</Button>
                </div>
             ))}
          </div>

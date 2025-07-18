@@ -10,6 +10,7 @@ export default function Header() {
    const [isCartOpen, setIsCartOpen] = useState(false);
    const {cartItems} = useCart()
 
+   // checking mobile size to display dropdown component 
    function useIsMobile(breakpoint = 768) {
       const [isMobile, setIsMobile] = useState(false); 
       
@@ -72,7 +73,7 @@ export default function Header() {
          <nav>
             {isMobile ? <MobileLinks /> : <DesktopLinks />}
             <button onClick={() => setIsCartOpen(prev => !prev)} className="cartIconButton">
-               <Image fill={true} src="/assets/shared/desktop/icon-cart.svg" alt='' />
+               <Image width={23} height={20} src="/assets/shared/desktop/icon-cart.svg" alt='' />
                {cartItems.length >= 1 && (
                   <p>{cartItems.length}</p>
                )}
@@ -81,8 +82,7 @@ export default function Header() {
       </header>
       {isCartOpen && (
          <aside className="cartOverlay">
-            <Cart />
-            <button onClick={() => setIsCartOpen(false)} className="closeCartBtn">Close</button>
+            <Cart cartState={isCartOpen} setCartState={setIsCartOpen} />
          </aside>
       )}
       </>

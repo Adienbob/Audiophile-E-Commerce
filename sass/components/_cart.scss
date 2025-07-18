@@ -1,0 +1,108 @@
+.cartOverlay {
+   position: absolute;
+   z-index: 999;
+   width: 100%;
+   height: 100vh;
+   &::before {
+      content: "";
+      position: fixed;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+      z-index: -1;
+   }
+   .cartContainer {
+      max-height: 70vh;
+      overflow-y: auto;
+      position: absolute;
+      background-color: $white;
+      padding: 2rem;
+      width: 22.5rem;
+      top: 37.5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: $radius-10;
+      .cartHeader {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 1.5rem;
+         span {
+            color: $jet-black;
+            font-weight: 800;
+            font-size: 1.25rem;
+            color: $lighter-black;
+         }
+         button {
+            background-color: transparent;
+            border: none;
+            color: $grey;
+            text-decoration: underline;
+            transition: 0.3s;
+            font-size: 1rem;
+            cursor: pointer;
+            &:hover {
+               color: $dark-tan;
+            }
+         }
+      }
+      .cartBody {
+         .cartEmpty {
+            @include paragraph-style;
+            text-align: center;
+         }
+         .cartItem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            .productDetails {
+               display: flex;
+               align-items: center;
+               img {
+                  border-radius: $radius-5;
+               }
+               .details {
+                  margin-left: 0.5rem;
+                  span {
+                     color: $lighter-black;
+                     font-weight: 800;
+                  }
+                  p {
+                     @include paragraph-style;
+                     font-weight: 600;
+                  }
+               }
+            }
+            .productBtn {
+               @include quantityButton;
+               font-size: 0.8rem;
+               font-weight: 800;
+               button {
+                  padding: 0.5rem 1rem;
+                  cursor: pointer;
+               }
+            }
+         }
+         .totalPrice {
+            display: flex;
+            justify-content: space-between;
+            margin: 1.5rem 0;
+            p {
+               @include paragraph-style;
+            }
+            span {
+               color: $lighter-black;
+               font-weight: 800;
+            }
+         }
+         a {
+            display: block;
+            width: 100%;
+         }
+      }
+   }
+}

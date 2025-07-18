@@ -23,6 +23,11 @@
             color: $lighter-black;
             font-size: 1.25rem;
          }
+         a {
+            &:hover {
+               color: $dark-tan;
+            }
+         }
          .arrow {
             margin-left: 0.5rem;
          }
