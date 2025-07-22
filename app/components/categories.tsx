@@ -11,7 +11,7 @@ export default function Category() {
             <picture>
                <source media="min-width: 1025" srcSet="/assets/category-headphones/desktop/image-category-thumbnail-headphones.png"/>
                <source media="min-width: 769" srcSet="/assets/category-headphones/tablet/image-category-thumbnail-headphones.png"/>
-            <Image className="productImage" width={438} height={422} src="/assets/category-headphones/mobile/image-category-thumbnail-headphones.png" alt="" quality={100} />
+            <img className="productImage" src="/assets/category-headphones/mobile/image-category-thumbnail-headphones.png" alt="" />
             </picture>
             <span className="categoryName">HEADPHONES</span>
             <Link className="btnDarkGrey" href="/headphones">SHOP <Image className="arrow" width={8} height={12} src="/assets/shared/desktop/icon-arrow-right.svg" alt="" /></Link> 
@@ -20,7 +20,7 @@ export default function Category() {
             <picture>
                <source media="min-width: 1025" srcSet="/assets/category-speakers/desktop/image-category-thumbnail-speakers.png"/>
                <source media="min-width: 769" srcSet="/assets/category-speakers/tablet/image-category-thumbnail-speakers.png"/>
-            <Image className="productImage" width={320} height={388} src="/assets/category-speakers/mobile/image-category-thumbnail-speakers.png" alt="" quality={100} />
+            <img className="productImage" src="/assets/category-speakers/mobile/image-category-thumbnail-speakers.png" alt="" />
             </picture>
             <span className="categoryName">SPEAKERS</span>
             <Link className="btnDarkGrey" href="/speakers">SHOP <Image className="arrow" width={8} height={12} src="/assets/shared/desktop/icon-arrow-right.svg" alt="" /></Link> 
@@ -29,7 +29,7 @@ export default function Category() {
             <picture>
                <source media="min-width: 1025" srcSet="/assets/category-earphones/desktop/image-yx1-earphones.jpg"/>
                <source media="min-width: 769" srcSet="/assets/category-earphones/tablet/image-category-thumbnail-earphones.png"/>
-            <Image className="productImage" width={438} height={380} src="/assets/category-earphones/desktop/image-yx1-earphones.jpg" alt="" quality={100} />
+            <img className="productImage" src="/assets/category-earphones/desktop/image-yx1-earphones.jpg" alt="" />
             </picture>
             <span className="categoryName">EARPHONES</span>
             <Link className="btnDarkGrey" href="/earphones">SHOP <Image className="arrow" width={8} height={12} src="/assets/shared/desktop/icon-arrow-right.svg" alt="" /></Link> 

@@ -11,6 +11,10 @@ footer {
    .logo, ul, p, strong {
       margin-bottom: 3rem;
    }
+   .logo {
+      width: 45%;
+      height: auto;
+   }
    &::before {
       content: "";
       position: absolute;
@@ -22,29 +26,38 @@ footer {
    ul { 
       display: flex;
       flex-direction: column;
+      gap: 1.5rem;
       a {
+         font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.03333), 1.28rem);
          color: $light-grey;
          font-weight: 600;
-         padding: 0.75rem;
+         padding: 0;
          letter-spacing: 2px;
+         &:hover {
+            color: $dark-tan;
+         }
       }
    }
    p {
       color: $dark-grey;
-      font-size: 16.5px;
+      font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.04733), 1.28rem);
+      line-height: 2.5rem;
+      line-height: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.1333), 2.5rem);
    }
    strong {
       color: $grey;
+      opacity: 0.75;
+      font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.04733), 1.28rem);
    }
    .socialIcons {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      width: 30%;
+      width: 32.5%;
       margin-bottom: 0;
       a {
-         &:hover .socialIcon {
+         &:hover {
             color: $dark-tan;
          }
       }

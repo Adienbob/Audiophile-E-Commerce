@@ -34,6 +34,10 @@ a, button:not(aside button, .items button, header button) {
       color: $lighter-black;
       border: 2px solid $jet-black;
       font-weight: 800;
+      &:hover {
+         background-color: $jet-black;
+         color: $white;
+      }
    }
    &.backBtn {
       background-color: transparent;

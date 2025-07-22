@@ -1,6 +1,6 @@
 
 
-@use "./components/dropdown" as *;
+@import "./components/dropdown";
 @import "./abstract/variables";
 @import "./abstract/mixins";
 @import "./components/description";

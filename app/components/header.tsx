@@ -1,8 +1,8 @@
 "use client"
 import Cart from './cart';
-import Button from './links';
-import Image from "next/image"
-import { useState, useEffect } from "react"
+import Link from "./links";
+import Image from "next/image";
+import { useState, useEffect, useRef } from "react";
 import { useCart } from "../context/cartContext";
 
 
@@ -26,16 +26,37 @@ export default function Header() {
 
    const isMobile = useIsMobile();
 
+   const dropdownRef = useRef<HTMLDivElement | null>(null);
+   
+   useEffect(() => {
+      function handleOutsideClick(event: globalThis.MouseEvent) {
+         if(dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+            const input = dropdownRef.current.querySelector("input");
+            if (input) {
+               input.checked = false;
+            }
+         }
+      }
+
+      if (isMobile) {
+         document.addEventListener("mousedown", handleOutsideClick);
+      }
+
+      return () => {
+         document.removeEventListener("mousedown", handleOutsideClick)
+      }
+   }, [isMobile])
+
    function DesktopLinks() {
       return (
          <>
          <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='' />
          <div className='desktopLinks'>
             <ul>
-               <Button className='HomeLink' path='/'>Home</Button>
-               <Button className='headphonesLink' path='/headphones'>Headphones</Button>
-               <Button className='speakersLink' path='/speakers'>Speakers</Button>
-               <Button className='earphonesLink' path='/earphones'>Earphones</Button>
+               <Link className='HomeLink' path='/'>Home</Link>
+               <Link className='headphonesLink' path='/headphones'>Headphones</Link>
+               <Link className='speakersLink' path='/speakers'>Speakers</Link>
+               <Link className='earphonesLink' path='/earphones'>Earphones</Link>
             </ul>
          </div>
          </>
@@ -46,8 +67,8 @@ export default function Header() {
       return (
          <>
          <div className="mobileLinks">
-            <div className="dropdownMenu">
-               <input type="checkbox" className='toggleButton' id='toggle' />
+            <div className="dropdownMenu" ref={dropdownRef}>
+               <input type="checkbox" className='toggleButton' id='toggle'  />
                <label htmlFor="toggle" className='hamburger'>
                   <div className='top'></div>
                   <div className='mid'></div>
@@ -55,10 +76,10 @@ export default function Header() {
                </label>
 
                <div className="menu">
-                  <Button className='HomeLink' path='/'>Home</Button>
-                  <Button className='headphonesLink' path='/headphones'>Headphones</Button>
-                  <Button className='speakersLink' path='/speakers'>Speakers</Button>
-                  <Button className='earphonesLink' path='/earphones'>Earphones</Button>
+                  <Link path='/'  className='HomeLink' >Home</Link>
+                  <Link path='/headphones'  className='headphonesLink'>Headphones</Link>
+                  <Link path='/speakers'  className='speakersLink'>Speakers</Link>
+                  <Link path='/earphones'  className='earphonesLink'>Earphones</Link>
                </div>
             </div>
          </div>
