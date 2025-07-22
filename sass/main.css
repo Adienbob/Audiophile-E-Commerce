@@ -106,7 +106,7 @@ a, button:not(aside button, .items button, header button) {
   letter-spacing: 0.05rem;
   text-decoration: none;
   text-align: center;
-  font-size: 0.9rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.035, 1.2rem);
   letter-spacing: 1px;
   cursor: pointer;
 }
@@ -241,7 +241,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 }
 .cartOverlay .cartContainer .cartBody .cartEmpty {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
   text-align: center;
 }
@@ -267,7 +267,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details p {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
   font-weight: 600;
 }
@@ -303,7 +303,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 }
 .cartOverlay .cartContainer .cartBody .totalPrice p {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
 }
 .cartOverlay .cartContainer .cartBody .totalPrice span {
@@ -423,6 +423,7 @@ footer .socialIcons a:hover {
 .earphonesPage h1 {
   background-color: #101010;
   color: #fff;
+  font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.1, 2.75rem);
   padding: 2rem;
 }
 .earphonesPage .productContainer {
@@ -440,18 +441,18 @@ footer .socialIcons a:hover {
 }
 .earphonesPage .productContainer .productDetails span {
   color: #d87d4a;
-  letter-spacing: 0.625rem;
-  font-size: 0.875rem;
+  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.0333, 0.875rem);
+  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.05, 1.25rem);
 }
 .earphonesPage .productContainer .productDetails h2 {
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.08, 2.35rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 1.5rem 0;
 }
 .earphonesPage .productContainer .productDetails p {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
   margin-bottom: 3rem;
 }
@@ -468,6 +469,7 @@ footer .socialIcons a:hover {
 .speakerPage h1 {
   background-color: #101010;
   color: #fff;
+  font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.1, 2.75rem);
   padding: 2rem;
 }
 .speakerPage .productContainer {
@@ -485,18 +487,18 @@ footer .socialIcons a:hover {
 }
 .speakerPage .productContainer .productDetails span {
   color: #d87d4a;
-  letter-spacing: 0.625rem;
-  font-size: 0.875rem;
+  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.0333, 0.875rem);
+  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.05, 1.25rem);
 }
 .speakerPage .productContainer .productDetails h2 {
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.08, 2.35rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 1.5rem 0;
 }
 .speakerPage .productContainer .productDetails p {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
   margin-bottom: 3rem;
 }
@@ -513,6 +515,7 @@ footer .socialIcons a:hover {
 .headphonesPage h1 {
   background-color: #101010;
   color: #fff;
+  font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.1, 2.75rem);
   padding: 2rem;
 }
 .headphonesPage .productContainer {
@@ -530,18 +533,18 @@ footer .socialIcons a:hover {
 }
 .headphonesPage .productContainer .productDetails span {
   color: #d87d4a;
-  letter-spacing: 0.625rem;
-  font-size: 0.875rem;
+  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.0333, 0.875rem);
+  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.05, 1.25rem);
 }
 .headphonesPage .productContainer .productDetails h2 {
-  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.08, 2.35rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 1.5rem 0;
 }
 .headphonesPage .productContainer .productDetails p {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
   margin-bottom: 3rem;
 }
@@ -562,8 +565,8 @@ footer .socialIcons a:hover {
 }
 .productInner section .details .newProduct {
   color: #d87d4a;
-  letter-spacing: 0.625rem;
-  font-size: 0.875rem;
+  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.0333, 0.875rem);
+  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.05, 1.25rem);
 }
 .productInner section .details h1 {
   text-transform: uppercase;
@@ -573,7 +576,7 @@ footer .socialIcons a:hover {
 }
 .productInner section .details p {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
   font-weight: 400;
 }
@@ -610,7 +613,7 @@ footer .socialIcons a:hover {
 }
 .productInner .productFeatures p {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
   white-space: pre-line;
 }
@@ -625,7 +628,7 @@ footer .socialIcons a:hover {
 }
 .productInner .productInclaudes span p {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
   display: inline;
   margin-left: 0.75rem;
@@ -682,8 +685,8 @@ footer .socialIcons a:hover {
 }
 .checkoutPage .checkoutContainer .checkout span {
   color: #d87d4a;
-  letter-spacing: 0.625rem;
-  font-size: 0.875rem;
+  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.0333, 0.875rem);
+  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.05, 1.25rem);
   letter-spacing: normal;
   font-weight: 800;
   margin-top: 2rem;
@@ -761,7 +764,7 @@ footer .socialIcons a:hover {
 }
 .checkoutPage .checkoutContainer .summary div p {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
 }
 .checkoutPage .checkoutContainer .summary div span {
@@ -824,7 +827,7 @@ footer .socialIcons a:hover {
 }
 .confirmationOverlay .confirmation p {
   color: #979797;
-  font-size: 0.9375rem;
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
 }
 .confirmationOverlay .confirmation .grandTotal {

@@ -1,6 +1,6 @@
 @mixin paragraph-style {
    color: $dark-grey;
-   font-size: 0.9375rem;
+   font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.04833) ,1.3rem);
    line-height: 1.66;
 }
 
@@ -12,8 +12,8 @@
 
 @mixin darkTan-style {
    color: $dark-tan;
-   letter-spacing: 0.625rem;
-   font-size: 0.875rem;
+   letter-spacing: clamp(0.625rem, calc(0.625rem + (100vw - 360px) * 0.0333 ) ,0.875rem);
+   font-size: clamp(0.875rem, calc(0.875rem + (100vw - 360px) * 0.05 ) ,1.25rem);
 }
 
 
@@ -25,6 +25,7 @@
    h1 {
       background-color: $lighter-black;
       color: $white;
+      font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.1 ) ,2.75rem);
       padding: 2rem;
    }
    .productContainer {
@@ -42,7 +43,7 @@
             @include darkTan-style;
          }
          h2 {
-            font-size: 1.75rem;
+            font-size: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.08 ) ,2.35rem);
             letter-spacing: 2px;
             text-transform: uppercase;
             margin: 1.5rem 0;

@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image"
 import Button from "./links"
 
 type ProductType = {
@@ -20,7 +19,7 @@ export default function Product({isNew, name, description, desktopSrc, tabletSrc
             <picture>
                <source media="(min-width: 1025)" srcSet={desktopSrc} />
                <source media="(min-width: 769)" srcSet={tabletSrc} />
-               <Image width={654} height={654} src={mobileSrc} alt="" quality={100} />
+               <img src={mobileSrc} alt="" />
             </picture>
          </div>
          <div className="productDetails">
