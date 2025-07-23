@@ -66,7 +66,7 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
             </picture>
          </div>
          <div className="suggestedProducts">
-            <h3>YOU MAY ALSO LIKE</h3>
+            <h4>YOU MAY ALSO LIKE</h4>
             {product.others.map((item) => (
                <div key={item.name} className="item">
                   <picture>
@@ -74,7 +74,7 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                      <source media="(min-width: 769)" srcSet={item.image.tablet} />
                   <Image height={654} width={654} src={item.image.mobile} alt="" quality={100} />
                   </picture>
-                  <h4>{item.name}</h4>
+                  <h5>{item.name}</h5>
                   <Button className="btnOrange" path={`/products/${item.slug}`}>SEE PRODUCT</Button>
                </div>
             ))}

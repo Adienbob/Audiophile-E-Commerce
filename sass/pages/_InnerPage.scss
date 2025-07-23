@@ -16,7 +16,7 @@
          h1 {
             text-transform: uppercase;
             color: $lighter-black;
-            font-size: 1.85rem;
+            font-size: clamp(1.82rem, calc(1.82rem + (100vw - 360px) * 0.1 ) ,2.57rem);
             margin: 1.5rem 0
          }
          p {
@@ -27,7 +27,7 @@
             display: block;
             margin: 1.5rem 0;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.08 ) ,1.6rem);
             span {
                margin-left: 0.25rem;
             }
@@ -40,7 +40,8 @@
    .productFeatures {
       @extend %sections-break;
       h2 {
-         margin-bottom: 2rem
+         font-size: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0866 ) ,2.15rem);
+         margin-bottom: 2rem;
       }
       p {
          @include paragraph-style;
@@ -50,17 +51,20 @@
    .productInclaudes {
       @extend %sections-break;
       h3 {
-         font-size: 1.5rem;
+         font-size: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0583 ) ,1.9375rem);
          margin-bottom: 2rem;
       }
       span {
          color: $dark-tan;
          display: block;
          margin-bottom: 0.25rem;
+         font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.05 ) ,1.25rem);
+         font-weight: 600;
          p {
             @include paragraph-style;
             display: inline;
-            margin-left: 0.75rem;
+            margin-left: clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.0333 ) ,1rem);
+            font-weight: 400;
          }
       }
    }
@@ -77,8 +81,8 @@
    }
    .suggestedProducts {
       text-align: center;
-      h3 {
-         font-size: 1.5rem;
+      h4 {
+         font-size: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.1 ) ,2.25rem);
          margin-bottom: 2rem
       }
       .item {
@@ -88,9 +92,9 @@
             height: 100%;
             border-radius: $radius-10;
          }
-         h4 {
+         h5 {
             text-transform: uppercase;
-            font-size: 1.5rem;
+            font-size: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0666 ) ,2rem);
             color: $lighter-black;
             margin: 2rem 0 3rem;
          }
