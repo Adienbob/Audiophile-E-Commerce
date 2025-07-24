@@ -21,7 +21,7 @@
          span {
             font-weight: 600;
             color: $lighter-black;
-            font-size: 1.25rem;
+            font-size: clamp(1.25rem, calc(1.25rem + (100vw - 360px) * 0.02 ), 1.4rem);
          }
          a {
             padding: 0;

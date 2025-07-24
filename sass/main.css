@@ -175,7 +175,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 .categories div span {
   font-weight: 600;
   color: #101010;
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.25rem + (100vw - 360px) * 0.02, 1.4rem);
 }
 .categories div a {
   padding: 0;
@@ -825,11 +825,11 @@ footer .socialIcons a:hover {
 
 .confirmationOverlay {
   width: 100%;
-  height: 100%;
+  height: 150%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 50;
+  z-index: 999;
 }
 .confirmationOverlay::before {
   content: "";
@@ -870,20 +870,14 @@ footer .socialIcons a:hover {
   font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04833, 1.3rem);
   line-height: 1.66;
 }
-.confirmationOverlay .confirmation .grandTotal {
-  background-color: #101010;
-  padding: 1.125rem 1.5rem;
-  margin-bottom: 1.125rem;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-.confirmationOverlay .confirmation .grandTotal span {
-  color: #fff;
+.confirmationOverlay .confirmation .cartEmpty span {
+  font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0666, 1.5rem);
   font-weight: 800;
+  color: #000;
 }
 .confirmationOverlay .confirmation .items {
   background-color: #f1f1f1;
-  padding: 1.125rem 1.5rem;
+  padding: 1.125rem 1.5rem 1.125rem 1rem;
   margin-top: 1.125rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -900,6 +894,15 @@ footer .socialIcons a:hover {
   display: flex;
   align-items: center;
 }
+.confirmationOverlay .confirmation .items .item .details img {
+  width: 64px;
+  width: clamp(64px, 64px + (100vw - 360px) * 0.2166, 90px);
+  height: 64px;
+  height: clamp(64px, 64px + (100vw - 360px) * 0.2166, 90px);
+}
+.confirmationOverlay .confirmation .items .item .details .name {
+  font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0533, 1.4rem);
+}
 .confirmationOverlay .confirmation .items button {
   background-color: transparent;
   border: none;
@@ -912,6 +915,18 @@ footer .socialIcons a:hover {
 }
 .confirmationOverlay .confirmation .items button:hover {
   color: #d87d4a;
+}
+.confirmationOverlay .grandTotal {
+  background-color: #101010;
+  padding: 1.125rem 1.5rem;
+  margin-bottom: 1.125rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.confirmationOverlay .grandTotal span {
+  color: #fff;
+  font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0666, 1.5rem);
+  font-weight: 800;
 }
 
 * {
