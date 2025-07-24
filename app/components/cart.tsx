@@ -1,5 +1,5 @@
 
-import Image from "next/image"
+import Link from "next/link"
 import QuantityButton from "./productBtn";
 import {useEffect, useRef} from "react"
 import { useCart } from "../context/cartContext";
@@ -64,7 +64,7 @@ export default function Cart({cartState, setCartState}: cartTypes) {
                      <picture>
                         <source media="(min-width:1024px)" srcSet={product.image.desktop} />
                         <source media="(min-width:768px)" srcSet={product.image.tablet} />
-                        <Image width={50} height={50} src={product.image.mobile} alt={product.name} />
+                        <img src={product.image.mobile} alt="" />
                      </picture>
                         <div className="details">
                            <span>{product.name.split(" ", 1)}</span>
@@ -79,7 +79,7 @@ export default function Cart({cartState, setCartState}: cartTypes) {
                <p>TOTAL</p>
                <span>$ {total.toLocaleString()}</span>
             </div>
-            <a className="btnOrange" onClick={() => setCartState(false)} href="/checkout">CHECKOUT</a>
+            <Link className="btnOrange" href="/checkout" onClick={() => setCartState(false)}>CHECKOUT</Link>
          </div>
       </div>
    )

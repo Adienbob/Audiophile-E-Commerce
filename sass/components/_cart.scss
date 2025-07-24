@@ -64,6 +64,8 @@
                align-items: center;
                img {
                   border-radius: $radius-5;
+                  width: 64px;
+                  height: 64px;
                }
                .details {
                   margin-left: 0.5rem;

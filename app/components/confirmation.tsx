@@ -47,7 +47,7 @@ export default function Confirmation({total}: confirmationProps) {
                      <picture>
                         <source media="(min-width:1024px)" srcSet={product.image.desktop} />
                         <source media="(min-width:768px)" srcSet={product.image.tablet} />
-                        <Image width={64} height={64} src={product.image.mobile} alt={product.name} />
+                        <img src={product.image.mobile} alt="" />
                      </picture>
                      <div className="itemDetails">
                         <span>{product.name.split(" ", 1)}</span>

@@ -1,6 +1,6 @@
 .checkoutPage {
    padding: 1.5rem;
-   background-color: $lighter-grey;
+   background-color: rgb(241, 241, 241);
    position: relative;
    .checkoutContainer {
       margin-top: 1.5rem;
@@ -14,7 +14,7 @@
       .checkout {
          display: grid;
          h1 {
-            font-size: 1.75rem;
+            font-size: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.1133), 2.6rem);
          }
          span {
             @include darkTan-style;
@@ -26,7 +26,7 @@
          }
          label, strong {
             display: block;
-            font-size: 0.75rem;
+            font-size: clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.0466), 1.1rem);
             color: $lighter-black;
             font-weight: 800;
             margin-bottom: 0.5rem;
@@ -38,11 +38,11 @@
             margin-bottom: 1rem;
             &::placeholder {
                font-weight: 600;
+               font-size: 13.25px;
+               font-size: 14.5px;
+               font-size: clamp(13.25px, calc(13.25px + (100vw - 360px) * 0.010416), 14.5px);
                color: $dark-grey;
             }
-         }
-         .description {
-            display: grid;
          }
          .paymentMethod {
             display: flex;
@@ -63,13 +63,21 @@
                transform: scale(1.3);
             }
          }
+         .description {
+            display: grid;
+            gap: 1rem;
+            p {
+               color: $dark-grey;
+               font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.06033), 1.39rem);
+            }
+         }
       }
       .summary {
          display: flex;
          flex-direction: column;
          h2 {
             margin-bottom: 2rem;
-            font-size: 1.125rem;
+            font-size: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.0766), 1.7rem);
             letter-spacing: 1px;
          }
          div {
@@ -86,25 +94,30 @@
                }
                img {
                   border-radius: 10%;
+                  width: clamp(64px, calc(64px + (100vw - 360px) * 0.2166), 90px);
+                  height: clamp(64px, calc(64px + (100vw - 360px) * 0.2166), 90px);
                }
             }
             p {
                @include paragraph-style;
+               font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.0616), 1.4rem);
+               line-height: 3rem;
             }
             span {
                color: $lighter-black;
+               font-size: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.03666), 1.4rem);
                font-weight: 800;
             }
             &.grandTotal {
-               margin-top: 1.5rem;
-               margin-bottom: 1.5rem;
+               margin: 1.5rem 0;
                span {
                   color: $dark-tan;
                }
             }
-            button {
+            button.btnOrange {
                display: block;
                width: 100%;
+               font-weight: 800;
             }
          }
       }
