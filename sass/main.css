@@ -188,6 +188,14 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
   margin-left: 0.5rem;
 }
 
+.productInner .suggestedProducts .item, .productInner .productGallary, .productInner .productInclaudes, .productInner .productFeatures, .productInner section {
+  margin-bottom: 5rem;
+}
+
+.homePage .featuredProducts, .categories {
+  padding: 2rem 1rem;
+}
+
 .cartOverlay {
   position: absolute;
   z-index: 999;
@@ -212,7 +220,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
   position: absolute;
   background-color: #fff;
   padding: 2rem;
-  width: 22.5rem;
+  width: 90%;
   top: 37.5%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -221,12 +229,12 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 .cartOverlay .cartContainer .cartHeader {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 .cartOverlay .cartContainer .cartHeader span {
   color: #000;
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 1.25rem + (100vw - 360px) * 0.0666, 1.75rem);
   color: #101010;
 }
 .cartOverlay .cartContainer .cartHeader button {
@@ -235,7 +243,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
   color: #b9b9b9;
   text-decoration: underline;
   transition: 0.3s;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0466, 1.35rem);
   cursor: pointer;
 }
 .cartOverlay .cartContainer .cartHeader button:hover {
@@ -259,14 +267,15 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productDetails img {
   border-radius: 5px;
-  width: 64px;
-  height: 64px;
+  width: clamp(64px, 64px + (100vw - 360px) * 0.2166, 90px);
+  height: clamp(64px, 64px + (100vw - 360px) * 0.2166, 90px);
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details {
   margin-left: 0.5rem;
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details span {
   color: #101010;
+  font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0533, 1.4rem);
   font-weight: 800;
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details p {
@@ -279,26 +288,26 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
   background-color: #eeeeee;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 0.8rem;
+  font-size: clamp(0.8rem, 0.8rem + (100vw - 360px) * 0.0266, 1rem);
   font-weight: 800;
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productBtn span {
-  padding: 0.45rem;
   background-color: inherit;
+  text-align: center;
+  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0333, 1rem) clamp(0.5rem, 0.5rem + (100vw - 360px) * 0.0333, 0.75rem);
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productBtn button {
   border: none;
   background-color: #eeeeee;
   transition: 0.3s;
   color: #101010;
+  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0333, 1rem) clamp(1rem, 1rem + (100vw - 360px) * 0.0666, 1.5rem);
+  cursor: pointer;
+  font-size: clamp(0.8rem, 0.8rem + (100vw - 360px) * 0.0266, 1rem);
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productBtn button:hover {
   background-color: #b9b9b9;
   color: #d87d4a;
-}
-.cartOverlay .cartContainer .cartBody .cartItem .productBtn button {
-  padding: 0.5rem 1rem;
-  cursor: pointer;
 }
 .cartOverlay .cartContainer .cartBody .totalPrice {
   display: flex;
@@ -312,6 +321,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 }
 .cartOverlay .cartContainer .cartBody .totalPrice span {
   color: #101010;
+  font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0666, 1.5rem);
   font-weight: 800;
 }
 .cartOverlay .cartContainer .cartBody a {
@@ -597,16 +607,22 @@ footer .socialIcons a:hover {
   background-color: #eeeeee;
   width: -moz-fit-content;
   width: fit-content;
+  font-size: clamp(0.8rem, 0.8rem + (100vw - 360px) * 0.0266, 1rem);
+  font-weight: 800;
 }
 .productInner section .details .quantityButton span {
-  padding: 0.45rem;
   background-color: inherit;
+  text-align: center;
+  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0333, 1rem) clamp(0.5rem, 0.5rem + (100vw - 360px) * 0.0333, 0.75rem);
 }
 .productInner section .details .quantityButton button {
   border: none;
   background-color: #eeeeee;
   transition: 0.3s;
   color: #101010;
+  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0333, 1rem) clamp(1rem, 1rem + (100vw - 360px) * 0.0666, 1.5rem);
+  cursor: pointer;
+  font-size: clamp(0.8rem, 0.8rem + (100vw - 360px) * 0.0266, 1rem);
 }
 .productInner section .details .quantityButton button:hover {
   background-color: #b9b9b9;

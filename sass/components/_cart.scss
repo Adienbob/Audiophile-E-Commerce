@@ -1,3 +1,4 @@
+@import "../abstract/variables";
 .cartOverlay {
    position: absolute;
    z-index: 999;
@@ -21,7 +22,7 @@
       position: absolute;
       background-color: $white;
       padding: 2rem;
-      width: 22.5rem;
+      width: 90%;
       top: 37.5%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -29,11 +30,11 @@
       .cartHeader {
          display: flex;
          justify-content: space-between;
-         margin-bottom: 1.5rem;
+         margin-bottom: 3rem;
          span {
             color: $jet-black;
             font-weight: 800;
-            font-size: 1.25rem;
+            font-size: clamp(1.25rem, calc(1.25rem + (100vw - 360px) * 0.0666), 1.75rem);
             color: $lighter-black;
          }
          button {
@@ -42,7 +43,7 @@
             color: $grey;
             text-decoration: underline;
             transition: 0.3s;
-            font-size: 1rem;
+            font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0466), 1.35rem);
             cursor: pointer;
             &:hover {
                color: $dark-tan;
@@ -64,13 +65,14 @@
                align-items: center;
                img {
                   border-radius: $radius-5;
-                  width: 64px;
-                  height: 64px;
+                  width: clamp(64px, calc(64px + (100vw - 360px) * 0.2166), 90px);
+                  height: clamp(64px, calc(64px + (100vw - 360px) * 0.2166), 90px);
                }
                .details {
                   margin-left: 0.5rem;
                   span {
                      color: $lighter-black;
+                     font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0533), 1.4rem);
                      font-weight: 800;
                   }
                   p {
@@ -81,12 +83,6 @@
             }
             .productBtn {
                @include quantityButton;
-               font-size: 0.8rem;
-               font-weight: 800;
-               button {
-                  padding: 0.5rem 1rem;
-                  cursor: pointer;
-               }
             }
          }
          .totalPrice {
@@ -98,6 +94,7 @@
             }
             span {
                color: $lighter-black;
+               font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0666), 1.5rem);
                font-weight: 800;
             }
          }
