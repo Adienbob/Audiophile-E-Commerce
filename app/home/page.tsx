@@ -7,7 +7,7 @@ export default function Home() {
       <div className="homePage">
          <picture>
             <source media="(min-width: 1025px)" srcSet="/assets/home/desktop/image-hero.jpg" />
-            <source media="(min-width: 769px)" srcSet="/assets/home/tablet/image-hero.jpg" />
+            <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-hero.jpg" />
             <img className="background" src="/assets/home/mobile/image-hero.jpg" alt="" />
          </picture>
          <div className="hero">
@@ -26,7 +26,7 @@ export default function Home() {
             <div className="ZX9-Product">
                <picture>
                   <source media="(min-width: 1025px)" srcSet="/assets/home/desktop/image-speaker-zx9.png" />
-                  <source media="(min-width: 769px)" srcSet="/assets/home/tablet/image-speaker-zx9.png" />
+                  <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-speaker-zx9.png" />
                   <img className="image" src="/assets/home/mobile/image-speaker-zx9.png" alt="" />
                </picture>
                <h2>ZX9 SPEAKER</h2>
@@ -47,7 +47,7 @@ export default function Home() {
                <div className="ImageContainer">
                   <picture>
                      <source media="(min-width: 1025px)" srcSet="/assets/home/desktop/image-earphones-yx1.jpg" />
-                     <source media="(min-width: 769px)" srcSet="/assets/home/tablet/image-earphones-yx1.jpg" />
+                     <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-earphones-yx1.jpg" />
                      <img className="productIamge" src="/assets/home/mobile/image-earphones-yx1.jpg" alt="" />
                   </picture>
                </div>

@@ -29,12 +29,13 @@
          letter-spacing: 0.1rem;
          margin-bottom: 1rem;
          line-height: clamp(2.75rem, calc(2.75rem + (100vw - 360px) * 0.1), 3.5rem);
-         font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.1333), 3rem);
+         font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0833), 3rem);
       }
       p {
          color: $grey;
          margin-bottom: 2rem;
-         font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0333), 1.25rem);
+         font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0333), 1.5rem);
+         padding: 0 1rem;
       }
    }
    .featuredProducts {
@@ -50,7 +51,7 @@
          display: grid;
          background-image: url("/assets/home/desktop/pattern-circles.svg");
          background-size: cover;
-         background-position: center clamp(-160px, -33vw, -120px);
+         background-position: center clamp(-210px, calc(-115px + (100vw - 360px) * -0.375), -120px);
          background-size: 170%;
          background-repeat: no-repeat;
          background-color: $dark-tan;
@@ -60,26 +61,23 @@
          align-items: center;
             .image {
                align-self: center;
-               width: 50%;
-               width: 70%;
                height: auto;
-               width: clamp(50%, 45vw, 75%);
-               margin-top: clamp(3rem, 13.3vw, 4rem);
-               margin-bottom: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.2666), 3.75rem);
+               width: clamp(162px, calc(162px + (100vw - 360px) * 0.5125), 285px);
+               margin-top: clamp(4rem, calc(4rem + (100vw - 360px) * 0.1), 5.5rem);
+               margin-bottom: clamp(30px, calc(30px + (100vw - 360px) * 0.09375), 52.5px);
             }
             h2 {
                color: $white;
-               font-size: clamp(2.5rem, calc(2.5rem + (100vw - 360px) * 0.1333), 3.5rem);
+               font-size: clamp(2.5rem, calc(2.5rem + (100vw - 360px) * 0.1333), 4.5rem);
                padding: 0 3rem;
-               line-height: 2.75rem;
-               line-height: clamp(2.75rem, calc(2.75rem + (100vw - 360px) * 0.1333), 3.75rem);
+               line-height: clamp(2.75rem, calc(2.75rem + (100vw - 360px) * 0.15), 5rem);
             }
             p {
                margin: 1rem 0 2rem;
-               line-height: clamp(1.6rem, calc(1.6rem + (100vw - 360px) * 0.0866), 2.25rem);
+               line-height: clamp(1.6rem, calc(1.6rem + (100vw - 360px) * 0.0933), 3rem);
                color: $white;
                opacity: 0.75;
-               font-size: clamp(0.9rem, calc(1rem + (100vw - 360px) * 0.04666), 1.35rem);
+               font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.05666), 1.75rem);
             }
             a {
                margin-bottom: 4rem;
@@ -89,21 +87,23 @@
       .ZX7-Product {
          background-image: url("/assets/home/mobile/image-speaker-zx7.jpg");
          background-size: cover;
-         background-position: 100%;
+         background-position: center;
          background-repeat: no-repeat;
          position: relative;
          border-radius: $radius-10;
          display: flex;
          align-items: center;
+         padding: 3rem 0;
          .details {
             text-align: left;
             padding: 7rem 0;
             padding-left: 1.5rem;
             h2{
-               margin-bottom: 2rem;
+               margin-bottom: clamp(2rem, calc(2rem + (100vw - 360px) * 0.1333), 4rem);
                color: $lighter-black;
-               font-size: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.1), 2.5rem);
+               font-size: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.103), 3.3em);
                letter-spacing: 1px;
+               margin-bottom: clamp(3rem, calc(3rem + (100vw - 360px) * 0.0666), 4em);
             }
          }
       }
@@ -125,7 +125,7 @@
             justify-content: center;
             gap: 2rem;
             h2 {
-               font-size: clamp(2em, calc(2rem + (100vw - 360px) * 0.0666), 2.5rem);
+               font-size: clamp(2.1rem, calc(2.1rem + (100vw - 360px) * 0.08333), 3.35rem);
                letter-spacing: 1px;
             }
          }

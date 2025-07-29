@@ -9,8 +9,9 @@
       margin-bottom: 2rem;
    }
    h3 {
-      font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0533), 2.4rem);
-      margin-bottom: 2rem;
+      font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
+      // font-size: 3rem;
+      margin-bottom: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
       color: $jet-black;
       span {
          color: $dark-tan;
@@ -20,6 +21,8 @@
       color: $dark-grey;
       font-weight: 600;
       line-height: 1.75;
-      font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.05033), 1.5rem);
+      font-size: clamp(14px, calc(1rem + (100vw - 360px) * 0.045833), 25px);
+      // font-size: 14px;
+//       font-size: 25px;
    }
 }

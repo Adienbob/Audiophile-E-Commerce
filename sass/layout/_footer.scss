@@ -28,7 +28,7 @@ footer {
       flex-direction: column;
       gap: 1.5rem;
       a {
-         font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.03333), 1.28rem);
+         font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.03333), 1.5rem);
          color: $light-grey;
          font-weight: 600;
          padding: 0;
@@ -40,15 +40,15 @@ footer {
    }
    p {
       color: $dark-grey;
-      font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.04733), 1.28rem);
+      font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.045), 1.6rem);
       line-height: 2.5rem;
-      line-height: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.1333), 2.5rem);
+      line-height: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0833), 2.75rem);
    }
    strong {
       color: $grey;
       opacity: 0.75;
-      font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.04733), 1.28rem);
-   }
+      font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.045), 1.6rem);
+      }
    .socialIcons {
       display: flex;
       flex-direction: row;
