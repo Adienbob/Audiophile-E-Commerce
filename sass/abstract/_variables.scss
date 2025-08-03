@@ -13,8 +13,12 @@ $red: #cd2c2c;
 $radius-5: 5px;
 $radius-10: 10px;
 %sections-break {
-   margin-bottom: 5rem;
+   margin-bottom: clamp(5rem, calc(5rem + (100vw - 360px) * 0.1333 ) ,7rem);
 }
 %main-pads {
    padding: 2rem 1rem;
+}
+
+%pages-pads {
+   padding: 0 2rem;
 }

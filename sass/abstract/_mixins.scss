@@ -1,7 +1,8 @@
 @mixin paragraph-style {
    color: $dark-grey;
-   font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.04833) ,1.3rem);
+   font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.03541) ,23.5px);
    line-height: 1.66;
+   font-weight: 600;
 }
 
 @mixin productImge-style {
@@ -12,8 +13,8 @@
 
 @mixin darkTan-style {
    color: $dark-tan;
-   letter-spacing: clamp(0.625rem, calc(0.625rem + (100vw - 360px) * 0.0333 ) ,0.875rem);
-   font-size: clamp(0.875rem, calc(0.875rem + (100vw - 360px) * 0.05 ) ,1.25rem);
+   letter-spacing: clamp(0.625rem, calc(0.625rem + (100vw - 360px) * 0.04166 ) ,0.875rem);
+   font-size: clamp(0.875rem, calc(0.875rem + (100vw - 360px) * 0.025 ) ,1.25rem);
 }
 
 

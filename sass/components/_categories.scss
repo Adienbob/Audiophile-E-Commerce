@@ -1,13 +1,14 @@
 
 .categories {
-   @extend %main-pads;
+   @extend %sections-break;
+   @extend %pages-pads;
       div {
          display: flex;
          align-items: center;
          justify-content: flex-end;
          flex-direction: column;
          background-color: $light-grey;
-         margin: 6rem 0;
+         margin: clamp(6rem, calc(6rem + (100vw - 360px) * 0.0666 ), 7rem) 0;
          border-radius: 10px;
          position: relative;
          padding-top: 6rem;
