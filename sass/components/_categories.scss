@@ -1,7 +1,8 @@
 
 .categories {
    @extend %sections-break;
-   @extend %pages-pads;
+   margin: clamp(5rem, calc(5rem + (100vw - 360px) * 0.2666 ), 9rem) 0;
+   
       div {
          display: flex;
          align-items: center;

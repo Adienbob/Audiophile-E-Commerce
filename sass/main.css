@@ -77,12 +77,10 @@
   padding: 2rem 1rem;
 }
 
-.categories {
-  padding: 0 2rem;
-}
-
 .descrbtion {
   text-align: center;
+  padding: 0 2rem;
+  margin: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem) 0;
 }
 .descrbtion img {
   width: 100%;
@@ -100,7 +98,7 @@
 }
 .descrbtion p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
 }
@@ -110,7 +108,7 @@ a, button:not(aside button, .items button, header button) {
   letter-spacing: 0.05rem;
   text-decoration: none;
   text-align: center;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.02083, 1.25rem);
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.0275, 1.35rem);
   letter-spacing: 1px;
   font-weight: 600;
   cursor: pointer;
@@ -157,6 +155,9 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
   text-decoration: underline;
 }
 
+.categories {
+  margin: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem) 0;
+}
 .categories div {
   display: flex;
   align-items: center;
@@ -197,10 +198,6 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 
 .homePage .featuredProducts {
   padding: 2rem 1rem;
-}
-
-.categories {
-  padding: 0 2rem;
 }
 
 .cartOverlay {
@@ -258,7 +255,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 }
 .cartOverlay .cartContainer .cartBody .cartEmpty {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
   text-align: center;
@@ -288,7 +285,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
   font-weight: 600;
@@ -297,22 +294,22 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
   background-color: #eeeeee;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: clamp(0.8rem, 0.8rem + (100vw - 360px) * 0.0266, 1rem);
+  font-size: clamp(0.8rem, 0.8rem + (100vw - 360px) * 0.0266, 1.25rem);
   font-weight: 800;
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productBtn span {
   background-color: inherit;
   text-align: center;
-  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0333, 1rem) clamp(0.5rem, 0.5rem + (100vw - 360px) * 0.0333, 0.75rem);
+  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.05, 1.5rem) clamp(0.5rem, 0.5rem + (100vw - 360px) * 0.0833, 1.75rem);
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productBtn button {
   border: none;
   background-color: #eeeeee;
   transition: 0.3s;
   color: #101010;
-  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0333, 1rem) clamp(1rem, 1rem + (100vw - 360px) * 0.0666, 1.5rem);
+  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.05, 1.5rem) clamp(1rem, 1rem + (100vw - 360px) * 0.0833, 2.25rem);
   cursor: pointer;
-  font-size: clamp(0.8rem, 0.8rem + (100vw - 360px) * 0.0266, 1rem);
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.0275, 1.35rem);
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productBtn button:hover {
   background-color: #b9b9b9;
@@ -325,7 +322,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 }
 .cartOverlay .cartContainer .cartBody .totalPrice p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
 }
@@ -360,8 +357,8 @@ header nav button {
   background-color: transparent;
 }
 header nav button img {
-  width: 100%;
-  height: 100%;
+  width: clamp(23px, 23px + (100vw - 360px) * 0.0416, 7rem);
+  height: clamp(20px, 20px + (100vw - 360px) * 0.0416, 7rem);
   position: relative !important;
 }
 header nav button p {
@@ -447,12 +444,13 @@ footer .socialIcons a:hover {
 .earphonesPage h1 {
   background-color: #101010;
   color: #fff;
-  font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.1, 2.75rem);
+  font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.0833, 2.75rem);
   padding: 2rem;
 }
 .earphonesPage .productContainer {
   display: flex;
-  padding: 4rem 2rem 2rem;
+  padding: 0 2rem;
+  margin: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem) 0;
   flex-direction: column;
 }
 .earphonesPage .productContainer .productImage img {
@@ -465,21 +463,22 @@ footer .socialIcons a:hover {
 }
 .earphonesPage .productContainer .productDetails span {
   color: #d87d4a;
-  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.04166, 0.875rem);
-  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.25rem);
+  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.03166, 1.1rem);
+  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.5rem);
 }
 .earphonesPage .productContainer .productDetails h2 {
-  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.08, 2.35rem);
+  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.07916, 2.75rem);
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 1.5rem 0;
+  margin: 1.5rem clamp(1rem, 1rem + (100vw - 360px) * 0.133, 3rem);
 }
 .earphonesPage .productContainer .productDetails p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(3rem, 3rem + (100vw - 360px) * 0.133, 5rem);
+  padding: 0 clamp(0.1rem, 0.1rem + (100vw - 360px) * 0.06, 1rem);
 }
 .earphonesPage .productContainer:last-of-type {
   margin-bottom: 2rem;
@@ -494,12 +493,13 @@ footer .socialIcons a:hover {
 .speakerPage h1 {
   background-color: #101010;
   color: #fff;
-  font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.1, 2.75rem);
+  font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.0833, 2.75rem);
   padding: 2rem;
 }
 .speakerPage .productContainer {
   display: flex;
-  padding: 4rem 2rem 2rem;
+  padding: 0 2rem;
+  margin: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem) 0;
   flex-direction: column;
 }
 .speakerPage .productContainer .productImage img {
@@ -512,21 +512,22 @@ footer .socialIcons a:hover {
 }
 .speakerPage .productContainer .productDetails span {
   color: #d87d4a;
-  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.04166, 0.875rem);
-  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.25rem);
+  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.03166, 1.1rem);
+  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.5rem);
 }
 .speakerPage .productContainer .productDetails h2 {
-  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.08, 2.35rem);
+  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.07916, 2.75rem);
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 1.5rem 0;
+  margin: 1.5rem clamp(1rem, 1rem + (100vw - 360px) * 0.133, 3rem);
 }
 .speakerPage .productContainer .productDetails p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(3rem, 3rem + (100vw - 360px) * 0.133, 5rem);
+  padding: 0 clamp(0.1rem, 0.1rem + (100vw - 360px) * 0.06, 1rem);
 }
 .speakerPage .productContainer:last-of-type {
   margin-bottom: 2rem;
@@ -541,12 +542,13 @@ footer .socialIcons a:hover {
 .headphonesPage h1 {
   background-color: #101010;
   color: #fff;
-  font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.1, 2.75rem);
+  font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.0833, 2.75rem);
   padding: 2rem;
 }
 .headphonesPage .productContainer {
   display: flex;
-  padding: 4rem 2rem 2rem;
+  padding: 0 2rem;
+  margin: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem) 0;
   flex-direction: column;
 }
 .headphonesPage .productContainer .productImage img {
@@ -559,21 +561,22 @@ footer .socialIcons a:hover {
 }
 .headphonesPage .productContainer .productDetails span {
   color: #d87d4a;
-  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.04166, 0.875rem);
-  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.25rem);
+  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.03166, 1.1rem);
+  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.5rem);
 }
 .headphonesPage .productContainer .productDetails h2 {
-  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.08, 2.35rem);
+  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.07916, 2.75rem);
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 1.5rem 0;
+  margin: 1.5rem clamp(1rem, 1rem + (100vw - 360px) * 0.133, 3rem);
 }
 .headphonesPage .productContainer .productDetails p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(3rem, 3rem + (100vw - 360px) * 0.133, 5rem);
+  padding: 0 clamp(0.1rem, 0.1rem + (100vw - 360px) * 0.06, 1rem);
 }
 .headphonesPage .productContainer:last-of-type {
   margin-bottom: 2rem;
@@ -592,8 +595,8 @@ footer .socialIcons a:hover {
 }
 .productInner section .details .newProduct {
   color: #d87d4a;
-  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.04166, 0.875rem);
-  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.25rem);
+  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.03166, 1.1rem);
+  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.5rem);
 }
 .productInner section .details h1 {
   text-transform: uppercase;
@@ -603,7 +606,7 @@ footer .socialIcons a:hover {
 }
 .productInner section .details p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
   font-weight: 400;
@@ -621,22 +624,22 @@ footer .socialIcons a:hover {
   background-color: #eeeeee;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: clamp(0.8rem, 0.8rem + (100vw - 360px) * 0.0266, 1rem);
+  font-size: clamp(0.8rem, 0.8rem + (100vw - 360px) * 0.0266, 1.25rem);
   font-weight: 800;
 }
 .productInner section .details .quantityButton span {
   background-color: inherit;
   text-align: center;
-  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0333, 1rem) clamp(0.5rem, 0.5rem + (100vw - 360px) * 0.0333, 0.75rem);
+  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.05, 1.5rem) clamp(0.5rem, 0.5rem + (100vw - 360px) * 0.0833, 1.75rem);
 }
 .productInner section .details .quantityButton button {
   border: none;
   background-color: #eeeeee;
   transition: 0.3s;
   color: #101010;
-  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0333, 1rem) clamp(1rem, 1rem + (100vw - 360px) * 0.0666, 1.5rem);
+  padding: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.05, 1.5rem) clamp(1rem, 1rem + (100vw - 360px) * 0.0833, 2.25rem);
   cursor: pointer;
-  font-size: clamp(0.8rem, 0.8rem + (100vw - 360px) * 0.0266, 1rem);
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.0275, 1.35rem);
 }
 .productInner section .details .quantityButton button:hover {
   background-color: #b9b9b9;
@@ -648,7 +651,7 @@ footer .socialIcons a:hover {
 }
 .productInner .productFeatures p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
   white-space: pre-line;
@@ -666,7 +669,7 @@ footer .socialIcons a:hover {
 }
 .productInner .productInclaudes span p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
   display: inline;
@@ -685,6 +688,7 @@ footer .socialIcons a:hover {
 }
 .productInner .suggestedProducts {
   text-align: center;
+  margin-bottom: 10rem;
 }
 .productInner .suggestedProducts h4 {
   font-size: clamp(1.5rem, 1.5rem + (100vw - 360px) * 0.08333, 2.75rem);
@@ -725,8 +729,8 @@ footer .socialIcons a:hover {
 }
 .checkoutPage .checkoutContainer .checkout span {
   color: #d87d4a;
-  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.04166, 0.875rem);
-  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.25rem);
+  letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.03166, 1.1rem);
+  font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.5rem);
   letter-spacing: normal;
   font-weight: 800;
   margin-top: 2rem;
@@ -817,7 +821,7 @@ footer .socialIcons a:hover {
 }
 .checkoutPage .checkoutContainer .summary div p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
   font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.0616, 1.4rem);
@@ -884,7 +888,7 @@ footer .socialIcons a:hover {
 }
 .confirmationOverlay .confirmation p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.03541, 23.5px);
+  font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
 }

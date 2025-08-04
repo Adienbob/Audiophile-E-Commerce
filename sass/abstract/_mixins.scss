@@ -1,6 +1,6 @@
 @mixin paragraph-style {
    color: $dark-grey;
-   font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.03541) ,23.5px);
+   font-size: clamp(13.5px, calc(0.9375rem + (100vw - 360px) * 0.04375) ,24px);
    line-height: 1.66;
    font-weight: 600;
 }
@@ -13,8 +13,8 @@
 
 @mixin darkTan-style {
    color: $dark-tan;
-   letter-spacing: clamp(0.625rem, calc(0.625rem + (100vw - 360px) * 0.04166 ) ,0.875rem);
-   font-size: clamp(0.875rem, calc(0.875rem + (100vw - 360px) * 0.025 ) ,1.25rem);
+   letter-spacing: clamp(0.625rem, calc(0.625rem + (100vw - 360px) * 0.03166 ) ,1.1rem);
+   font-size: clamp(0.875rem, calc(0.875rem + (100vw - 360px) * 0.025 ) ,1.5rem);
 }
 
 
@@ -26,12 +26,13 @@
    h1 {
       background-color: $lighter-black;
       color: $white;
-      font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.1 ) ,2.75rem);
+      font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0833 ) ,2.75rem);
       padding: 2rem;
    }
    .productContainer {
       display: flex;
-      padding: 4rem 2rem 2rem;
+      padding: 0 2rem;
+      margin: clamp(5rem, calc(5rem + (100vw - 360px) * 0.2666 ), 9rem) 0;
       flex-direction: column;
       .productImage {
          img {
@@ -44,14 +45,15 @@
             @include darkTan-style;
          }
          h2 {
-            font-size: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.08 ) ,2.35rem);
+            font-size: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.07916 ) ,2.75rem);
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin: 1.5rem 0;
+            margin: 1.5rem clamp(1rem, calc(1rem + (100vw - 360px) * 0.133 ) ,3rem);
          }
          p {
             @include paragraph-style;
-            margin-bottom: 3rem;
+            margin-bottom: clamp(3rem, calc(3rem + (100vw - 360px) * 0.133 ) , 5rem);
+            padding: 0 clamp(0.1rem, calc(0.1rem + (100vw - 360px) * 0.06 ) , 1rem);
          }
       }
       &:last-of-type {
@@ -63,21 +65,21 @@
 @mixin quantityButton {
    background-color: $light-grey;
    width: fit-content;
-   font-size: clamp(0.8rem, calc(0.8rem + (100vw - 360px) * 0.0266), 1rem);
+   font-size: clamp(0.8rem, calc(0.8rem + (100vw - 360px) * 0.0266), 1.25rem);
    font-weight: 800;
    span {
       background-color: inherit;
       text-align: center;
-      padding: clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.0333), 1rem) clamp(0.5rem, calc(0.5rem + (100vw - 360px) * 0.0333), 0.75rem);
+      padding: clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.05), 1.5rem) clamp(0.5rem, calc(0.5rem + (100vw - 360px) * 0.0833), 1.75rem);
    }
    button {
       border: none;
       background-color: $light-grey;
       transition: 0.3s;
       color: $lighter-black;
-      padding: clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.0333), 1rem) clamp(1rem, calc(1rem + (100vw - 360px) * 0.0666), 1.5rem);
+      padding: clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.05), 1.5rem) clamp(1rem, calc(1rem + (100vw - 360px) * 0.0833), 2.25rem);
       cursor: pointer;
-      font-size: clamp(0.8rem, calc(0.8rem + (100vw - 360px) * 0.0266), 1rem);
+         font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.0275 ) ,1.35rem);
       &:hover {
          background-color: $grey;
          color: $dark-tan;
