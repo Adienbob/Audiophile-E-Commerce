@@ -1,6 +1,7 @@
 
 .productInner {
-   padding: 2rem;
+   @extend %pages-pads;
+   margin: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0333), 2rem) 0;
    section {
       @extend %sections-break;
       

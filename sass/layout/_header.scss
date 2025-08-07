@@ -16,19 +16,20 @@ header {
          cursor: pointer;
          position: relative;
          background-color: transparent;
+         text-align: center;
          img {
-            width: clamp(23px, calc(23px + (100vw - 360px) * 0.0416 ), 7rem);
-            height: clamp(20px, calc(20px + (100vw - 360px) * 0.0416 ), 7rem);
+            width: clamp(23px, calc(23px + (100vw - 360px) * 0.0625 ), 38px);
+            height: clamp(20px, calc(20px + (100vw - 360px) * 0.0625 ), 35px);
             position: relative !important;
          }
          p {
             position: absolute;
-            top: -15px;
-            left: 15px;
+            top: clamp(-22.5px, calc(-15px + (100vw - 360px) * -0.03125), -15px);;
+            left: clamp(15px, calc(15px + (100vw - 360px) * 0.03125 ), 22.5px);
             background-color: $dark-tan;
             border-radius: 50%;
-            width: 20px;
-            height: 20px;
+            font-size: clamp(16px, calc(16px + (100vw - 360px) * 0.00833 ), 18px);
+            padding: clamp(2px, calc(2px + (100vw - 360px) * 0.0125 ), 5px) clamp(8px, calc(8px + (100vw - 360px) * 0.0125 ), 11px);
             color: $white;
          }
       }

@@ -12,22 +12,24 @@ export default function Headphones() {
    return (
       <div className="headphonesPage">
          <h1>HEADPHONES</h1>
-         {data.toReversed().map((product, index) => (
-            <Product 
-               key={product.id}
-               isNew={product.new} 
-               name={product.name} 
-               description={product.description} 
-               desktopSrc={product.image.desktop}
-               tabletSrc={product.image.tablet}
-               mobileSrc={product.image.mobile}
-               slug={product.slug}
-               index={index}
-            />
-         ))
-         }
-         <Category />
-         <Descrbtion />
+         <div className="productsContainer">
+            {data.toReversed().map((product, index) => (
+               <Product 
+                  key={product.id}
+                  isNew={product.new} 
+                  name={product.name} 
+                  description={product.description} 
+                  desktopSrc={product.image.desktop}
+                  tabletSrc={product.image.tablet}
+                  mobileSrc={product.image.mobile}
+                  slug={product.slug}
+                  index={index}
+               />
+            ))
+            }
+            <Category />
+            <Descrbtion />
+         </div>
       </div>
    )
 }

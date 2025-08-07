@@ -38,7 +38,7 @@ export default function Checkout() {
 
    function CashDescription() {
       return (
-         <div className="description">
+         <div className="cashDescription">
             <Image width={48} height={48} src="/assets/checkout/icon-cash-on-delivery.svg" alt=""  />
             <p>The &apos;Cash on Delivery&apos; option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
          </div>
@@ -47,7 +47,7 @@ export default function Checkout() {
 
    function EMoneyDescription() {
       return (
-         <div className="description">
+         <div className="emoneyDescription">
             <label htmlFor="eMoneyNumber">e-Money Number</label>
             <input type="number" id="eMoneyNumber" placeholder="238521993"/>
             <label htmlFor="eMoneyPin">e-Money PIN</label>
@@ -107,7 +107,7 @@ export default function Checkout() {
                         <div className="detailsContainer">
                            <picture>
                               <source media="(min-width: 1025)" srcSet={product.image.desktop} />
-                              <source media="(min-width: 1025)" srcSet={product.image.tablet} />
+                              <source media="(min-width: 600)" srcSet={product.image.tablet} />
                               <img src={product.image.mobile} alt="" />
                            </picture>
                            <div className="details">

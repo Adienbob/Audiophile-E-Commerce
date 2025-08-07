@@ -14,11 +14,11 @@ type ProductType = {
 
 export default function Product({isNew, name, description, desktopSrc, tabletSrc, mobileSrc, slug, index}: ProductType) {
    return (
-      <div className="productContainer" id={index % 2 == 0 ? "even" : "odd"}>
-         <div className="productImage">
+      <div className="product" id={index % 2 == 0 ? "even" : "odd"}>
+         <div className="productImage"> 
             <picture>
                <source media="(min-width: 1025)" srcSet={desktopSrc} />
-               <source media="(min-width: 769)" srcSet={tabletSrc} />
+               <source media="(min-width: 600)" srcSet={tabletSrc} />
                <img src={mobileSrc} alt="" />
             </picture>
          </div>

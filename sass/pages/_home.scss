@@ -39,7 +39,7 @@
       }
    }
    .featuredProducts {
-      @extend %main-pads;
+      @extend %pages-pads;
       div {
          margin-bottom: 2rem;
       }
@@ -129,5 +129,9 @@
             }
          }
       }
+   }
+   .categories, 
+   .descrbtion {
+      @extend %pages-pads;
    }
 

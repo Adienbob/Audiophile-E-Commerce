@@ -20,5 +20,5 @@ $radius-10: 10px;
 }
 
 %pages-pads {
-   padding: 0 2rem;
+   padding: 0 clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0333), 2rem);
 }

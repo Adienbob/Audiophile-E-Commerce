@@ -73,14 +73,14 @@
   margin-bottom: clamp(5rem, 5rem + (100vw - 360px) * 0.1333, 7rem);
 }
 
-.homePage .featuredProducts {
-  padding: 2rem 1rem;
+.categories,
+.descrbtion, .homePage .featuredProducts, .productInner, .headphonesPage .productsContainer, .speakerPage .productsContainer, .earphonesPage .productsContainer, footer {
+  padding: 0 clamp(1.5rem, 1.5rem + (100vw - 360px) * 0.0333, 2rem);
 }
 
 .descrbtion {
   text-align: center;
-  padding: 0 2rem;
-  margin: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem) 0;
+  margin-top: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem);
 }
 .descrbtion img {
   width: 100%;
@@ -156,7 +156,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
 }
 
 .categories {
-  margin: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem) 0;
+  margin-top: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem);
 }
 .categories div {
   display: flex;
@@ -196,8 +196,9 @@ a.backBtn:hover, button:not(aside button, .items button, header button).backBtn:
   margin-bottom: clamp(5rem, 5rem + (100vw - 360px) * 0.1333, 7rem);
 }
 
-.homePage .featuredProducts {
-  padding: 2rem 1rem;
+.categories,
+.descrbtion, .homePage .featuredProducts, .productInner, .headphonesPage .productsContainer, .speakerPage .productsContainer, .earphonesPage .productsContainer, footer {
+  padding: 0 clamp(1.5rem, 1.5rem + (100vw - 360px) * 0.0333, 2rem);
 }
 
 .cartOverlay {
@@ -355,20 +356,21 @@ header nav button {
   cursor: pointer;
   position: relative;
   background-color: transparent;
+  text-align: center;
 }
 header nav button img {
-  width: clamp(23px, 23px + (100vw - 360px) * 0.0416, 7rem);
-  height: clamp(20px, 20px + (100vw - 360px) * 0.0416, 7rem);
+  width: clamp(23px, 23px + (100vw - 360px) * 0.0625, 38px);
+  height: clamp(20px, 20px + (100vw - 360px) * 0.0625, 35px);
   position: relative !important;
 }
 header nav button p {
   position: absolute;
-  top: -15px;
-  left: 15px;
+  top: clamp(-22.5px, -15px + (100vw - 360px) * -0.03125, -15px);
+  left: clamp(15px, 15px + (100vw - 360px) * 0.03125, 22.5px);
   background-color: #d87d4a;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  font-size: clamp(16px, 16px + (100vw - 360px) * 0.00833, 18px);
+  padding: clamp(2px, 2px + (100vw - 360px) * 0.0125, 5px) clamp(8px, 8px + (100vw - 360px) * 0.0125, 11px);
   color: #fff;
 }
 
@@ -378,9 +380,9 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 2rem;
   position: relative;
   text-align: center;
+  margin-top: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem);
 }
 footer .logo, footer ul, footer p, footer strong {
   margin-bottom: 3rem;
@@ -445,34 +447,34 @@ footer .socialIcons a:hover {
   background-color: #101010;
   color: #fff;
   font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.0833, 2.75rem);
-  padding: 2rem;
+  padding: clamp(1.5rem, 1.5rem + (100vw - 360px) * 0.0333, 2rem);
 }
-.earphonesPage .productContainer {
+.earphonesPage .productsContainer .product {
   display: flex;
-  padding: 0 2rem;
-  margin: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem) 0;
+  margin: clamp(3rem, 3rem + (100vw - 360px) * 0.2, 6rem) 0;
   flex-direction: column;
 }
-.earphonesPage .productContainer .productImage img {
+.earphonesPage .productsContainer .product .productImage img {
   border-radius: 10px;
   width: 100%;
   height: 100%;
+  margin-bottom: 1rem;
 }
-.earphonesPage .productContainer .productDetails {
+.earphonesPage .productsContainer .product .productDetails {
   padding: 1rem 0;
 }
-.earphonesPage .productContainer .productDetails span {
+.earphonesPage .productsContainer .product .productDetails span {
   color: #d87d4a;
   letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.03166, 1.1rem);
   font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.5rem);
 }
-.earphonesPage .productContainer .productDetails h2 {
+.earphonesPage .productsContainer .product .productDetails h2 {
   font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.07916, 2.75rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 1.5rem clamp(1rem, 1rem + (100vw - 360px) * 0.133, 3rem);
 }
-.earphonesPage .productContainer .productDetails p {
+.earphonesPage .productsContainer .product .productDetails p {
   color: #979797;
   font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
@@ -480,7 +482,7 @@ footer .socialIcons a:hover {
   margin-bottom: clamp(3rem, 3rem + (100vw - 360px) * 0.133, 5rem);
   padding: 0 clamp(0.1rem, 0.1rem + (100vw - 360px) * 0.06, 1rem);
 }
-.earphonesPage .productContainer:last-of-type {
+.earphonesPage .productsContainer .product:last-of-type {
   margin-bottom: 2rem;
 }
 
@@ -494,34 +496,34 @@ footer .socialIcons a:hover {
   background-color: #101010;
   color: #fff;
   font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.0833, 2.75rem);
-  padding: 2rem;
+  padding: clamp(1.5rem, 1.5rem + (100vw - 360px) * 0.0333, 2rem);
 }
-.speakerPage .productContainer {
+.speakerPage .productsContainer .product {
   display: flex;
-  padding: 0 2rem;
-  margin: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem) 0;
+  margin: clamp(3rem, 3rem + (100vw - 360px) * 0.2, 6rem) 0;
   flex-direction: column;
 }
-.speakerPage .productContainer .productImage img {
+.speakerPage .productsContainer .product .productImage img {
   border-radius: 10px;
   width: 100%;
   height: 100%;
+  margin-bottom: 1rem;
 }
-.speakerPage .productContainer .productDetails {
+.speakerPage .productsContainer .product .productDetails {
   padding: 1rem 0;
 }
-.speakerPage .productContainer .productDetails span {
+.speakerPage .productsContainer .product .productDetails span {
   color: #d87d4a;
   letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.03166, 1.1rem);
   font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.5rem);
 }
-.speakerPage .productContainer .productDetails h2 {
+.speakerPage .productsContainer .product .productDetails h2 {
   font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.07916, 2.75rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 1.5rem clamp(1rem, 1rem + (100vw - 360px) * 0.133, 3rem);
 }
-.speakerPage .productContainer .productDetails p {
+.speakerPage .productsContainer .product .productDetails p {
   color: #979797;
   font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
@@ -529,7 +531,7 @@ footer .socialIcons a:hover {
   margin-bottom: clamp(3rem, 3rem + (100vw - 360px) * 0.133, 5rem);
   padding: 0 clamp(0.1rem, 0.1rem + (100vw - 360px) * 0.06, 1rem);
 }
-.speakerPage .productContainer:last-of-type {
+.speakerPage .productsContainer .product:last-of-type {
   margin-bottom: 2rem;
 }
 
@@ -543,34 +545,34 @@ footer .socialIcons a:hover {
   background-color: #101010;
   color: #fff;
   font-size: clamp(2rem, 2rem + (100vw - 360px) * 0.0833, 2.75rem);
-  padding: 2rem;
+  padding: clamp(1.5rem, 1.5rem + (100vw - 360px) * 0.0333, 2rem);
 }
-.headphonesPage .productContainer {
+.headphonesPage .productsContainer .product {
   display: flex;
-  padding: 0 2rem;
-  margin: clamp(5rem, 5rem + (100vw - 360px) * 0.2666, 9rem) 0;
+  margin: clamp(3rem, 3rem + (100vw - 360px) * 0.2, 6rem) 0;
   flex-direction: column;
 }
-.headphonesPage .productContainer .productImage img {
+.headphonesPage .productsContainer .product .productImage img {
   border-radius: 10px;
   width: 100%;
   height: 100%;
+  margin-bottom: 1rem;
 }
-.headphonesPage .productContainer .productDetails {
+.headphonesPage .productsContainer .product .productDetails {
   padding: 1rem 0;
 }
-.headphonesPage .productContainer .productDetails span {
+.headphonesPage .productsContainer .product .productDetails span {
   color: #d87d4a;
   letter-spacing: clamp(0.625rem, 0.625rem + (100vw - 360px) * 0.03166, 1.1rem);
   font-size: clamp(0.875rem, 0.875rem + (100vw - 360px) * 0.025, 1.5rem);
 }
-.headphonesPage .productContainer .productDetails h2 {
+.headphonesPage .productsContainer .product .productDetails h2 {
   font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.07916, 2.75rem);
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 1.5rem clamp(1rem, 1rem + (100vw - 360px) * 0.133, 3rem);
 }
-.headphonesPage .productContainer .productDetails p {
+.headphonesPage .productsContainer .product .productDetails p {
   color: #979797;
   font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
@@ -578,12 +580,12 @@ footer .socialIcons a:hover {
   margin-bottom: clamp(3rem, 3rem + (100vw - 360px) * 0.133, 5rem);
   padding: 0 clamp(0.1rem, 0.1rem + (100vw - 360px) * 0.06, 1rem);
 }
-.headphonesPage .productContainer:last-of-type {
+.headphonesPage .productsContainer .product:last-of-type {
   margin-bottom: 2rem;
 }
 
 .productInner {
-  padding: 2rem;
+  margin: clamp(1.5rem, 1.5rem + (100vw - 360px) * 0.0333, 2rem) 0;
 }
 .productInner section .imageContainer {
   margin: 2rem 0;
@@ -592,6 +594,7 @@ footer .socialIcons a:hover {
   border-radius: 10px;
   width: 100%;
   height: 100%;
+  margin-bottom: 1rem;
 }
 .productInner section .details .newProduct {
   color: #d87d4a;
@@ -707,9 +710,12 @@ footer .socialIcons a:hover {
 }
 
 .checkoutPage {
-  padding: 1.5rem;
+  padding: clamp(1.5rem, 1.5rem + (100vw - 360px) * 0.0333, 2rem);
   background-color: rgb(241, 241, 241);
   position: relative;
+}
+.checkoutPage .backBtn {
+  font-weight: 400;
 }
 .checkoutPage .checkoutContainer {
   margin-top: 1.5rem;
@@ -718,14 +724,14 @@ footer .socialIcons a:hover {
 }
 .checkoutPage .checkoutContainer section {
   background-color: #fff;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 10px;
 }
 .checkoutPage .checkoutContainer .checkout {
   display: grid;
 }
 .checkoutPage .checkoutContainer .checkout h1 {
-  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.1133, 2.6rem);
+  font-size: clamp(1.75rem, 1.75rem + (100vw - 360px) * 0.0666, 2.75rem);
 }
 .checkoutPage .checkoutContainer .checkout span {
   color: #d87d4a;
@@ -734,34 +740,30 @@ footer .socialIcons a:hover {
   letter-spacing: normal;
   font-weight: 800;
   margin-top: 2rem;
-  margin-bottom: 1rem;
   letter-spacing: 0.9px;
 }
 .checkoutPage .checkoutContainer .checkout label, .checkoutPage .checkoutContainer .checkout strong {
   display: block;
-  font-size: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0466, 1.1rem);
+  font-size: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0266, 1.15rem);
   color: #101010;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  margin-bottom: clamp(0.5rem, 0.5rem + (100vw - 360px) * 0.0333, 1rem);
+  margin-top: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0333, 1.25rem);
 }
 .checkoutPage .checkoutContainer .checkout input {
-  padding: 1rem;
+  padding: clamp(1rem, 1rem + (100vw - 360px) * 0.0333, 1.5rem);
   border-radius: 10px;
   border: 1px solid #b9b9b9;
   margin-bottom: 1rem;
 }
 .checkoutPage .checkoutContainer .checkout input::-moz-placeholder {
   font-weight: 600;
-  font-size: 13.25px;
-  font-size: 14.5px;
-  font-size: clamp(13.25px, 13.25px + (100vw - 360px) * 0.010416, 14.5px);
+  font-size: clamp(13.25px, 13.25px + (100vw - 360px) * 0.0177083, 17.5px);
   color: #979797;
 }
 .checkoutPage .checkoutContainer .checkout input::placeholder {
   font-weight: 600;
-  font-size: 13.25px;
-  font-size: 14.5px;
-  font-size: clamp(13.25px, 13.25px + (100vw - 360px) * 0.010416, 14.5px);
+  font-size: clamp(13.25px, 13.25px + (100vw - 360px) * 0.0177083, 17.5px);
   color: #979797;
 }
 .checkoutPage .checkoutContainer .checkout .paymentMethod {
@@ -783,21 +785,33 @@ footer .socialIcons a:hover {
   width: 1.25rem;
   transform: scale(1.3);
 }
-.checkoutPage .checkoutContainer .checkout .description {
+.checkoutPage .checkoutContainer .checkout .cashDescription {
   display: grid;
   gap: 1rem;
 }
-.checkoutPage .checkoutContainer .checkout .description p {
+.checkoutPage .checkoutContainer .checkout .cashDescription img {
+  width: clamp(48px, 48px + (100vw - 360px) * 0.01125, 75px);
+  height: clamp(48px, 48px + (100vw - 360px) * 0.01125, 75px);
+  margin: 1.5rem 0 1rem;
+}
+.checkoutPage .checkoutContainer .checkout .cashDescription p {
   color: #979797;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.06033, 1.39rem);
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.04416, 1.6rem);
+}
+.checkoutPage .checkoutContainer .checkout .emoneyDescription {
+  display: flex;
+  flex-direction: column;
+}
+.checkoutPage .checkoutContainer .checkout .emoneyDescription label {
+  margin-top: clamp(0.75rem, 0.75rem + (100vw - 360px) * 0.0333, 1.25rem);
 }
 .checkoutPage .checkoutContainer .summary {
   display: flex;
   flex-direction: column;
 }
 .checkoutPage .checkoutContainer .summary h2 {
-  margin-bottom: 2rem;
-  font-size: clamp(1.125rem, 1.125rem + (100vw - 360px) * 0.0766, 1.7rem);
+  margin-bottom: clamp(2rem, 2rem + (100vw - 360px) * 0.0666, 3rem);
+  font-size: clamp(1.125rem, 1.125rem + (100vw - 360px) * 0.0583, 2rem);
   letter-spacing: 1px;
 }
 .checkoutPage .checkoutContainer .summary div {
@@ -807,7 +821,7 @@ footer .socialIcons a:hover {
 .checkoutPage .checkoutContainer .summary div.product {
   align-items: center;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: clamp(1rem, 1rem + (100vw - 360px) * 0.0333, 1.5rem);
 }
 .checkoutPage .checkoutContainer .summary div.product .details {
   display: grid;
@@ -816,20 +830,20 @@ footer .socialIcons a:hover {
 }
 .checkoutPage .checkoutContainer .summary div.product img {
   border-radius: 10%;
-  width: clamp(64px, 64px + (100vw - 360px) * 0.2166, 90px);
-  height: clamp(64px, 64px + (100vw - 360px) * 0.2166, 90px);
+  width: clamp(64px, 64px + (100vw - 360px) * 0.17083, 105px);
+  height: clamp(64px, 64px + (100vw - 360px) * 0.17083, 105px);
 }
 .checkoutPage .checkoutContainer .summary div p {
   color: #979797;
   font-size: clamp(13.5px, 0.9375rem + (100vw - 360px) * 0.04375, 24px);
   line-height: 1.66;
   font-weight: 600;
-  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.0616, 1.4rem);
+  font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.0375, 1.5rem);
   line-height: 3rem;
 }
 .checkoutPage .checkoutContainer .summary div span {
   color: #101010;
-  font-size: clamp(1.125rem, 1.125rem + (100vw - 360px) * 0.03666, 1.4rem);
+  font-size: clamp(1.125rem, 1.125rem + (100vw - 360px) * 0.0316, 1.6rem);
   font-weight: 800;
 }
 .checkoutPage .checkoutContainer .summary div.grandTotal {
@@ -877,9 +891,11 @@ footer .socialIcons a:hover {
 }
 .confirmationOverlay .confirmation .icon {
   margin-bottom: 1.5rem;
+  width: clamp(64px, 64px + (100vw - 360px) * 0.0875, 85px);
+  height: clamp(64px, 64px + (100vw - 360px) * 0.0875, 85px);
 }
 .confirmationOverlay .confirmation h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.5rem + (100vw - 360px) * 0.05, 2.25rem);
   line-height: 1.15;
   margin-bottom: 1.125rem;
 }
@@ -917,13 +933,11 @@ footer .socialIcons a:hover {
   align-items: center;
 }
 .confirmationOverlay .confirmation .items .item .details img {
-  width: 64px;
-  width: clamp(64px, 64px + (100vw - 360px) * 0.2166, 90px);
-  height: 64px;
-  height: clamp(64px, 64px + (100vw - 360px) * 0.2166, 90px);
+  width: clamp(64px, 64px + (100vw - 360px) * 0.17083, 105px);
+  height: clamp(64px, 64px + (100vw - 360px) * 0.17083, 105px);
 }
 .confirmationOverlay .confirmation .items .item .details .name {
-  font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0533, 1.4rem);
+  font-size: clamp(1.125rem, 1.125rem + (100vw - 360px) * 0.0316, 1.6rem);
 }
 .confirmationOverlay .confirmation .items button {
   background-color: transparent;
@@ -941,13 +955,13 @@ footer .socialIcons a:hover {
 .confirmationOverlay .grandTotal {
   background-color: #101010;
   padding: 1.125rem 1.5rem;
-  margin-bottom: 1.125rem;
+  margin-bottom: clamp(1.125rem, 1.125rem + (100vw - 360px) * 0.0416, 1.75rem);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 .confirmationOverlay .grandTotal span {
   color: #fff;
-  font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0666, 1.5rem);
+  font-size: clamp(1.125rem, 1.125rem + (100vw - 360px) * 0.0316, 1.6rem);
   font-weight: 800;
 }
 
