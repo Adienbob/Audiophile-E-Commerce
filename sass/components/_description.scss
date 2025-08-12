@@ -1,23 +1,35 @@
 
 .descrbtion {
-   @extend %sections-break;
    text-align: center;
    margin-top: clamp(5rem, calc(5rem + (100vw - 360px) * 0.2666 ), 9rem);
+   @extend %pages-pads;
+   @media (min-width: 600px) {
+      margin-top: 5rem;
+   }
    img {
       width: 100%;
       height: 100%;
       border-radius: $radius-10;
-      margin-bottom: 2rem;
+      margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
    }
    h3 {
       font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
       margin-bottom: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
       color: $jet-black;
+      @media (min-width: 600px) {
+         font-size: clamp(2.1rem, calc(2.1rem + (100vw - 600px) * 0.056603 ), 3.6rem);
+         padding: 0 clamp(2rem, calc(2rem + (100vw - 600px) * 0.18867 ), 7rem);
+         margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
+         font-weight: 800;
+      }
       span {
          color: $dark-tan;
       }
    }
    p {
       @include paragraph-style;
+      @media (min-width: 600px) {
+         padding: 0 clamp(1.75rem, calc(1.75rem + (100vw - 600px) * 0.132075 ), 5.25rem);
+      }
    }
 }

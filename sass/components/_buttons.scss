@@ -4,7 +4,11 @@ a, button:not(aside button, .items button, header button) {
    letter-spacing: 0.05rem;
    text-decoration: none;
    text-align: center;
-   font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.0275 ) ,1.35rem);
+   font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.0275 ), 1.35rem);
+   @media (min-width: 600px) {
+      font-size: clamp(10px, calc(10px + (100vw - 600px) * 0.01886 ), 18px);
+      padding: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.01886 ), 1.25rem) clamp(1.5rem, calc(1.5rem + (100vw - 600px) * 0.04716 ), 2.75rem);
+   }
    letter-spacing: 1px;
    font-weight: 600;
    cursor: pointer;

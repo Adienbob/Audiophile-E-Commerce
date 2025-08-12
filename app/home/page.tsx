@@ -44,7 +44,7 @@ export default function Home() {
                </div>
             </div>
             <div className="YX1-Product">
-               <div className="ImageContainer">
+               <div className="imgContainer">
                   <picture>
                      <source media="(min-width: 1025px)" srcSet="/assets/home/desktop/image-earphones-yx1.jpg" />
                      <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-earphones-yx1.jpg" />

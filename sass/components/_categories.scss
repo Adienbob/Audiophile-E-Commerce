@@ -1,34 +1,54 @@
 
 .categories {
-   @extend %sections-break;
+   margin-bottom: clamp(5rem, calc(5rem + (100vw - 360px) * 0.1333 ) ,7rem);
    margin-top: clamp(5rem, calc(5rem + (100vw - 360px) * 0.2666 ), 9rem);
+   @extend %pages-pads;
+   @media (min-width: 600px) {
+      display: flex;
+      gap: 0.75rem;
+      margin: 0;
+   }
       div {
          display: flex;
          align-items: center;
-         justify-content: flex-end;
          flex-direction: column;
          background-color: $light-grey;
          margin: clamp(6rem, calc(6rem + (100vw - 360px) * 0.0666 ), 7rem) 0;
          border-radius: 10px;
          position: relative;
          padding-top: 6rem;
+         flex: 1;
          .productImage {
             position: absolute;
             transform: translate(-50%, -90%);
             width: 45%;
             height: 100%;
             z-index: 1;
+            @media (min-width: 600px) {
+               width: clamp(60%, calc(70% + (100vw - 600px) * -0.0235849), 70%);
+               height: clamp(70%, calc(70% + (100vw - 600px) * 0.035377 ), 90%);
+               transform: translate(-50%, -120%);
+               transform: translate(-50%, clamp(-120%, calc(-120% + (100vw - 600px) * 0.0707547), -90%));
+            }
          }
-         span {
+         .categoryName {
             font-weight: 600;
             color: $lighter-black;
             font-size: clamp(1.25rem, calc(1.25rem + (100vw - 360px) * 0.03 ), 1.7rem);
+            @media (min-width: 600px) {
+               font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 600px) * 0.0212264 ), 1.5rem);
+               font-weight: 800;
+               letter-spacing: 0.5px;
+            }
          }
          a {
             padding: 0;
             margin: 1rem;
             &:hover {
                color: $dark-tan;
+            }
+            @media (min-width: 600px) {
+               font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.018867 ), 1.25rem);
             }
          }
          .arrow {

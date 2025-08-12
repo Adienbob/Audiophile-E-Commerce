@@ -7,30 +7,50 @@ header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @media (min-width: 600px) {
+         justify-content: flex-start;
+      }
       .logo {
          width: 45%;
          height: auto;
+         @media (min-width: 600px) {
+            width: 25%;
+            margin-left: 2rem;
+         }
       }
-      button {
+      .cartIconButton {
          border:  none;
          cursor: pointer;
          position: relative;
          background-color: transparent;
          text-align: center;
+         @media (min-width: 600px) {
+            margin-left: auto;
+         }
          img {
             width: clamp(23px, calc(23px + (100vw - 360px) * 0.0625 ), 38px);
             height: clamp(20px, calc(20px + (100vw - 360px) * 0.0625 ), 35px);
             position: relative !important;
+            @media (min-width: 600px) {
+               width: clamp(23px, calc(23px + (100vw - 600px) * 0.011792 ), 28px);
+               height: clamp(20px, calc(20px + (100vw - 600px) * 0.011792 ), 25px);
+            }
          }
          p {
             position: absolute;
-            top: clamp(-22.5px, calc(-15px + (100vw - 360px) * -0.03125), -15px);;
+            top: clamp(-22.5px, calc(-15px + (100vw - 360px) * -0.03125), -15px);
             left: clamp(15px, calc(15px + (100vw - 360px) * 0.03125 ), 22.5px);
             background-color: $dark-tan;
             border-radius: 50%;
             font-size: clamp(16px, calc(16px + (100vw - 360px) * 0.00833 ), 18px);
             padding: clamp(2px, calc(2px + (100vw - 360px) * 0.0125 ), 5px) clamp(8px, calc(8px + (100vw - 360px) * 0.0125 ), 11px);
             color: $white;
+            @media (min-width: 600px) {
+               padding: 2px 8px;
+               font-size: clamp(12px, calc(12px + (100vw - 600px) * 0.004716 ), 14px);
+               top: -15px;
+               left: clamp(15px, calc(15px + (100vw - 600px) * 0.011792 ), 20px);
+            }
          }
       }
    }   

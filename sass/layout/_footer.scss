@@ -1,6 +1,6 @@
 
 footer {
-   @extend %pages-pads;
+   @extend %main-pads;
    background-color: $lighter-black;
    color: white;
    display: flex;
@@ -9,12 +9,24 @@ footer {
    position: relative;
    text-align: center;
    margin-top: clamp(5rem, calc(5rem + (100vw - 360px) * 0.2666 ), 9rem);
+   @media (min-width: 600px) {
+      margin-top: 5rem;
+      padding: clamp(3rem, calc(3rem + (100vw - 600px) * 0.037735 ), 4rem) clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
+      align-items: flex-start;
+      text-align: left;
+   }
    .logo, ul, p, strong {
       margin-bottom: 3rem;
+      @media (min-width: 600px) {
+         margin-bottom: 2rem;
+      }
    }
    .logo {
       width: 45%;
       height: auto;
+      @media (min-width: 600px) {
+         width: 20%;
+      }
    }
    &::before {
       content: "";
@@ -23,17 +35,32 @@ footer {
       width: 25%;
       height: 4px;
       top: 0;
+      @media (min-width: 600px) {
+         width: 12.5%;
+         left: 2rem;
+         left: 3rem;
+         left: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
+      }
    }
    ul { 
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      &.socialIcons {
+         gap: 0;
+      }
+      @media (min-width: 600px) {
+         flex-direction: row;
+      }
       a {
          font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.03333), 1.5rem);
          color: $light-grey;
          font-weight: 600;
          padding: 0;
          letter-spacing: 2px;
+         @media (min-width: 600px) {
+            font-size: clamp(0.6rem, calc(0.6rem + (100vw - 600px) * 0.018867 ), 1.1rem);
+         }
          &:hover {
             color: $dark-tan;
          }
@@ -42,24 +69,48 @@ footer {
    p {
       color: $dark-grey;
       font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.045), 1.6rem);
-      line-height: 2.5rem;
       line-height: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0833), 2.75rem);
-   }
-   strong {
-      color: $grey;
-      opacity: 0.75;
-      font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.045), 1.6rem);
+      @media (min-width: 600px) {
+         font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.020754 ), 1.3rem);
+         line-height: clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.0283018 ), 2rem);
+         margin-bottom: clamp(3rem, calc(3rem + (100vw - 600px) * 0.075471 ), 5rem);
       }
-   .socialIcons {
+   }
+   div {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      width: 32.5%;
-      margin-bottom: 0;
-      a {
-         &:hover {
-            color: $dark-tan;
+      @media (min-width: 600px) {
+         flex-direction: row;
+         align-items: center;
+         width: 100%;
+         justify-content: space-between;
+      }
+      strong {
+         color: $grey;
+         opacity: 0.75;
+         font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.045), 1.6rem);
+         @media (min-width: 600px) {
+            font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.0245283 ), 1.4rem);
+            margin-bottom: 0;
+         }
+      }
+      .socialIcons {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         width: 32.5%;
+         margin-bottom: 0;
+         @media (min-width: 600px) {
+            width: auto;
+            gap: clamp(0.5rem, calc(0.5rem + (100vw - 600px) * 0.06603 ), 2.25rem);
+            justify-content: center;
+         }
+         a {
+            &:hover {
+               color: $dark-tan;
+            }
          }
       }
    }

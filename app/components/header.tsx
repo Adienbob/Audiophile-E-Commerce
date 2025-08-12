@@ -11,7 +11,7 @@ export default function Header() {
    const {cartItems} = useCart()
 
    // checking mobile size to display dropdown component 
-   function useIsMobile(breakpoint = 768) {
+   function useIsMobile(breakpoint = 1024) {
       const [isMobile, setIsMobile] = useState(false); 
       
       useEffect(() => {
