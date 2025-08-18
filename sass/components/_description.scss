@@ -5,6 +5,7 @@
    @extend %pages-pads;
    @media (min-width: 600px) {
       margin-top: 5rem;
+      margin-top: 9rem;
    }
    img {
       width: 100%;
@@ -17,8 +18,8 @@
       margin-bottom: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
       color: $jet-black;
       @media (min-width: 600px) {
-         font-size: clamp(2.1rem, calc(2.1rem + (100vw - 600px) * 0.056603 ), 3.6rem);
-         padding: 0 clamp(2rem, calc(2rem + (100vw - 600px) * 0.18867 ), 7rem);
+         font-size: clamp(2.5rem, calc(2.5rem + (100vw - 600px) * 0.066037 ), 4.25rem);
+         letter-spacing: 1px;
          margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
          font-weight: 800;
       }
@@ -28,8 +29,5 @@
    }
    p {
       @include paragraph-style;
-      @media (min-width: 600px) {
-         padding: 0 clamp(1.75rem, calc(1.75rem + (100vw - 600px) * 0.132075 ), 5.25rem);
-      }
    }
 }

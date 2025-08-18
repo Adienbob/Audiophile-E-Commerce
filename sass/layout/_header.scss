@@ -1,8 +1,10 @@
 
 header {
    background-color: $lighter-black;
-   padding: 2rem;
    border-bottom: 1px solid $jet-grey;
+   @media (min-width: 600px) {
+      padding: 2rem clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
+   }
    nav {
       display: flex;
       justify-content: space-between;
@@ -14,7 +16,7 @@ header {
          width: 45%;
          height: auto;
          @media (min-width: 600px) {
-            width: 25%;
+            width: clamp(150px, calc(150px + (100vw - 600px) * 0.23584), 250px);
             margin-left: 2rem;
          }
       }

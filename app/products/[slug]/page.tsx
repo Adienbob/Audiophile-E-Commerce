@@ -1,7 +1,6 @@
 "use client";
 
 import { use } from "react";
-import Image from "next/image";
 import Button from "../../components/links";
 import Category from "../../components/categories";
 import { useData } from "../../context/dataContext";
@@ -12,7 +11,6 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
    const { slug } = use(params);
    const product = (useData().find((item) => item.slug === slug))
    if (!product) return <div>Product Not Found</div>;
-   
    return (
       <div className="productInner">
             <Button className="backBtn" path={`/${product.category}`}>
@@ -21,9 +19,9 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
          <section className="productDetails">
             <div className="imageContainer">
                <picture>
-                  <source media="(min-width: 1025)" srcSet={product.image.desktop} />
-                  <source media="(min-width: 769)" srcSet={product.image.tablet} />
-                  <Image width={654} height={654} src={product.image.desktop} alt="" quality={100} />
+                  <source media="(min-width: 1025px)" srcSet={product.image.desktop} />
+                  <source media="(min-width: 600px)" srcSet={product.image.tablet} />
+                  <img src={product.image.desktop} alt="" />
                </picture>
             </div>
             <div className="details">
@@ -49,35 +47,43 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
             </div>
          </article>
          <div className="productGallary">
-            <picture>
-               <source media="(min-width: 1025)" srcSet={product.gallery.first.desktop} />
-               <source media="(min-width: 769)" srcSet={product.gallery.first.tablet} />
-               <Image height={654} width={654} src={product.gallery.first.mobile} alt="" quality={100} />
-            </picture>
-            <picture>
-               <source media="(min-width: 1025)" srcSet={product.gallery.second.desktop} />
-               <source media="(min-width: 769)" srcSet={product.gallery.second.tablet} />
-               <Image height={654} width={654} src={product.gallery.second.mobile} alt="" quality={100} />
-            </picture>
-            <picture>
-               <source media="(min-width: 1025)" srcSet={product.gallery.third.desktop} />
-               <source media="(min-width: 769)" srcSet={product.gallery.third.tablet} />
-               <Image height={654} width={654} src={product.gallery.third.mobile} alt="" quality={100} />
-            </picture>
+            <div className="first">
+               <picture>
+                  <source media="(min-width: 1025px)" srcSet={product.gallery.first.desktop} />
+                  <source media="(min-width: 600px)" srcSet={product.gallery.first.tablet} />
+                  <img src={product.gallery.first.mobile} alt="" />
+               </picture>
+            </div>
+            <div className="second">
+               <picture>
+                  <source media="(min-width: 1025px)" srcSet={product.gallery.second.desktop} />
+                  <source media="(min-width: 600px)" srcSet={product.gallery.second.tablet} />
+                  <img src={product.gallery.second.mobile} alt="" />
+               </picture>
+            </div>
+            <div className="third">
+               <picture>
+                  <source media="(min-width: 1025px)" srcSet={product.gallery.third.desktop} />
+                  <source media="(min-width: 600px)" srcSet={product.gallery.third.tablet} />
+                  <img src={product.gallery.third.mobile} alt="" />
+               </picture>
+            </div>
          </div>
          <div className="suggestedProducts">
             <h4>YOU MAY ALSO LIKE</h4>
-            {product.others.map((item) => (
-               <div key={item.name} className="item">
-                  <picture>
-                     <source media="(min-width: 1025)" srcSet={item.image.desktop} />
-                     <source media="(min-width: 769)" srcSet={item.image.tablet} />
-                  <Image height={654} width={654} src={item.image.mobile} alt="" quality={100} />
-                  </picture>
-                  <h5>{item.name}</h5>
-                  <Button className="btnOrange" path={`/products/${item.slug}`}>SEE PRODUCT</Button>
-               </div>
-            ))}
+            <div className="items">
+               {product.others.map((item) => (
+                  <div key={item.name} className="item">
+                     <picture>
+                        <source media="(min-width: 1025px)" srcSet={item.image.desktop} />
+                        <source media="(min-width: 600px)" srcSet={item.image.tablet} />
+                        <img src={item.image.mobile} alt="" />
+                     </picture>
+                     <h5>{item.name}</h5>
+                     <Button className="btnOrange" path={`/products/${item.slug}`}>SEE PRODUCT</Button>
+                  </div>
+               ))}
+            </div>
          </div>
          <Category />
          <Description />

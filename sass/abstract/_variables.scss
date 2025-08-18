@@ -22,6 +22,6 @@ $radius-10: 10px;
 %pages-pads {
    padding: 0 clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0333), 2rem);
    @media (min-width: 600px) {
-      padding: 0 clamp(2rem, calc(2rem + (100vw - 360px) * 0.03773), 3rem); 
+      padding: 0 clamp(2rem, calc(2rem + (100vw - 600px) * 0.03773), 3rem); 
    }
 }
