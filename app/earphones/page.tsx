@@ -3,7 +3,7 @@
 import Product from "../components/product";
 import { useData } from "../context/dataContext";
 import Category from "../components/categories"
-import Descrbtion from "../components/description";
+import Description from "../components/description";
 
 
 export default function Earphones() {
@@ -13,22 +13,24 @@ export default function Earphones() {
    return (
       <div className="earphonesPage">
          <h1>EARPHONES</h1>
-         {data.map((product, index) => (
-            <Product 
-               key={product.id}
-               isNew={product.new} 
-               name={product.name} 
-               description={product.description} 
-               desktopSrc={product.image.desktop}
-               tabletSrc={product.image.tablet}
-               mobileSrc={product.image.mobile}
-               slug={product.slug}
-               index={index}
-            />
-         ))
-         }
+         <div className="productsContainer">
+            {data.map((product, index) => (
+               <Product 
+                  key={product.id}
+                  isNew={product.new} 
+                  name={product.name} 
+                  description={product.description} 
+                  desktopSrc={product.preview.desktop}
+                  tabletSrc={product.preview.tablet}
+                  mobileSrc={product.preview.mobile}
+                  slug={product.slug}
+                  index={index}
+               />
+            ))
+            }
+         </div>
          <Category />
-         <Descrbtion />
+         <Description />
       </div>
    )
 }

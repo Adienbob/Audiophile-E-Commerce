@@ -11,6 +11,11 @@ image: {
    tablet: string;
    desktop: string;
 };
+preview: {
+   mobile: string;
+   tablet: string;
+   desktop: string;
+}
 category: string;
 new: boolean;
 price: number;

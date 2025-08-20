@@ -1,8 +1,8 @@
 
-export default function Descrbtion() {
+export default function description() {
 
    return (
-      <div className="descrbtion">
+      <div className="description">
          <picture>
             <source media="(min-width: 1025px)" srcSet="/assets/shared/desktop/image-best-gear.jpg"/>
             <source media="(min-width: 600px)" srcSet="/assets/shared/tablet/image-best-gear.jpg"/>

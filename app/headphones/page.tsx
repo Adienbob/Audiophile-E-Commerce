@@ -3,7 +3,7 @@
 import Product from "../components/product";
 import { useData } from "../context/dataContext";
 import Category from "../components/categories"
-import Descrbtion from "../components/description";
+import Description from "../components/description";
 
 
 export default function Headphones() {
@@ -19,16 +19,16 @@ export default function Headphones() {
                   isNew={product.new} 
                   name={product.name} 
                   description={product.description} 
-                  desktopSrc={product.image.desktop}
-                  tabletSrc={product.image.tablet}
-                  mobileSrc={product.image.mobile}
+                  desktopSrc={product.preview.desktop}
+                  tabletSrc={product.preview.tablet}
+                  mobileSrc={product.preview.mobile}
                   slug={product.slug}
                   index={index}
                />
             ))
             }
             <Category />
-            <Descrbtion />
+            <Description />
          </div>
       </div>
    )

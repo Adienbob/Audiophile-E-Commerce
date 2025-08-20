@@ -6,8 +6,8 @@ a, button:not(aside button, .items button, header button) {
    text-align: center;
    font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.0275 ), 1.35rem);
    @media (min-width: 600px) {
-      font-size: clamp(10px, calc(10px + (100vw - 600px) * 0.035377 ), 25px);
-      padding: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.01886 ), 1.25rem) clamp(1.5rem, calc(1.5rem + (100vw - 600px) * 0.04716 ), 2.75rem);
+      font-size: clamp(0.8125rem, calc(0.8125rem + (100vw - 600px) * 0.0259433 ), 1.5rem);
+      padding: clamp(15px, calc(15px + (100vw - 600px) * 0.0117924 ), 20px) clamp(30px, calc(30px + (100vw - 600px) * 0.0353773 ), 45px);
    }
    letter-spacing: 1px;
    font-weight: 600;
