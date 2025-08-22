@@ -160,8 +160,7 @@
                font-size: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.0316), 1.6rem);
                font-weight: 800;
                @media (min-width: 600px) {
-                  font-size: 1.125rem;
-                  font-size: 1.75rem;
+                  font-size: clamp(1.125rem, calc(1.125rem + (100vw - 600px) * 0.0235849), 1.75rem);
                }
             }
             p {

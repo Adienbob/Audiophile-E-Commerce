@@ -1,5 +1,6 @@
 
 import Link from "next/link"
+import Image from "next/image"
 import QuantityButton from "./productBtn";
 import {useEffect, useRef} from "react"
 import { useCart } from "../context/cartContext";
@@ -61,11 +62,7 @@ export default function Cart({cartState, setCartState}: cartTypes) {
                return (
                   <div key={product.id} className="cartItem">
                      <div className="productDetails">
-                     <picture>
-                        <source media="(min-width:1024px)" srcSet={product.image.desktop} />
-                        <source media="(min-width:768px)" srcSet={product.image.tablet} />
-                        <img src={product.image.mobile} alt="" />
-                     </picture>
+                        <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.jpg`} alt=""  quality={100}/>
                         <div className="details">
                            <span>{product.name.split(" ", 1)}</span>
                            <p>$ {product.price.toLocaleString()}</p>

@@ -27,6 +27,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
       border-radius: $radius-10;
+      @media (min-width: 600px) {
+         width: 70%;
+      }
       .cartHeader {
          display: flex;
          justify-content: space-between;
@@ -36,6 +39,9 @@
             font-weight: 800;
             font-size: clamp(1.25rem, calc(1.25rem + (100vw - 360px) * 0.0666), 1.75rem);
             color: $lighter-black;
+            @media (min-width: 600px) {
+               font-size: clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.0283018), 2rem);
+            }
          }
          button {
             background-color: transparent;
@@ -45,6 +51,9 @@
             transition: 0.3s;
             font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0466), 1.35rem);
             cursor: pointer;
+            @media (min-width: 600px) {
+               font-size: clamp(1rem, calc(1rem + (100vw - 600px) * 0.0283018), 1.75rem);
+            }
             &:hover {
                color: $dark-tan;
             }
@@ -67,13 +76,24 @@
                   border-radius: $radius-5;
                   width: clamp(64px, calc(64px + (100vw - 360px) * 0.2166), 90px);
                   height: clamp(64px, calc(64px + (100vw - 360px) * 0.2166), 90px);
+                  @media (min-width: 600px) {
+                     width: clamp(64px, calc(64px + (100vw - 600px) * 0.061320), 90px);
+                     height: clamp(64px, calc(64px + (100vw - 600px) * 0.061320), 90px);
+                  }
                }
                .details {
                   margin-left: 0.5rem;
+                  @media (min-width: 600px) {
+                     margin-left: clamp(4rem, calc(4rem + (100vw - 600px) * 0.1509433), 8rem);
+                  }
                   span {
                      color: $lighter-black;
                      font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0533), 1.4rem);
                      font-weight: 800;
+                     @media (min-width: 600px) {
+                        font-size: clamp(1rem, calc(1rem + (100vw - 600px) * 0.0283018), 1.75rem);
+                        letter-spacing: 0.5px;
+                     }
                   }
                   p {
                      @include paragraph-style;
@@ -83,6 +103,16 @@
             }
             .productBtn {
                @include quantityButton;
+               @media (min-width: 600px) {
+                  span {
+                     padding: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.0188679), 1.25rem) clamp(1rem, calc(1rem + (100vw - 600px) * 0.0283018), 1.75rem);
+                     font-size:clamp(0.9375rem, calc(0.9375rem + (100vw - 600px) * 0.0117924), 1.25rem);
+                  }
+                  button {
+                     padding: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.0188679), 1.25rem) clamp(1rem, calc(1rem + (100vw - 600px) * 0.0283018), 1.75rem);
+                     font-size:clamp(0.9375rem, calc(0.9375rem + (100vw - 600px) * 0.0117924), 1.25rem);
+                  }
+               }
             }
          }
          .totalPrice {
@@ -96,6 +126,9 @@
                color: $lighter-black;
                font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0666), 1.5rem);
                font-weight: 800;
+               @media (min-width: 600px) {
+                  font-size:clamp(1rem, calc(1rem + (100vw - 600px) * 0.0283018), 1.75rem);
+               }
             }
          }
          a {

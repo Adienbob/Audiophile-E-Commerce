@@ -307,6 +307,11 @@ footer {
   transform: translate(-50%, -50%);
   border-radius: 10px;
 }
+@media (min-width: 600px) {
+  .cartOverlay .cartContainer {
+    width: 70%;
+  }
+}
 .cartOverlay .cartContainer .cartHeader {
   display: flex;
   justify-content: space-between;
@@ -318,6 +323,11 @@ footer {
   font-size: clamp(1.25rem, 1.25rem + (100vw - 360px) * 0.0666, 1.75rem);
   color: #101010;
 }
+@media (min-width: 600px) {
+  .cartOverlay .cartContainer .cartHeader span {
+    font-size: clamp(1.25rem, 1.25rem + (100vw - 600px) * 0.0283018, 2rem);
+  }
+}
 .cartOverlay .cartContainer .cartHeader button {
   background-color: transparent;
   border: none;
@@ -326,6 +336,11 @@ footer {
   transition: 0.3s;
   font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0466, 1.35rem);
   cursor: pointer;
+}
+@media (min-width: 600px) {
+  .cartOverlay .cartContainer .cartHeader button {
+    font-size: clamp(1rem, 1rem + (100vw - 600px) * 0.0283018, 1.75rem);
+  }
 }
 .cartOverlay .cartContainer .cartHeader button:hover {
   color: #d87d4a;
@@ -357,13 +372,30 @@ footer {
   width: clamp(64px, 64px + (100vw - 360px) * 0.2166, 90px);
   height: clamp(64px, 64px + (100vw - 360px) * 0.2166, 90px);
 }
+@media (min-width: 600px) {
+  .cartOverlay .cartContainer .cartBody .cartItem .productDetails img {
+    width: clamp(64px, 64px + (100vw - 600px) * 0.06132, 90px);
+    height: clamp(64px, 64px + (100vw - 600px) * 0.06132, 90px);
+  }
+}
 .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details {
   margin-left: 0.5rem;
+}
+@media (min-width: 600px) {
+  .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details {
+    margin-left: clamp(4rem, 4rem + (100vw - 600px) * 0.1509433, 8rem);
+  }
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details span {
   color: #101010;
   font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0533, 1.4rem);
   font-weight: 800;
+}
+@media (min-width: 600px) {
+  .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details span {
+    font-size: clamp(1rem, 1rem + (100vw - 600px) * 0.0283018, 1.75rem);
+    letter-spacing: 0.5px;
+  }
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details p {
   color: #979797;
@@ -386,7 +418,7 @@ footer {
 }
 @media (min-width: 600px) {
   .cartOverlay .cartContainer .cartBody .cartItem .productBtn {
-    font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.021226, 1.5rem);
+    font-size: clamp(0.9375rem, 0.9375rem + (100vw - 600px) * 0.021226, 1.5rem);
   }
 }
 .cartOverlay .cartContainer .cartBody .cartItem .productBtn span {
@@ -418,6 +450,16 @@ footer {
   background-color: #b9b9b9;
   color: #d87d4a;
 }
+@media (min-width: 600px) {
+  .cartOverlay .cartContainer .cartBody .cartItem .productBtn span {
+    padding: clamp(0.75rem, 0.75rem + (100vw - 600px) * 0.0188679, 1.25rem) clamp(1rem, 1rem + (100vw - 600px) * 0.0283018, 1.75rem);
+    font-size: clamp(0.9375rem, 0.9375rem + (100vw - 600px) * 0.0117924, 1.25rem);
+  }
+  .cartOverlay .cartContainer .cartBody .cartItem .productBtn button {
+    padding: clamp(0.75rem, 0.75rem + (100vw - 600px) * 0.0188679, 1.25rem) clamp(1rem, 1rem + (100vw - 600px) * 0.0283018, 1.75rem);
+    font-size: clamp(0.9375rem, 0.9375rem + (100vw - 600px) * 0.0117924, 1.25rem);
+  }
+}
 .cartOverlay .cartContainer .cartBody .totalPrice {
   display: flex;
   justify-content: space-between;
@@ -438,6 +480,11 @@ footer {
   color: #101010;
   font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0666, 1.5rem);
   font-weight: 800;
+}
+@media (min-width: 600px) {
+  .cartOverlay .cartContainer .cartBody .totalPrice span {
+    font-size: clamp(1rem, 1rem + (100vw - 600px) * 0.0283018, 1.75rem);
+  }
 }
 .cartOverlay .cartContainer .cartBody a {
   display: block;
@@ -1102,7 +1149,7 @@ footer div .socialIcons a:hover {
 }
 @media (min-width: 600px) {
   .productInner section .details .quantityButton {
-    font-size: clamp(0.9375rem, 0.9375rem + (100vw - 360px) * 0.021226, 1.5rem);
+    font-size: clamp(0.9375rem, 0.9375rem + (100vw - 600px) * 0.021226, 1.5rem);
   }
 }
 .productInner section .details .quantityButton span {
@@ -1507,8 +1554,7 @@ footer div .socialIcons a:hover {
 }
 @media (min-width: 600px) {
   .checkoutPage .checkoutContainer .summary div span {
-    font-size: 1.125rem;
-    font-size: 1.75rem;
+    font-size: clamp(1.125rem, 1.125rem + (100vw - 600px) * 0.0235849, 1.75rem);
   }
 }
 .checkoutPage .checkoutContainer .summary div p {
@@ -1572,15 +1618,34 @@ footer div .socialIcons a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+@media (min-width: 600px) {
+  .confirmationOverlay .confirmation {
+    max-height: 70vh;
+    width: 70%;
+    padding: clamp(2rem, 2rem + (100vw - 600px) * 0.037735, 3rem);
+  }
+}
 .confirmationOverlay .confirmation .icon {
   margin-bottom: 1.5rem;
   width: clamp(64px, 64px + (100vw - 360px) * 0.0875, 85px);
   height: clamp(64px, 64px + (100vw - 360px) * 0.0875, 85px);
 }
+@media (min-width: 600px) {
+  .confirmationOverlay .confirmation .icon {
+    width: clamp(64px, 64px + (100vw - 600px) * 0.0966981, 105px);
+    height: clamp(64px, 64px + (100vw - 600px) * 0.0966981, 105px);
+  }
+}
 .confirmationOverlay .confirmation h3 {
   font-size: clamp(1.5rem, 1.5rem + (100vw - 360px) * 0.05, 2.25rem);
   line-height: 1.15;
   margin-bottom: 1.125rem;
+}
+@media (min-width: 600px) {
+  .confirmationOverlay .confirmation h3 {
+    font-size: clamp(1.5rem, 1.5rem + (100vw - 600px) * 0.037735, 2.5rem);
+    letter-spacing: 0.5px;
+  }
 }
 .confirmationOverlay .confirmation a {
   display: block;
@@ -1596,12 +1661,18 @@ footer div .socialIcons a:hover {
     font-size: clamp(0.9375rem, 0.9375rem + (100vw - 600px) * 0.0247641, 25.5px);
   }
 }
-.confirmationOverlay .confirmation .cartEmpty span {
+@media (min-width: 600px) {
+  .confirmationOverlay .confirmation .container {
+    display: flex;
+    margin: clamp(2rem, 2rem + (100vw - 600px) * 0.037735, 3rem) 0 clamp(2rem, 2rem + (100vw - 600px) * 0.037735, 3rem);
+  }
+}
+.confirmationOverlay .confirmation .container .cartEmpty span {
   font-size: clamp(1rem, 1rem + (100vw - 360px) * 0.0666, 1.5rem);
   font-weight: 800;
   color: #000;
 }
-.confirmationOverlay .confirmation .items {
+.confirmationOverlay .confirmation .container .items {
   background-color: #f1f1f1;
   padding: 1.125rem 1.5rem 1.125rem 1rem;
   margin-top: 1.125rem;
@@ -1609,25 +1680,45 @@ footer div .socialIcons a:hover {
   border-top-right-radius: 10px;
   text-align: center;
 }
-.confirmationOverlay .confirmation .items .item {
+@media (min-width: 600px) {
+  .confirmationOverlay .confirmation .container .items {
+    width: 55%;
+    margin-top: 0;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+.confirmationOverlay .confirmation .container .items .item {
   text-align: initial;
   display: flex;
   justify-content: space-between;
   font-weight: 600;
   align-items: center;
 }
-.confirmationOverlay .confirmation .items .item .details {
+.confirmationOverlay .confirmation .container .items .item .details {
   display: flex;
   align-items: center;
 }
-.confirmationOverlay .confirmation .items .item .details img {
+.confirmationOverlay .confirmation .container .items .item .details img {
   width: clamp(64px, 64px + (100vw - 360px) * 0.17083, 105px);
   height: clamp(64px, 64px + (100vw - 360px) * 0.17083, 105px);
 }
-.confirmationOverlay .confirmation .items .item .details .name {
+@media (min-width: 600px) {
+  .confirmationOverlay .confirmation .container .items .item .details img {
+    width: clamp(50px, 50px + (100vw - 600px) * 0.094339, 90px);
+    height: clamp(50px, 50px + (100vw - 600px) * 0.094339, 90px);
+  }
+}
+.confirmationOverlay .confirmation .container .items .item .details .name {
   font-size: clamp(1.125rem, 1.125rem + (100vw - 360px) * 0.0316, 1.6rem);
 }
-.confirmationOverlay .confirmation .items button {
+@media (min-width: 600px) {
+  .confirmationOverlay .confirmation .container .items .item .details .name {
+    font-size: clamp(1rem, 1rem + (100vw - 600px) * 0.0283018, 1.75rem);
+  }
+}
+.confirmationOverlay .confirmation .container button {
   background-color: transparent;
   border: none;
   color: #b9b9b9;
@@ -1637,7 +1728,7 @@ footer div .socialIcons a:hover {
   font-weight: 800;
   cursor: pointer;
 }
-.confirmationOverlay .confirmation .items button:hover {
+.confirmationOverlay .confirmation .container button:hover {
   color: #d87d4a;
 }
 .confirmationOverlay .grandTotal {
@@ -1647,10 +1738,24 @@ footer div .socialIcons a:hover {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
+@media (min-width: 600px) {
+  .confirmationOverlay .grandTotal {
+    width: 45%;
+    margin-bottom: 0;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
 .confirmationOverlay .grandTotal span {
   color: #fff;
   font-size: clamp(1.125rem, 1.125rem + (100vw - 360px) * 0.0316, 1.6rem);
   font-weight: 800;
+}
+@media (min-width: 600px) {
+  .confirmationOverlay .grandTotal span {
+    font-size: clamp(1.125rem, 1.125rem + (100vw - 600px) * 0.0283018, 1.875rem);
+  }
 }
 
 * {
