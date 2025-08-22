@@ -202,6 +202,8 @@
       }
    }
    .description {
-      margin: 0;
+      @media (min-width: 600px)  {
+         margin-top: clamp(7rem, calc(7rem + (100vw - 600px) * 0.0754716) ,9rem);
+      }
    }
 }

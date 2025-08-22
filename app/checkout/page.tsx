@@ -81,17 +81,17 @@ export default function Checkout() {
                <input type="text" id="country" placeholder="United States"/>
                <span>PAYMENT DETAILS</span>
                <div className="paymentContainer">
-                  <div className="payment">
                      <strong>Payment Method</strong>
-                     <div className="paymentMethod">
-                        <input type="radio" name="payment" id="eMoney" onClick={() => setPayment("eMoney")} />
-                        <label htmlFor="eMoney">e-Money</label>
+                     < div className="payment">
+                        <div className="paymentMethod">
+                           <input type="radio" name="payment" id="eMoney" onClick={() => setPayment("eMoney")} />
+                           <label htmlFor="eMoney">e-Money</label>
+                        </div>
+                        <div className="paymentMethod">
+                           <input type="radio" name="payment" id="cash" onClick={() => setPayment("cash")} />
+                           <label htmlFor="cash">Cash on Delivery</label>
+                        </div>
                      </div>
-                     <div className="paymentMethod">
-                        <input type="radio" name="payment" id="cash" onClick={() => setPayment("cash")} />
-                        <label htmlFor="cash">Cash on Delivery</label>
-                     </div>
-                  </div>
                </div>
                <div className="paymentDescription">
                   {payment === "eMoney" ? <EMoneyDescription /> : <CashDescription />}
