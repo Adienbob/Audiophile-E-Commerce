@@ -3,30 +3,52 @@
    text-align: center;
    margin-top: clamp(5rem, calc(5rem + (100vw - 360px) * 0.2666 ), 9rem);
    @extend %pages-pads;
-   @media (min-width: 600px) {
-      margin-top: 9rem;
-      margin-top: 0rem;
+   @media (min-width: 1024px) {
+      display: grid;
+      grid-template-columns: 45% auto;
+      flex-direction: row-reverse;
+      text-align: left;
+      gap: 100px;
+      align-items: center;
+      margin: 150px 0;
    }
-   img {
-      width: 100%;
-      border-radius: $radius-10;
-      margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
-   }
-   h3 {
-      font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
-      margin-bottom: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
-      color: $jet-black;
-      @media (min-width: 600px) {
-         font-size: clamp(2.5rem, calc(2.5rem + (100vw - 600px) * 0.066037 ), 4.25rem);
-         letter-spacing: 1px;
+   picture {
+      grid-column: 2;
+      img {
+         width: 100%;
+         border-radius: $radius-10;
          margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
-         font-weight: 800;
-      }
-      span {
-         color: $dark-tan;
+         @media (min-width: 1024px) {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0;
+         }
       }
    }
-   p {
-      @include paragraph-style;
+   div {
+      grid-column: 1;
+      grid-row: 1;
+      h3 {
+         font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
+         margin-bottom: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
+         color: $jet-black;
+         @media (min-width: 600px) {
+            font-size: clamp(2.5rem, calc(2.5rem + (100vw - 600px) * 0.066037 ), 4.25rem);
+            letter-spacing: 1px;
+            margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
+            font-weight: 800;
+         }
+         @media (min-width: 1024px) {
+            font-size: 35px;
+            letter-spacing: 1.43px;
+            line-height: 44px;
+         }
+         span {
+            color: $dark-tan;
+         }
+      }
+      p {
+         @include paragraph-style;
+      }
    }
 }

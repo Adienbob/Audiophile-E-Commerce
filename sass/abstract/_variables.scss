@@ -24,4 +24,7 @@ $radius-10: 10px;
    @media (min-width: 600px) {
       padding: 0 clamp(2rem, calc(2rem + (100vw - 600px) * 0.03773), 3rem); 
    }
+   @media (min-width: 1024px) {
+      padding: 0 100px;
+   }
 }

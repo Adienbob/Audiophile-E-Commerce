@@ -40,11 +40,7 @@ export default function Confirmation({total}: confirmationProps) {
             return (
                <div key={product.id} className="item">
                   <div className="details">
-                     <picture>
-                        <source media="(min-width: 1024px)" srcSet={product.image.desktop} />
-                        <source media="(min-width: 600px)" srcSet={product.image.tablet} />
-                        <img src={product.image.mobile} alt="" />
-                     </picture>
+                     <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.jpg`} alt=""  quality={100}/>
                      <div className="itemDetails">
                         <span className="name">{product.name.split(" ", 1)}</span>
                         <p className="price">$ {product.price.toLocaleString()}</p>

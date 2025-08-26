@@ -18,7 +18,7 @@ export default function Product({isNew, name, description, desktopSrc, tabletSrc
       <div className="product" id={index % 2 == 0 ? "even" : "odd"}>
          <div className="productImage"> 
             <picture>
-               <source media="(min-width: 1025px)" srcSet={desktopSrc} />
+               <source media="(min-width: 1024px)" srcSet={desktopSrc} />
                <source media="(min-width: 600px)" srcSet={tabletSrc} />
                <img src={mobileSrc} alt="" />
             </picture>

@@ -19,7 +19,7 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
          <section className="productDetails">
             <div className="imageContainer">
                <picture>
-                  <source media="(min-width: 1025px)" srcSet={product.image.desktop} />
+                  <source media="(min-width: 1024px)" srcSet={product.image.desktop} />
                   <source media="(min-width: 600px)" srcSet={product.image.tablet} />
                   <img src={product.image.desktop} alt="" />
                </picture>
@@ -49,21 +49,21 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
          <div className="productGallary">
             <div className="first">
                <picture>
-                  <source media="(min-width: 1025px)" srcSet={product.gallery.first.desktop} />
+                  <source media="(min-width: 1024px)" srcSet={product.gallery.first.desktop} />
                   <source media="(min-width: 600px)" srcSet={product.gallery.first.tablet} />
                   <img src={product.gallery.first.mobile} alt="" />
                </picture>
             </div>
             <div className="second">
                <picture>
-                  <source media="(min-width: 1025px)" srcSet={product.gallery.second.desktop} />
+                  <source media="(min-width: 1024px)" srcSet={product.gallery.second.desktop} />
                   <source media="(min-width: 600px)" srcSet={product.gallery.second.tablet} />
                   <img src={product.gallery.second.mobile} alt="" />
                </picture>
             </div>
             <div className="third">
                <picture>
-                  <source media="(min-width: 1025px)" srcSet={product.gallery.third.desktop} />
+                  <source media="(min-width: 1024px)" srcSet={product.gallery.third.desktop} />
                   <source media="(min-width: 600px)" srcSet={product.gallery.third.tablet} />
                   <img src={product.gallery.third.mobile} alt="" />
                </picture>
@@ -75,7 +75,7 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                {product.others.map((item) => (
                   <div key={item.name} className="item">
                      <picture>
-                        <source media="(min-width: 1025px)" srcSet={item.image.desktop} />
+                        <source media="(min-width: 1024px)" srcSet={item.image.desktop} />
                         <source media="(min-width: 600px)" srcSet={item.image.tablet} />
                         <img src={item.image.mobile} alt="" />
                      </picture>

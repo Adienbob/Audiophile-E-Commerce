@@ -105,11 +105,7 @@ export default function Checkout() {
                   return (
                      <div key={product.id} className="product">
                         <div className="detailsContainer">
-                           <picture>
-                              <source media="(min-width: 1025)" srcSet={product.image.desktop} />
-                              <source media="(min-width: 600)" srcSet={product.image.tablet} />
-                              <img src={product.image.mobile} alt="" />
-                           </picture>
+                           <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.jpg`} alt=""  quality={100}/>
                            <div className="details">
                               <span className="name">{product.name.split(" ", 1)}</span>
                               <p>$ {product.price.toLocaleString()}</p>

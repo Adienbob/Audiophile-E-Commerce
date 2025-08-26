@@ -6,7 +6,7 @@ export default function Home() {
    return (
       <div className="homePage">
          <picture>
-            <source media="(min-width: 1025px)" srcSet="/assets/home/desktop/image-hero.jpg" />
+            <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-hero.jpg" />
             <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-hero.jpg" />
             <img className="background" src="/assets/home/mobile/image-hero.jpg" alt="" />
          </picture>
@@ -25,15 +25,17 @@ export default function Home() {
          <div className="featuredProducts">
             <div className="ZX9-Product">
                <picture>
-                  <source media="(min-width: 1025px)" srcSet="/assets/home/desktop/image-speaker-zx9.png" />
+                  <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-speaker-zx9.png" />
                   <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-speaker-zx9.png" />
                   <img className="image" src="/assets/home/mobile/image-speaker-zx9.png" alt="" />
                </picture>
-               <h2>ZX9 SPEAKER</h2>
-               <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-               <Button className="btnBlack" path="/products/zx9-speaker">
-                  SEE PRODUCT
-               </Button>
+               <div className="details">
+                  <h2>ZX9 SPEAKER</h2>
+                  <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+                  <Button className="btnBlack" path="/products/zx9-speaker">
+                     SEE PRODUCT
+                  </Button>
+               </div>
             </div>
             <div className="ZX7-Product">
                <div className="details">
@@ -46,7 +48,7 @@ export default function Home() {
             <div className="YX1-Product">
                <div className="imgContainer">
                   <picture>
-                     <source media="(min-width: 1025px)" srcSet="/assets/home/desktop/image-earphones-yx1.jpg" />
+                     <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-earphones-yx1.jpg" />
                      <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-earphones-yx1.jpg" />
                      <img className="productIamge" src="/assets/home/mobile/image-earphones-yx1.jpg" alt="" />
                   </picture>

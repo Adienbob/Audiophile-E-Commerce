@@ -1,10 +1,16 @@
 @mixin paragraph-style {
-   color: $dark-grey;
+   color: $jet-black;
    font-size: clamp(13.5px, calc(0.9375rem + (100vw - 360px) * 0.04375) ,24px);
    line-height: 1.66;
    font-weight: 500;
+   opacity: 50%;
    @media (min-width: 600px) {
       font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 600px) * 0.0247641 ) , 25.5px);
+   }
+   @media (min-width: 1024px) {
+      font-size: 0.9375rem;
+      line-height: 25px;
+      text-align: left;
    }
 }
 
@@ -26,6 +32,10 @@
       font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 600px) * 0.013679 ) ,1.3rem);
       letter-spacing: clamp(10px, calc(10px + (100vw - 600px) * 0.023584 ) ,20px);
    }
+   @media (min-width: 1024px) {
+      letter-spacing: 10px;
+      font-size: 0.9375rem;
+   }
 }
 
 
@@ -43,6 +53,10 @@
          font-size: clamp(2.5rem, calc(2.5rem + (100vw - 600px) * 0.075471 ) ,4.5rem);
          padding: clamp(3rem, calc(3rem + (100vw - 600px) * 0.037735 ) ,4rem);
       }
+      @media (min-width: 1024px) {
+         font-size: 2.5rem;
+         padding: 6.25rem 0;
+      }
    }
    .productsContainer {
       @extend %pages-pads;
@@ -55,15 +69,39 @@
       .product {
          display: flex;
          flex-direction: column;
+         @media (min-width: 1024px) {
+            flex-direction: row;
+            gap: 130px;
+            text-align: left;
+            &#even {
+               flex-direction: row-reverse
+            }
+         }
          .productImage {
+            @media (min-width: 1024px) {
+               flex: 1;
+               width: 100%;
+               height: 80%;
+               display: flex;
+               justify-content: center;
+               justify-items: center;
+               align-items: center;
+               align-self: center;
+            }
             img {
                @include productImge-style;
+               // @media (min-width: 1024px) {
+               //    width: 90%;
+               // }
             }
          }
          .productDetails {
             margin: 1rem 0;
             @media (min-width: 600px) {
                margin: clamp(2.5rem, calc(2.5rem + (100vw - 600px) * 0.037735 ) ,3.5rem) 0 clamp(1rem, calc(1rem + (100vw - 600px) * 0.037735 ) ,2rem);
+            }
+            @media (min-width: 1024px) {
+               flex: 1;
             }
             span {
                @include darkTan-style;
@@ -79,6 +117,11 @@
                   line-height: clamp(44px, calc(44px + (100vw - 600px) * 0.077830 ) ,77px);
                   letter-spacing: 1px;
                }
+               @media (min-width: 1024px) {
+                  line-height: 44px;
+                  font-size: 2.5rem;
+                  margin: 1rem 0 2rem;
+               }
             }
             p {
                @include paragraph-style;
@@ -87,6 +130,9 @@
                @media (min-width: 600px) {
                   margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.075471 ) ,4rem);
                   padding: 0;
+               }
+               @media (min-width: 1024px) {
+                  margin-bottom: 3.5rem;
                }
             }
          }
@@ -100,6 +146,9 @@
       @media (min-width: 600px) {
          margin: clamp(1rem, calc(1rem + (100vw - 600px) * 0.1132075 ) ,4rem) 0;
       }
+      @media (min-width: 1024px) {
+         margin: 0;
+      }
    } 
    @media (min-width: 600px) {
       .categories,
@@ -110,6 +159,13 @@
          div {
             margin: 0;
          }
+      }
+   }
+   @media (min-width: 1024px) {
+      .categories, 
+      .description {
+         margin: 0;
+         padding: 0;
       }
    }
 }
