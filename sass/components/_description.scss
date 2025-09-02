@@ -5,10 +5,13 @@
    @extend %pages-pads;
    @media (min-width: 1024px) {
       display: grid;
-      grid-template-columns: 45% auto;
+      grid-template-columns: 54.5% auto;
+      grid-template-columns: auto calc(50% - 15px);
       flex-direction: row-reverse;
       text-align: left;
-      gap: 100px;
+      gap: 125px;
+      gap: 75px;
+      gap: clamp(75px, calc(75px + (100vw - 1024px) * 0.1201923 ) , 125px);;
       align-items: center;
       margin: 150px 0;
    }
@@ -19,9 +22,9 @@
          border-radius: $radius-10;
          margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
          @media (min-width: 1024px) {
-            width: 100%;
             height: auto;
             margin-bottom: 0;
+            width: 100%;
          }
       }
    }
@@ -40,8 +43,11 @@
          }
          @media (min-width: 1024px) {
             font-size: 35px;
+            font-size: 46.5px;
+            font-size: clamp(35px, calc(35px + (100vw - 1024px) * 0.0276442 ) , 46.5px);
             letter-spacing: 1.43px;
             line-height: 44px;
+            margin-bottom: 2rem;
          }
          span {
             color: $dark-tan;
@@ -49,6 +55,11 @@
       }
       p {
          @include paragraph-style;
+         @media (min-width: 1024px) {
+            width: 440px;
+            width: 343px;
+            width: clamp(343px, calc(343px + (100vw - 1024px) * 0.233173 ) , 440px);
+         }
       }
    }
 }

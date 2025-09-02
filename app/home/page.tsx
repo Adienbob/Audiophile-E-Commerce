@@ -5,21 +5,23 @@ import Button from "../components/links";
 export default function Home() {
    return (
       <div className="homePage">
-         <picture>
-            <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-hero.jpg" />
-            <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-hero.jpg" />
-            <img className="background" src="/assets/home/mobile/image-hero.jpg" alt="" />
-         </picture>
-         <div className="hero">
-            <span>NEW PRODUCT</span>
-            <h1>XX99 MARK II <strong>HEADPHONE</strong></h1>
-            <p>
-               Experience natural, lifelike audio and exceptional build quality
-               made for the passionate music enthusiast.
-            </p>
-            <Button className="btnOrange" path="/products/xx99-mark-two-headphones">
-               SEE PRODUCT
-            </Button>
+         <div className="heroContainer">
+            <picture>
+               <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-hero.jpg" />
+               <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-hero.jpg" />
+               <img className="background" src="/assets/home/mobile/image-hero.jpg" alt="" />
+            </picture>
+            <div className="hero">
+               <span>NEW PRODUCT</span>
+               <h1>XX99 MARK II <strong>HEADPHONE</strong></h1>
+               <p>
+                  Experience natural, lifelike audio and exceptional build quality
+                  made for the passionate music enthusiast.
+               </p>
+               <Button className="btnOrange" path="/products/xx99-mark-two-headphones">
+                  SEE PRODUCT
+               </Button>
+            </div>
          </div>
          <Category />
          <div className="featuredProducts">

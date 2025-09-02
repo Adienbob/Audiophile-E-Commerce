@@ -17,7 +17,9 @@ footer {
    }
    @media (min-width: 1024px) {
       padding: 5rem 100px;
-      margin-top: clamp(5rem, calc(5rem + (100vw - 360px) * 0.2666 ), 9rem);
+      padding: 5rem 150px;
+      padding: 5rem clamp(100px, calc(100px + (100vw - 1024px) * 0.1201923 ), 150px);
+      margin-top: clamp(5rem, calc(5rem + (100vw - 1024px) * 0.2666 ), 9rem);
    }
    .logo, ul, p, strong {
       margin-bottom: 3rem;
@@ -25,55 +27,72 @@ footer {
          margin-bottom: 2rem;
       }
    }
-   .logo {
-      width: 45%;
-      height: auto;
-      @media (min-width: 600px) {
-         width: 20%;
-      }
-   }
-   &::before {
-      content: "";
-      position: absolute;
-      background-color: $dark-tan;
-      width: 25%;
-      height: 4px;
-      top: 0;
-      @media (min-width: 600px) {
-         width: 12.5%;
-         left: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
-      }
+   .logoAndLinks {
       @media (min-width: 1024px) {
-         width: 101px;
-         left: 100px;
+         display: flex;
+         justify-content: space-between;
+         width: 100%;
       }
-   }
-   ul { 
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      &.socialIcons {
-         gap: 0;
-      }
-      @media (min-width: 600px) {
-         flex-direction: row;
-      }
-      a {
-         font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.03333), 1.5rem);
-         color: $light-grey;
-         font-weight: 600;
-         padding: 0;
-         letter-spacing: 2px;
+      .logo {
+         width: 45%;
+         height: auto;
          @media (min-width: 600px) {
-            font-size: clamp(0.6rem, calc(0.6rem + (100vw - 600px) * 0.018867 ), 1.1rem);
+            width: 20%;
          }
-         &:hover {
-            color: $dark-tan;
+         @media (min-width: 1024px) {
+            width: 143px;
+            height: 25px;
+         }
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         background-color: $dark-tan;
+         width: 25%;
+         height: 4px;
+         top: 0;
+         @media (min-width: 600px) {
+            width: 12.5%;
+            left: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
+         }
+         @media (min-width: 1024px) {
+            width: 101px;
+            left: 100px;
+            left: 100px;
+            left: clamp(100px, calc(100px + (100vw - 1024px) * 0.1201923 ), 150px);
+         }
+      }
+      ul { 
+         display: flex;
+         flex-direction: column;
+         gap: 1.5rem;
+         &.socialIcons {
+            gap: 0;
+         }
+         @media (min-width: 600px) {
+            flex-direction: row;
+         }
+         a {
+            font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.03333), 1.5rem);
+            color: $light-grey;
+            font-weight: 600;
+            padding: 0;
+            letter-spacing: 2px;
+            @media (min-width: 600px) {
+               font-size: clamp(0.6rem, calc(0.6rem + (100vw - 600px) * 0.018867 ), 1.1rem);
+            }
+            &:hover {
+               color: $dark-tan;
+            }
+            @media (min-width: 1024px) {
+               font-size: 13px;
+            }
          }
       }
    }
    p {
-      color: $dark-grey;
+      color: $white;
+      opacity: 50%;
       font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.045), 1.6rem);
       line-height: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0833), 2.75rem);
       @media (min-width: 600px) {
@@ -81,8 +100,18 @@ footer {
          line-height: clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.0283018 ), 2rem);
          margin-bottom: clamp(3rem, calc(3rem + (100vw - 600px) * 0.075471 ), 5rem);
       }
+      @media (min-width: 1024px) {
+         width: 530px;
+         width: 620px;
+         width: clamp(530px, calc(530px + (100vw - 1024px) * 0.216346), 620px);
+         font-size: 15px;
+         font-size: 17.5px;
+         font-size: clamp(15px, calc(15px + (100vw - 1024px) * 0.006009 ), 17.5px);
+         line-height: 25px;
+      }
    }
-   div {
+   .copyrightAndIcons {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -95,10 +124,14 @@ footer {
       strong {
          color: $white;
          opacity: 0.50;
+         line-height: 25px;
          font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.045), 1.6rem);
          @media (min-width: 600px) {
             font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.0245283 ), 1.4rem);
             margin-bottom: 0;
+         }
+         @media (min-width: 1024px) {
+            font-size: 15px;
          }
       }
       .socialIcons {
@@ -113,9 +146,22 @@ footer {
             gap: clamp(0.5rem, calc(0.5rem + (100vw - 600px) * 0.06603 ), 2.25rem);
             justify-content: center;
          }
+         @media (min-width: 1024px) {
+            justify-content: space-between;
+            width: 12.5%;
+            gap: 0;
+            position: absolute;
+            right: 0;
+            top: -100px;
+         }
          a {
+            color: $white;
             &:hover {
                color: $dark-tan;
+            }
+            @media (min-width: 1024px) {
+               padding: 0;
+               display: block;
             }
          }
       }

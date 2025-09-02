@@ -1,93 +1,109 @@
 
 .homePage {
    text-align: center;
-   .background {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      top: 0;
-      left: 0;
-      @media (min-width: 600px) {
-         height: clamp(500px, calc(500px + (100vw - 600px) * 0.4009433), 670px);
-         top: 7%;
-      }
-      @media (min-width: 1024px) {
+   .heroContainer {
+      .background {
+         position: absolute;
          width: 100%;
          height: 100%;
+         z-index: -1;
          top: 0;
-      }
-   }
-   .hero {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 0 1rem;
-      margin-bottom: 4rem;
-      height: 85vh;
-      @media (min-width: 600px) {
-         margin-bottom: clamp(0rem, calc(0rem + (100vw - 600px) * 0.226415), 6rem);
-      }
-      @media (min-width: 1024px) {
-         align-items: flex-start;
-         padding: 0; 
-         width: 37.5%;
-         margin-left: 110px;
-         text-align: left;
-         margin-bottom: 0;
-      }
-      span {
-         color: $dark-grey;
-         letter-spacing: clamp(0.5rem, calc(0.5rem + (100vw - 360px) * 0.0566), 1rem);
-         font-size: clamp(0.9rem, calc(0.9rem + (100vw - 360px) * 0.0233), 1.25rem);
-         margin: clamp(1rem, calc(1rem + (100vw - 360px) * 0.1333), 3rem) 0 1rem;
+         left: 0;
          @media (min-width: 600px) {
-            font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.09433), 1rem);
-            letter-spacing: clamp(0.45rem, calc(0.45rem + (100vw - 600px) * 0.01839), 0.9375rem);
-            margin: clamp(0rem, calc(0rem + (100vw - 600px) * 0.26415), 7rem) 0 1rem;
+            height: clamp(500px, calc(500px + (100vw - 600px) * 0.4009433), 670px);
+            top: 7%;
          }
          @media (min-width: 1024px) {
-            margin-top: 0;
-            font-size: 14px;
-            letter-spacing: 10px;
+            width: 100%;
+            height: 100%;
+            top: 0;
          }
       }
-      h1 {
-         color: $white;
-         letter-spacing: 0.1rem;
-         margin-bottom: 1rem;
-         line-height: clamp(2.75rem, calc(2.75rem + (100vw - 360px) * 0.1), 3.5rem);
-         font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.1), 3.5rem);
+      .hero {
+         position: relative;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+         padding: 0 1rem;
+         margin-bottom: 4rem;
+         height: 85vh;
          @media (min-width: 600px) {
-            font-size: clamp(2.70rem, calc(2.70rem + (100vw - 600px) * 0.07735), 4.75rem);
-            line-height: clamp(3rem, calc(3rem + (100vw - 600px) * 0.06603), 4.75rem);
-            margin-bottom: clamp(0.5rem, calc(0.5rem + (100vw - 600px) * 0.03773), 1.5rem);
+            margin-bottom: clamp(0rem, calc(0rem + (100vw - 600px) * 0.226415), 6rem);
          }
          @media (min-width: 1024px) {
-            font-size: 56px;
-            letter-spacing: 2px;
-            line-height: 58px;
-            
+            align-items: flex-start;
+            padding: 0; 
+            width: 37.5%;
+            margin-left: 115px;
+            margin-left: clamp(115px, calc(115px + (100vw - 1024px) * 0.084134), 150px);
+            text-align: left;
+            margin-bottom: 0;
          }
-      }
-      p {
-         color: $grey;
-         margin-bottom: 2rem;
-         font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0333), 1.5rem);
-         padding: 0 clamp(1rem, calc(1rem + (100vw - 360px) * 0.0666), 2rem);
-         @media (min-width: 600px) {
-            font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.019622), 1.27rem);
-            padding: 0 clamp(9rem, calc(9rem + (100vw - 600px) * 0.26415), 16rem);
-            line-height: clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.01886), 1.75rem);
+         span {
+            color: $dark-grey;
+            letter-spacing: clamp(0.5rem, calc(0.5rem + (100vw - 360px) * 0.0566), 1rem);
+            font-size: clamp(0.9rem, calc(0.9rem + (100vw - 360px) * 0.0233), 1.25rem);
+            margin: clamp(1rem, calc(1rem + (100vw - 360px) * 0.1333), 3rem) 0 1rem;
+            @media (min-width: 600px) {
+               font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.09433), 1rem);
+               letter-spacing: clamp(0.45rem, calc(0.45rem + (100vw - 600px) * 0.01839), 0.9375rem);
+               margin: clamp(0rem, calc(0rem + (100vw - 600px) * 0.26415), 7rem) 0 1rem;
+            }
+            @media (min-width: 1024px) {
+               margin-top: 0;
+               font-size: 18px;
+               font-size: clamp(14px, calc(14px + (100vw - 1024px) * 0.0096153), 18px);
+               font-size: 14px;
+               letter-spacing: 15px;
+               letter-spacing: clamp(10px, calc(10px + (100vw - 1024px) * 0.01201923), 15px);
+               letter-spacing: 10px;
+            }
          }
-         @media (min-width: 1024px) {
-            font-size: 15px;
-            padding: 0;
-            padding-right: 1rem;
-            font-weight: 500;
-            line-height: 25px;
+         h1 {
+            color: $white;
+            letter-spacing: 0.1rem;
+            margin-bottom: 1rem;
+            line-height: clamp(2.75rem, calc(2.75rem + (100vw - 360px) * 0.1), 3.5rem);
+            font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.1), 3.5rem);
+            @media (min-width: 600px) {
+               font-size: clamp(2.70rem, calc(2.70rem + (100vw - 600px) * 0.07735), 4.75rem);
+               line-height: clamp(3rem, calc(3rem + (100vw - 600px) * 0.06603), 4.75rem);
+               margin-bottom: clamp(0.5rem, calc(0.5rem + (100vw - 600px) * 0.03773), 1.5rem);
+            }
+            @media (min-width: 1024px) {
+               font-size: 81px;
+               font-size: clamp(56px, calc(56px + (100vw - 1024px) * 0.060096), 81px);
+               font-size: 56px;
+               letter-spacing: 2px;
+               line-height: 82px;
+               line-height: clamp(58px, calc(58px + (100vw - 1024px) * 0.0576923), 82px);
+               line-height: 58px;
+               
+            }
+         }
+         p {
+            color: $grey;
+            margin-bottom: 2rem;
+            font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0333), 1.5rem);
+            padding: 0 clamp(1rem, calc(1rem + (100vw - 360px) * 0.0666), 2rem);
+            @media (min-width: 600px) {
+               font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.019622), 1.27rem);
+               padding: 0 clamp(9rem, calc(9rem + (100vw - 600px) * 0.26415), 16rem);
+               line-height: clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.01886), 1.75rem);
+            }
+            @media (min-width: 1024px) {
+               font-size: 22px;
+               font-size: clamp(15px, calc(15px + (100vw - 1024px) * 0.0168269), 22px);
+               font-size: 15px;
+               width: 360px;
+               padding: 0;
+               padding-right: 1rem;
+               font-weight: 500;
+               line-height: 35px;
+               line-height: clamp(25px, calc(25px + (100vw - 1024px) * 0.0240384), 35px);
+               line-height: 25px;
+            }
          }
       }
    }
@@ -100,7 +116,9 @@
          gap: 2rem;
       }
       @media (min-width: 1024px) {
+         grid-template-rows: 510px 270px 270px;
          grid-template-rows: 560px 320px 320px;
+         grid-template-rows: clamp(510px, calc(510px + (100vw - 1024px) * 0.120192), 560px) repeat(2, clamp(270px, calc(270px + (100vw - 1024px) * 0.120192), 320px));
       }
       div {
          margin-bottom: 2rem;
@@ -136,37 +154,54 @@
             display: flex;
             flex-direction: row;
             text-align: left;
-            padding: 3rem;
+            background-position: left -140px bottom -350px;
             background-position: left -125px bottom -250px;
-            background-size: 82.5%;
+            background-position: left clamp(-140px, calc(-125px + (100vw - 1024px) * -0.0360577), -125px) bottom clamp(-350px, calc(-250px + (100vw - 1024px) * -0.240384), -250px);
+            background-size: 944px;
+            background-size: 770px;
+            background-size: clamp(770px, calc(770px + (100vw - 1024px) * 0.4182692), 944px);
             grid-row: 1;
             overflow: hidden;
+            gap: 117.5px;
          }
-         .image {
-            align-self: center;
-            height: auto;
-            width: clamp(162px, calc(162px + (100vw - 360px) * 0.5125), 285px);
-            width: 25%;
-            width: 30%;
-            margin-top: clamp(4rem, calc(4rem + (100vw - 360px) * 0.1), 5.5rem);
-            margin-bottom: clamp(30px, calc(30px + (100vw - 360px) * 0.09375), 52.5px);
-            @media (min-width: 600px) {
-               width: clamp(152.5px, calc(152.5px + (100vw - 600px) * 0.25353), 260px);
-               margin-top: clamp(3rem, calc(3rem + (100vw - 600px) * 0.03773), 4rem);
-               margin-bottom: clamp(2.25rem, calc(2.25rem + (100vw - 600px) * 0.1226415), 4.5rem);
-            }
-            @media (min-width: 1024px) {
-               width: 50%;
-               width: 62.5%;
-               transform: translate(20%, 20%);
+         picture {
+            width: 50%;
+            .image {
+               align-self: center;
+               height: auto;
+               width: clamp(162px, calc(162px + (100vw - 360px) * 0.5125), 285px);
+               width: 25%;
+               width: 30%;
+               margin-top: clamp(4rem, calc(4rem + (100vw - 360px) * 0.1), 5.5rem);
+               margin-bottom: clamp(30px, calc(30px + (100vw - 360px) * 0.09375), 52.5px);
+               @media (min-width: 600px) {
+                  width: clamp(152.5px, calc(152.5px + (100vw - 600px) * 0.25353), 260px);
+                  margin-top: clamp(3rem, calc(3rem + (100vw - 600px) * 0.03773), 4rem);
+                  margin-bottom: clamp(2.25rem, calc(2.25rem + (100vw - 600px) * 0.1226415), 4.5rem);
+               }
+               @media (min-width: 1024px) {
+                  width: 70%;
+                  width: 325px;
+                  width: 410px;
+                  width: clamp(325px, calc(325px + (100vw - 1024px) * 0.2043269), 410px);
+                  margin: 0;
+                  transform: translate(97.5px, 70px);
+                  transform: translate(125px, 47.5px);
+                  transform: translate(clamp(97.5px, calc(97.5px + (100vw - 1024px) * 0.2043269), 125px), clamp(47.5px, calc(70px + (100vw - 1024px) * -0.053966), 70px));
+               }
             }
          }
          .details {
             @media (min-width: 1024px) {
                width: 50%;
+               width: 349px;
                display: flex;
                flex-direction: column;
-               justify-content: flex-end;
+               justify-content: center;
+               margin-top: 2.5rem;
+               margin-top: clamp(1px, calc(2.5rem + (100vw - 1024px) * -0.0961538), 2.5rem);
+               margin-bottom: 6rem;
+               margin-bottom: clamp(1px, calc(1px + (100vw - 1024px) * 0.2307692), 6rem);
             }
             h2 {
                color: $white;
@@ -184,7 +219,6 @@
                   font-size: 56px;
                   line-height: 58px;
                   padding: 0;
-                  margin: 0;
                }
             }
             p {
@@ -210,6 +244,7 @@
                margin-bottom: 4rem;
                @media (min-width: 1024px) {
                   align-self: flex-start;
+                  margin: 0;
                }
             }
          }
@@ -275,11 +310,16 @@
             grid-template-columns: repeat(2, 1fr);
          }
          @media (min-width: 1024px) {
-            gap: 25px;
+            gap: 30px;
             grid-row: 3;
             grid-template-rows: 1fr;
          }
          .imgContainer {
+            @media (min-width: 1024px) {
+               height: 270px;
+               height: 320px;
+               height: clamp(270px, calc(270px + (100vw - 1024px) * 0.1201923), 320px);;
+            }
             img {
                width: 100%;
                height: 100%;

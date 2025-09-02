@@ -5,20 +5,22 @@ export default function Footer() {
 
    return (
       <footer>
-         <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='' />
-         <ul>
-            <Button className='HomeLink' path='/'>HOME</Button>
-            <Button className='headphonesLink' path='/headphones'>HEADPHONES</Button>
-            <Button className='speakersLink' path='/speakers'>SPEAKERS</Button>
-            <Button className='earphonesLink' path='/earphones'>EARPHONES</Button>
-         </ul>
+         <div className='logoAndLinks'>
+            <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='' />
+            <ul>
+               <Button className='HomeLink' path='/'>HOME</Button>
+               <Button className='headphonesLink' path='/headphones'>HEADPHONES</Button>
+               <Button className='speakersLink' path='/speakers'>SPEAKERS</Button>
+               <Button className='earphonesLink' path='/earphones'>EARPHONES</Button>
+            </ul>
+         </div>
          <p>
             Audiophile is an all in one stop to fulfill your audio needs. 
             We&apos;re a small team of music lovers and sound specialists who are 
             devoted to helping you get the most out of personal audio
             . Come and visit our demo facility - we’re open 7 days a week.
          </p>
-         <div>
+         <div className='copyrightAndIcons'>
             <strong>Copyright 2021. All Rights Reserved</strong>
             <ul className='socialIcons'>
                <Button path='https://www.facebook.com/ '> 

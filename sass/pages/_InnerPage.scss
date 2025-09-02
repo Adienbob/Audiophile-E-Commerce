@@ -24,7 +24,7 @@
          margin-top: 2rem;
       }
       @media (min-width: 1024px) {
-         grid-template-columns: 50% 40%;
+         grid-template-columns: 47.5% 40%;
          gap: 10%;
       }
       .imageContainer {
@@ -39,6 +39,10 @@
          }
       }
       .details {
+         @media (min-width: 1024px) {
+            display: grid;
+            align-self: center;
+         }
          .newProduct {
             @include darkTan-style;
          }
@@ -87,7 +91,7 @@
    article {
       @media (min-width: 1024px) {
          display: grid;
-         grid-template-columns: 52.2% auto;
+         grid-template-columns: 53% auto;
          gap: 125px;
       }
       .productFeatures {
@@ -206,6 +210,9 @@
                display: flex;
                gap: 0.75rem;
             }
+            @media (min-width: 1024px) {
+               gap: 25px;
+            }
          .item {
             @extend %sections-break;
             @media (min-width: 600px) {
@@ -230,11 +237,15 @@
                }
                @media (min-width: 1024px) {
                   font-size: 1.5rem;
+                  margin: 2rem 0;
                }
             }
             a {
                @media (min-width: 600px) {
                   width: 95%;
+               }
+               @media (min-width: 1024px) {
+                  width: 165px;
                }
             }
          }
