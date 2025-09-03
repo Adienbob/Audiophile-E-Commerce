@@ -9,8 +9,6 @@
       grid-template-columns: auto calc(50% - 15px);
       flex-direction: row-reverse;
       text-align: left;
-      gap: 125px;
-      gap: 75px;
       gap: clamp(75px, calc(75px + (100vw - 1024px) * 0.1201923 ) , 125px);;
       align-items: center;
       margin: 150px 0;
@@ -42,8 +40,6 @@
             font-weight: 800;
          }
          @media (min-width: 1024px) {
-            font-size: 35px;
-            font-size: 46.5px;
             font-size: clamp(35px, calc(35px + (100vw - 1024px) * 0.0276442 ) , 46.5px);
             letter-spacing: 1.43px;
             line-height: 44px;
@@ -56,8 +52,6 @@
       p {
          @include paragraph-style;
          @media (min-width: 1024px) {
-            width: 440px;
-            width: 343px;
             width: clamp(343px, calc(343px + (100vw - 1024px) * 0.233173 ) , 440px);
          }
       }

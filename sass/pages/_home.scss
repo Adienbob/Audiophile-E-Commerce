@@ -52,11 +52,7 @@
             }
             @media (min-width: 1024px) {
                margin-top: 0;
-               font-size: 18px;
-               font-size: clamp(14px, calc(14px + (100vw - 1024px) * 0.0096153), 18px);
                font-size: 14px;
-               letter-spacing: 15px;
-               letter-spacing: clamp(10px, calc(10px + (100vw - 1024px) * 0.01201923), 15px);
                letter-spacing: 10px;
             }
          }
@@ -72,12 +68,8 @@
                margin-bottom: clamp(0.5rem, calc(0.5rem + (100vw - 600px) * 0.03773), 1.5rem);
             }
             @media (min-width: 1024px) {
-               font-size: 81px;
-               font-size: clamp(56px, calc(56px + (100vw - 1024px) * 0.060096), 81px);
                font-size: 56px;
                letter-spacing: 2px;
-               line-height: 82px;
-               line-height: clamp(58px, calc(58px + (100vw - 1024px) * 0.0576923), 82px);
                line-height: 58px;
                
             }
@@ -93,15 +85,11 @@
                line-height: clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.01886), 1.75rem);
             }
             @media (min-width: 1024px) {
-               font-size: 22px;
-               font-size: clamp(15px, calc(15px + (100vw - 1024px) * 0.0168269), 22px);
                font-size: 15px;
                width: 360px;
                padding: 0;
                padding-right: 1rem;
                font-weight: 500;
-               line-height: 35px;
-               line-height: clamp(25px, calc(25px + (100vw - 1024px) * 0.0240384), 35px);
                line-height: 25px;
             }
          }
@@ -116,8 +104,6 @@
          gap: 2rem;
       }
       @media (min-width: 1024px) {
-         grid-template-rows: 510px 270px 270px;
-         grid-template-rows: 560px 320px 320px;
          grid-template-rows: clamp(510px, calc(510px + (100vw - 1024px) * 0.120192), 560px) repeat(2, clamp(270px, calc(270px + (100vw - 1024px) * 0.120192), 320px));
       }
       div {
@@ -154,11 +140,7 @@
             display: flex;
             flex-direction: row;
             text-align: left;
-            background-position: left -140px bottom -350px;
-            background-position: left -125px bottom -250px;
             background-position: left clamp(-140px, calc(-125px + (100vw - 1024px) * -0.0360577), -125px) bottom clamp(-350px, calc(-250px + (100vw - 1024px) * -0.240384), -250px);
-            background-size: 944px;
-            background-size: 770px;
             background-size: clamp(770px, calc(770px + (100vw - 1024px) * 0.4182692), 944px);
             grid-row: 1;
             overflow: hidden;
@@ -169,8 +151,6 @@
             .image {
                align-self: center;
                height: auto;
-               width: clamp(162px, calc(162px + (100vw - 360px) * 0.5125), 285px);
-               width: 25%;
                width: 30%;
                margin-top: clamp(4rem, calc(4rem + (100vw - 360px) * 0.1), 5.5rem);
                margin-bottom: clamp(30px, calc(30px + (100vw - 360px) * 0.09375), 52.5px);
@@ -180,13 +160,8 @@
                   margin-bottom: clamp(2.25rem, calc(2.25rem + (100vw - 600px) * 0.1226415), 4.5rem);
                }
                @media (min-width: 1024px) {
-                  width: 70%;
-                  width: 325px;
-                  width: 410px;
                   width: clamp(325px, calc(325px + (100vw - 1024px) * 0.2043269), 410px);
                   margin: 0;
-                  transform: translate(97.5px, 70px);
-                  transform: translate(125px, 47.5px);
                   transform: translate(clamp(97.5px, calc(97.5px + (100vw - 1024px) * 0.2043269), 125px), clamp(47.5px, calc(70px + (100vw - 1024px) * -0.053966), 70px));
                }
             }
@@ -198,9 +173,7 @@
                display: flex;
                flex-direction: column;
                justify-content: center;
-               margin-top: 2.5rem;
                margin-top: clamp(1px, calc(2.5rem + (100vw - 1024px) * -0.0961538), 2.5rem);
-               margin-bottom: 6rem;
                margin-bottom: clamp(1px, calc(1px + (100vw - 1024px) * 0.2307692), 6rem);
             }
             h2 {
@@ -278,8 +251,7 @@
                margin: auto;
             }
             @media (min-width: 1024px) {
-               padding: 0;
-               padding: 4rem 0 0 5rem ;
+               padding: clamp(2rem, calc(2rem + (100vw - 1024px) * 0.0769230), 4rem) 0 0 5rem ;
             }
             h2{
                margin-bottom: clamp(2rem, calc(2rem + (100vw - 360px) * 0.1333), 4rem);
@@ -316,8 +288,6 @@
          }
          .imgContainer {
             @media (min-width: 1024px) {
-               height: 270px;
-               height: 320px;
                height: clamp(270px, calc(270px + (100vw - 1024px) * 0.1201923), 320px);;
             }
             img {
@@ -341,6 +311,7 @@
             }
             @media (min-width: 1024px) {
                gap: 25px;
+               padding-left: clamp(50px, calc(50px + (100vw - 1024px) * 0.10817307), 95px);
             }
             h2 {
                font-size: clamp(2.1rem, calc(2.1rem + (100vw - 360px) * 0.08333), 3.35rem);

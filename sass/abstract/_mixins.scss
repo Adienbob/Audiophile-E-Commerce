@@ -84,19 +84,13 @@
                justify-items: center;
                align-items: center;
                align-self: center;
-               width: 298px;
-               height: 309px;
                width: clamp(298px, calc(298px + (100vw - 1024px) * 0.34375 ) ,441px);
                height:  clamp(309px, calc(309px + (100vw - 1024px) * 0.358173 ) ,458px);
             }
             img {
                @include productImge-style;
                @media (min-width: 1024px) {
-                  width: 298px;
-                  width: 441px;
                   width: clamp(298px, calc(298px + (100vw - 1024px) * 0.34375 ) ,441px);
-                  height: 309px;
-                  height: 458px;
                   height:  clamp(309px, calc(309px + (100vw - 1024px) * 0.358173 ) ,458px);
                }
             }
@@ -186,12 +180,18 @@
    @media (min-width: 600px) {
       font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 600px) * 0.021226), 1.5rem);
    }
+   @media (min-width: 1024px) {
+      font-size: 0.9375rem;
+   }
    span {
       background-color: inherit;
       text-align: center;
       padding: clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.05), 1.5rem) clamp(0.5rem, calc(0.5rem + (100vw - 360px) * 0.0833), 1.75rem);
       @media (min-width: 600px) {
          padding: clamp(1rem, calc(1rem + (100vw - 600px) * 0.009433), 1.25rem) clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.0283018), 2rem);
+      }
+      @media (min-width: 1024px) {
+         padding: 0.875rem 1rem;
       }
    }
    button {
@@ -205,6 +205,10 @@
       @media (min-width: 600px) {
          padding: clamp(1rem, calc(1rem + (100vw - 600px) * 0.009433), 1.25rem) clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.0283018), 2rem);
          font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 600px) * 0.025), 1.6rem);
+      }
+      @media (min-width: 1024px) {
+         font-size: 0.9375rem;
+         padding: 0.875rem 1rem;
       }
       &:hover {
          background-color: $grey;

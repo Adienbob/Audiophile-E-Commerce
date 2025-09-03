@@ -76,7 +76,9 @@ export default function Cart({cartState, setCartState}: cartTypes) {
                <p>TOTAL</p>
                <span>$ {total.toLocaleString()}</span>
             </div>
-            <Link className="btnOrange" href="/checkout" onClick={() => setCartState(false)}>CHECKOUT</Link>
+            {cartItems.length === 0 ? (
+               <Link className="btnOrange" href="/" onClick={() => setCartState(false)}>HOME</Link>
+            ) : <Link className="btnOrange" href="/checkout" onClick={() => setCartState(false)}>CHECKOUT</Link>}
          </div>
       </div>
    )

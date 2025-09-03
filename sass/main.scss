@@ -1,8 +1,10 @@
 
 
-@import "./components/dropdown";
 @import "./abstract/variables";
 @import "./abstract/mixins";
+
+@import "./base/base";
+@import "./components/dropdown";
 @import "./components/description";
 @import "./components/buttons";
 @import "./components/categories";
@@ -13,7 +15,6 @@
 @import "./pages/speakers";
 @import "./pages/\ headphones";
 @import "./pages/innerPage";
-@import "./pages/checkout";
 @import "./components/confirmation";
-@import "./base/base";
 @import "./pages/home";
+@import "./pages/checkout";

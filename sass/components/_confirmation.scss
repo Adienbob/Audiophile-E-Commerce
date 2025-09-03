@@ -33,6 +33,9 @@
          width: 70%;
          padding: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
       }
+      @media (min-width: 1024px) {
+         width: 50%;
+      }
       .icon {
          margin-bottom: 1.5rem;
          width: clamp(64px, calc(64px + (100vw - 360px) * 0.0875 ), 85px);
@@ -40,6 +43,10 @@
          @media (min-width: 600px) {
             width: clamp(64px, calc(64px + (100vw - 600px) * 0.0966981), 105px);
             height: clamp(64px, calc(64px + (100vw - 600px) * 0.0966981), 105px);
+         }
+         @media (min-width: 1024px) {
+            width: 64px;
+            height: 64px;
          }
       }
       h3 {
@@ -49,6 +56,9 @@
          @media (min-width: 600px) {
             font-size: clamp(1.5rem, calc(1.5rem + (100vw - 600px) * 0.037735 ), 2.5rem);
             letter-spacing: 0.5px;
+         }
+         @media (min-width: 1024px) {
+            font-size: 1.5rem;
          }
       }
       a {
@@ -67,6 +77,9 @@
                font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0666 ), 1.5rem);
                font-weight: 800;
                color: $jet-black;
+            }
+            @media (min-width: 1024px) {
+               
             }
          }
          .items {
@@ -99,16 +112,22 @@
                         width: clamp(50px, calc(50px + (100vw - 600px) * 0.094339), 90px);
                         height: clamp(50px, calc(50px + (100vw - 600px) * 0.094339), 90px);
                      }
+                     @media (min-width: 1024px) {
+                        width: 64px;
+                        height: 64px;
+                     }
                   }
                   .name {
                      font-size: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.0316), 1.6rem);
                      @media (min-width: 600px) {
                         font-size: clamp(1rem, calc(1rem + (100vw - 600px) * 0.0283018), 1.75rem);
                      }
+                     @media (min-width: 1024px) {
+                        font-size: 0.9375rem;
+                     }
                   }
                }
             } 
-
          }
          button {
             background-color: transparent;
@@ -138,12 +157,19 @@
          border-top-right-radius: $radius-10;
          border-bottom-right-radius: $radius-10;
       }
+      p {
+         color: $white;
+         margin-bottom: 0.5rem;
+      }
       span {
          color: $white;
          font-size: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.0316), 1.6rem);
          font-weight: 800;
          @media (min-width: 600px) {
             font-size: clamp(1.125rem, calc(1.125rem + (100vw - 600px) * 0.0283018), 1.875rem);
+         }
+         @media (min-width: 1024px) {
+            font-size: 1.125rem;
          }
       }
    }

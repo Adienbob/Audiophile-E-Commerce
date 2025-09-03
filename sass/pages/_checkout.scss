@@ -5,6 +5,9 @@
    @media (min-width: 600px) {
       padding: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ) ,3rem);
    }
+   @media (min-width: 1024px) {
+      padding: 3rem 117px;
+   }
    
    .backBtn {
       font-weight: 400;
@@ -13,6 +16,10 @@
       margin-top: 1.5rem;
       display: grid;
       gap: 2rem;
+      @media (min-width: 1024px) {
+         display: flex;
+         gap: 1.875rem;
+      }
       section {
          background-color: $white;
          padding: 2rem;
@@ -20,16 +27,25 @@
          @media (min-width: 600px) {
             padding: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ) ,3rem);
          }
+         @media (min-width: 1024px) {
+            &:last-of-type {
+               padding: 1.5rem;
+            }
+         }
       }
       .checkout {
          display: grid;
+         @media (min-width: 1024px) {
+            width: 490px;
+         }
          h1 {
             color: $lighter-black;
             font-size: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.0666), 2.75rem);
             @media (min-width: 600px) {
-               font-size: 2.25rem;
-               font-size: 3.25rem;
                font-size: clamp(2.25rem, calc(2.25rem + (100vw - 600px) * 0.037735 ) ,3.25rem);
+            }
+            @media (min-width: 1024px) {
+               font-size: 2rem;
             }
          }
          span {
@@ -38,8 +54,10 @@
             margin-top: 2rem;
             letter-spacing: 0.9px;
             @media (min-width: 600px) {
-               letter-spacing: 0.5px;
                letter-spacing: 1px;
+            }
+            @media (min-width: 1024px) {
+               font-size: 0.8125rem;
             }
          }
          label, strong {
@@ -52,6 +70,9 @@
             @media (min-width: 600px) {
                font-size: clamp(0.875rem, calc(0.875rem + (100vw - 600px) * 0.0094339 ) ,1.125rem);
             }
+            @media (min-width: 1024px) {
+               font-size: 0.75rem;
+            }
          }
          input {
             padding: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0333), 1.5rem);
@@ -61,12 +82,20 @@
             @media (min-width: 600px) {
                width: 60%;
             }
+            @media (min-width: 1024px) {
+               font-size: 0.875rem;
+               width: 90%;
+               padding: 1.125rem 1.5rem;
+            }
             &::placeholder {
                font-weight: 600;
                font-size: clamp(13.25px, calc(13.25px + (100vw - 360px) * 0.0177083), 17.5px);
                color: $dark-grey;
                @media (min-width: 600px) {
                   font-size: clamp(14.5px, calc(14.5px + (100vw - 600px) * 0.00825471 ) ,1.125rem);
+               }
+               @media (min-width: 1024px) {
+                  font-size: 0.875rem;
                }
             }
          }
@@ -121,13 +150,19 @@
       .summary {
          display: flex;
          flex-direction: column;
-         
+         @media (min-width: 1024px) {
+            height: fit-content;
+            width: 323px;
+         }
          h2 {
             margin-bottom: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
             font-size: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.0583), 2rem);
             letter-spacing: 1px;
             @media (min-width: 600px) {
                font-size: clamp(1.125rem, calc(1.125rem + (100vw - 600px) * 0.0330188), 2rem);
+            }
+            @media (min-width: 1024px) {
+               font-size: 1.125rem;
             }
          }
          div {
@@ -153,6 +188,10 @@
                      width: clamp(64px, calc(64px + (100vw - 600px) * 0.0966981), 105px);
                      height: clamp(64px, calc(64px + (100vw - 600px) * 0.0966981), 105px);
                   }
+                  @media (min-width: 1024px) {
+                     width: 64px;
+                     height: 64px;
+                  }
                }
             }
             span {
@@ -162,6 +201,9 @@
                @media (min-width: 600px) {
                   font-size: clamp(1.125rem, calc(1.125rem + (100vw - 600px) * 0.0235849), 1.75rem);
                }
+               @media (min-width: 1024px) {
+                  font-size: 1.125rem;
+               }
             }
             p {
                @include paragraph-style;
@@ -170,6 +212,10 @@
                @media (min-width: 600px) {
                   line-height: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735), 3rem);
                   
+               }
+               @media (min-width: 1024px) {
+                  font-size: 0.9375rem;
+                  line-height: 25px;
                }
             }
             &.grandTotal {
