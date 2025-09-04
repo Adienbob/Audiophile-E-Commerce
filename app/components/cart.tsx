@@ -62,7 +62,7 @@ export default function Cart({cartState, setCartState}: cartTypes) {
                return (
                   <div key={product.id} className="cartItem">
                      <div className="productDetails">
-                        <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.jpg`} alt=""  quality={100}/>
+                        <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.webp`} alt="" quality={100} loading="lazy" decoding="async"/>
                         <div className="details">
                            <span>{product.name.split(" ", 1)}</span>
                            <p>$ {product.price.toLocaleString()}</p>

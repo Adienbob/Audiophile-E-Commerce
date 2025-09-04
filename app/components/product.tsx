@@ -20,7 +20,7 @@ export default function Product({isNew, name, description, desktopSrc, tabletSrc
             <picture>
                <source media="(min-width: 1024px)" srcSet={desktopSrc} />
                <source media="(min-width: 600px)" srcSet={tabletSrc} />
-               <img src={mobileSrc} alt="" />
+               <img src={mobileSrc} alt="" loading="lazy" decoding="async" />
             </picture>
          </div>
          <div className="productDetails">

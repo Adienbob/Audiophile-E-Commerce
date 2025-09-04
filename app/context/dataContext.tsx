@@ -57,7 +57,6 @@ const DataContext = createContext<dataType[] | null>(null);
 
 export const DataProvider = ({ children }: { children: React.ReactNode }) => {
 const [data, setData] = useState<dataType[]>([]);
-
 useEffect(() => {
    fetch("/data.json") 
       .then((res) => res.json())

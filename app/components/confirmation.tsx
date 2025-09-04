@@ -19,7 +19,7 @@ export default function Confirmation({total}: confirmationProps) {
       return (
          <div className="item">
             <div className="details">
-               <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.jpg`} alt=""  quality={100}/>
+               <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.webp`} alt="" quality={65} loading="lazy"/>
                <div className="itemDetails">
                   <span className="name">{product.name.split(" ", 1)}</span>
                   <p className="price">$ {product.price.toLocaleString()}</p>
@@ -40,7 +40,7 @@ export default function Confirmation({total}: confirmationProps) {
             return (
                <div key={product.id} className="item">
                   <div className="details">
-                     <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.jpg`} alt=""  quality={100}/>
+                     <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.webp`} alt="" quality={65} loading="lazy"/>
                      <div className="itemDetails">
                         <span className="name">{product.name.split(" ", 1)}</span>
                         <p className="price">$ {product.price.toLocaleString()}</p>
@@ -58,7 +58,7 @@ export default function Confirmation({total}: confirmationProps) {
    return (
       <div className="confirmationOverlay">
          <div className="confirmation">
-            <Image className="icon" width={64} height={64} src="/assets/checkout/icon-order-confirmation.svg" alt=""  />
+            <Image width={64} height={64} src="/assets/checkout/icon-order-confirmation.svg" alt="" />
             <h3>THANK YOU <br /> FOR YOUR ORDER</h3>
             <p>You will receive an email confirmation shortly.</p>
             <div className="container">

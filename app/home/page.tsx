@@ -7,9 +7,9 @@ export default function Home() {
       <div className="homePage">
          <div className="heroContainer">
             <picture>
-               <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-hero.jpg" />
-               <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-hero.jpg" />
-               <img className="background" src="/assets/home/mobile/image-hero.jpg" alt="" />
+               <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-hero.webp" />
+               <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-hero.webp" />
+               <img className="background" src="/assets/home/mobile/image-hero.webp" alt="Hero banner for homepage"  loading="eager" decoding="async" data-fetchpriority="high"/>
             </picture>
             <div className="hero">
                <span>NEW PRODUCT</span>
@@ -27,9 +27,9 @@ export default function Home() {
          <div className="featuredProducts">
             <div className="ZX9-Product">
                <picture>
-                  <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-speaker-zx9.png" />
-                  <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-speaker-zx9.png" />
-                  <img className="image" src="/assets/home/mobile/image-speaker-zx9.png" alt="" />
+                  <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-speaker-zx9.webp" />
+                  <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-speaker-zx9.webp" />
+                  <img className="image" src="/assets/home/mobile/image-speaker-zx9.webp" alt="" loading="lazy" decoding="async" />
                </picture>
                <div className="details">
                   <h2>ZX9 SPEAKER</h2>
@@ -50,9 +50,9 @@ export default function Home() {
             <div className="YX1-Product">
                <div className="imgContainer">
                   <picture>
-                     <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-earphones-yx1.jpg" />
-                     <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-earphones-yx1.jpg" />
-                     <img className="productIamge" src="/assets/home/mobile/image-earphones-yx1.jpg" alt="" />
+                     <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-earphones-yx1.webp" />
+                     <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-earphones-yx1.webp" />
+                     <img className="productIamge" src="/assets/home/mobile/image-earphones-yx1.webp" alt="" loading="lazy" decoding="async" />
                   </picture>
                </div>
                <div className="details">

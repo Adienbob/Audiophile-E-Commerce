@@ -50,7 +50,7 @@ export default function Header() {
    function DesktopLinks() {
       return (
          <>
-         <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='' />
+         <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='Audiophile Logo' loading="eager"/>
          <div className='desktopLinks'>
             <ul>
                <Link className='HomeLink' path='/'>Home</Link>
@@ -83,7 +83,7 @@ export default function Header() {
                </div>
             </div>
          </div>
-         <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='' />
+         <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='Audiophile Logo' loading="eager" />
          </>
       )
    }
@@ -94,7 +94,7 @@ export default function Header() {
          <nav>
             {isMobile ? <MobileLinks /> : <DesktopLinks />}
             <button onClick={() => setIsCartOpen(prev => !prev)} className="cartIconButton">
-               <Image width={23} height={20} src="/assets/shared/desktop/icon-cart.svg" alt='' />
+               <Image width={23} height={20} src="/assets/shared/desktop/icon-cart.svg" alt='Cart Icon' />
                {cartItems.length >= 1 && (
                   <p>{cartItems.length}</p>
                )}

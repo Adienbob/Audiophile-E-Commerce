@@ -17,7 +17,7 @@ footer {
    }
    @media (min-width: 1024px) {
       padding: 5rem clamp(100px, calc(100px + (100vw - 1024px) * 0.1201923 ), 150px);
-      margin-top: clamp(5rem, calc(5rem + (100vw - 1024px) * 0.2666 ), 9rem);
+      margin-top: 0;
    }
    .logo, ul, p, strong {
       margin-bottom: 3rem;
