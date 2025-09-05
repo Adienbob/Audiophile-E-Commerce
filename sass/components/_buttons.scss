@@ -14,7 +14,6 @@ a, button:not(aside button, .items button, header button) {
    }
    @media (min-width: 1024px) {
       font-size: 13px;
-      letter-spacing: 1px;
       padding: 0.9375rem 1.9375rem;
    }
    &.btnOrange {
@@ -26,7 +25,8 @@ a, button:not(aside button, .items button, header button) {
       background-color: $light-tan;
    }
    &.btnDarkGrey {
-      color: $dark-grey;
+      color: $jet-black;
+      opacity: 50%;
       font-weight: 600;
    }
    &.btnDarkGrey:hover {
