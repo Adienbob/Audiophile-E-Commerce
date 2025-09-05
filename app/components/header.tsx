@@ -53,10 +53,18 @@ export default function Header() {
          <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='Audiophile Logo' loading="eager"/>
          <div className='desktopLinks'>
             <ul>
-               <Link className='HomeLink' path='/'>Home</Link>
-               <Link className='headphonesLink' path='/headphones'>Headphones</Link>
-               <Link className='speakersLink' path='/speakers'>Speakers</Link>
-               <Link className='earphonesLink' path='/earphones'>Earphones</Link>
+               <li>
+                  <Link className='HomeLink' path='/'>Home</Link>
+               </li>
+               <li>
+                  <Link className='headphonesLink' path='/headphones'>Headphones</Link>
+               </li>
+               <li>
+                  <Link className='speakersLink' path='/speakers'>Speakers</Link>
+               </li>
+               <li>
+                  <Link className='earphonesLink' path='/earphones'>Earphones</Link>
+               </li>
             </ul>
          </div>
          </>
@@ -75,12 +83,20 @@ export default function Header() {
                   <div className='bot'></div>
                </label>
 
-               <div className="menu">
-                  <Link path='/'  className='HomeLink' >Home</Link>
-                  <Link path='/headphones'  className='headphonesLink'>Headphones</Link>
-                  <Link path='/speakers'  className='speakersLink'>Speakers</Link>
-                  <Link path='/earphones'  className='earphonesLink'>Earphones</Link>
-               </div>
+               <ul className="menu">
+                  <li>
+                     <Link path='/'  className='HomeLink' >Home</Link>
+                  </li>
+                  <li>
+                     <Link path='/headphones'  className='headphonesLink'>Headphones</Link>
+                  </li>
+                  <li>
+                     <Link path='/speakers'  className='speakersLink'>Speakers</Link>
+                  </li>
+                  <li>
+                     <Link path='/earphones'  className='earphonesLink'>Earphones</Link>
+                  </li>
+               </ul>
             </div>
          </div>
          <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='Audiophile Logo' loading="eager" />
@@ -93,7 +109,7 @@ export default function Header() {
       <header>
          <nav>
             {isMobile ? <MobileLinks /> : <DesktopLinks />}
-            <button onClick={() => setIsCartOpen(prev => !prev)} className="cartIconButton">
+            <button onClick={() => setIsCartOpen(prev => !prev)} aria-label='Cart button' className="cartIconButton">
                <Image width={23} height={20} src="/assets/shared/desktop/icon-cart.svg" alt='Cart Icon' />
                {cartItems.length >= 1 && (
                   <p>{cartItems.length}</p>

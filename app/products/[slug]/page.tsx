@@ -21,7 +21,7 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                <picture>
                   <source media="(min-width: 1024px)" srcSet={product.image.desktop} />
                   <source media="(min-width: 600px)" srcSet={product.image.tablet} />
-                  <img src={product.image.desktop} alt="" loading="lazy" decoding="async" />
+                  <img src={product.image.mobile} alt={product.name} loading="lazy" decoding="async" />
                </picture>
             </div>
             <div className="details">
@@ -51,21 +51,21 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                <picture>
                   <source media="(min-width: 1024px)" srcSet={product.gallery.first.desktop} />
                   <source media="(min-width: 600px)" srcSet={product.gallery.first.tablet} />
-                  <img src={product.gallery.first.mobile} alt="" loading="lazy" decoding="async" />
+                  <img src={product.gallery.first.mobile} alt={product.name} loading="lazy" decoding="async" />
                </picture>
             </div>
             <div className="second">
                <picture>
                   <source media="(min-width: 1024px)" srcSet={product.gallery.second.desktop} />
                   <source media="(min-width: 600px)" srcSet={product.gallery.second.tablet} />
-                  <img src={product.gallery.second.mobile} alt="" loading="lazy" decoding="async" />
+                  <img src={product.gallery.second.mobile} alt={product.name} loading="lazy" decoding="async" />
                </picture>
             </div>
             <div className="third">
                <picture>
                   <source media="(min-width: 1024px)" srcSet={product.gallery.third.desktop} />
                   <source media="(min-width: 600px)" srcSet={product.gallery.third.tablet} />
-                  <img src={product.gallery.third.mobile} alt="" loading="lazy" decoding="async" />
+                  <img src={product.gallery.third.mobile} alt={product.name} loading="lazy" decoding="async" />
                </picture>
             </div>
          </div>
@@ -77,7 +77,7 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                      <picture>
                         <source media="(min-width: 1024px)" srcSet={item.image.desktop} />
                         <source media="(min-width: 600px)" srcSet={item.image.tablet} />
-                        <img src={item.image.mobile} alt="" loading="lazy" decoding="async" />
+                        <img src={item.image.mobile} alt={item.name} loading="lazy" decoding="async" />
                      </picture>
                      <h5>{item.name}</h5>
                      <Button className="btnOrange" path={`/products/${item.slug}`}>SEE PRODUCT</Button>

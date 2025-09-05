@@ -18,7 +18,7 @@ export default function ProductButton({id}: QuantityTypes) {
             </div>
          ) : (
             <div className="addToCart">
-               <button className="btnOrange" onClick={() => increment(id)}>ADD TO CART</button>
+               <button className="btnOrange" onClick={() => increment(id)} aria-label="Add to cart Button">ADD TO CART</button>
             </div>
          )}
       </div>

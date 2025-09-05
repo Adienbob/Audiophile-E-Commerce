@@ -39,7 +39,7 @@ export default function Checkout() {
    function CashDescription() {
       return (
          <div className="cashDescription">
-            <Image width={48} height={48} src="/assets/checkout/icon-cash-on-delivery.svg" alt=""   />
+            <Image width={48} height={48} src="/assets/checkout/icon-cash-on-delivery.svg" alt="cash on delivery icon" />
             <p>The &apos;Cash on Delivery&apos; option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
          </div>
       )
@@ -105,7 +105,7 @@ export default function Checkout() {
                   return (
                      <div key={product.id} className="product">
                         <div className="detailsContainer">
-                           <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.webp`} alt=""  quality={100}/>
+                           <Image width={150} height={150} src={`/assets/cart/image-${product.slug}.webp`} alt={product.name}  quality={100}/>
                            <div className="details">
                               <span className="name">{product.name.split(" ", 1)}</span>
                               <p>$ {product.price.toLocaleString()}</p>

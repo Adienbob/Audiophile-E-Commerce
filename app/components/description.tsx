@@ -6,7 +6,7 @@ export default function description() {
          <picture>
             <source media="(min-width: 1024px)" srcSet="/assets/shared/desktop/image-best-gear.webp"/>
             <source media="(min-width: 600px)" srcSet="/assets/shared/tablet/image-best-gear.webp"/>
-            <img src="/assets/shared/mobile/image-best-gear.webp" alt="" loading="lazy" decoding="async" />
+            <img src="/assets/shared/mobile/image-best-gear.webp" alt="Man wearing headphones and enjoying high-quality audio gear" loading="lazy" decoding="async" />
          </picture>
          <div>
             <h3>BRINGING YOU THE <span>BEST</span> AUDIO GEAR</h3>

@@ -29,7 +29,7 @@ export default function Home() {
                <picture>
                   <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-speaker-zx9.webp" />
                   <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-speaker-zx9.webp" />
-                  <img className="image" src="/assets/home/mobile/image-speaker-zx9.webp" alt="" loading="lazy" decoding="async" />
+                  <img className="image" src="/assets/home/mobile/image-speaker-zx9.webp" alt="zx9 speaker image" loading="lazy" decoding="async" />
                </picture>
                <div className="details">
                   <h2>ZX9 SPEAKER</h2>
@@ -52,7 +52,7 @@ export default function Home() {
                   <picture>
                      <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-earphones-yx1.webp" />
                      <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-earphones-yx1.webp" />
-                     <img className="productIamge" src="/assets/home/mobile/image-earphones-yx1.webp" alt="" loading="lazy" decoding="async" />
+                     <img className="productIamge" src="/assets/home/mobile/image-earphones-yx1.webp" alt="yx1 earphone image" loading="lazy" decoding="async" />
                   </picture>
                </div>
                <div className="details">
