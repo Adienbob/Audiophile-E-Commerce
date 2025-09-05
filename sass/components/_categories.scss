@@ -10,8 +10,6 @@
    }
    @media (min-width: 1024px) {
       gap: 30px;
-      margin: 100px 0;
-      margin: 166px 0;
       margin: clamp(100px, calc(100px + (100vw - 360px) * 0.158653 ), 166px) 0;
    }
       div {
@@ -26,14 +24,14 @@
          flex: 1;
          .productImage {
             position: absolute;
-            transform: translate(-50%, -90%);
+            transform: translate(0, -90%);
             width: 45%;
             height: 100%;
             z-index: 1;
             @media (min-width: 600px) {
                width: clamp(70%, calc(70% + (100vw - 600px) * -0.0235849), 85%);
                height: clamp(70%, calc(70% + (100vw - 600px) * 0.070754 ), 100%);
-               transform: translate(-50%, clamp(-120%, calc(-120% + (100vw - 600px) * 0.506), -95%));               
+               transform: translate(0, clamp(-120%, calc(-120% + (100vw - 600px) * 0.506), -100%));
             }
             @media (min-width: 1024px) {
                width: 193px;

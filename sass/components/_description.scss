@@ -20,9 +20,7 @@
          border-radius: $radius-10;
          margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
          @media (min-width: 1024px) {
-            height: auto;
             margin-bottom: 0;
-            width: 100%;
          }
       }
    }

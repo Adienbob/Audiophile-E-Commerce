@@ -2,12 +2,11 @@
 header {
    background-color: $lighter-black;
    border-bottom: 1px solid $jet-grey;
+   padding: 1.5rem clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
    @media (min-width: 600px) {
       padding: 2rem clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
    }
    @media (min-width: 1024px) {
-      padding: 2rem 150px;
-      padding: 2rem 115px;
       padding: 2rem clamp(115px, calc(115px + (100vw - 1024px) * 0.08413461 ), 150px);
       border-bottom: none;
       position: relative;
@@ -16,8 +15,6 @@ header {
          bottom: 0;
          left: 50%;
          height: 1px;
-         width: calc(100% - 300px);
-         width: calc(100% - 230px);
          width: calc(100% - clamp(230px, calc(230px + (100vw - 1024px) * 0.1682692 ), 300px));
          transform: translateX(-50%);
          background-color: $jet-grey;
@@ -37,17 +34,14 @@ header {
          ul {
             display: flex;
             gap: 25px;
-            li {
-               list-style: none;
-               a {
-                  text-transform: uppercase;
-                  color: $white;
-                  padding: 0;
-                  font-size: 13px;
-                  letter-spacing: 2px;
-                  &:hover {
-                     color: $dark-tan;
-                  }
+            a {
+               text-transform: uppercase;
+               color: $white;
+               padding: 0;
+               font-size: 13px;
+               letter-spacing: 2px;
+               &:hover {
+                  color: $dark-tan;
                }
             }
          }
@@ -86,11 +80,7 @@ header {
                height: clamp(20px, calc(20px + (100vw - 600px) * 0.011792 ), 25px);
             }
             @media (min-width: 1024px) {
-               width: 23px;
-               width: 33px;
                width: clamp(23px, calc(23px + (100vw - 1024px) * 0.0240384 ), 33px);
-               height: 20px;
-               height: 30px;
                height: clamp(20px, calc(20px + (100vw - 1024px) * 0.0240384 ), 30px);
             }
          }
