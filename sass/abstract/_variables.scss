@@ -16,7 +16,7 @@ $radius-10: 10px;
    margin-bottom: clamp(5rem, calc(5rem + (100vw - 360px) * 0.1333 ) ,7rem);
 }
 %main-pads {
-   padding: 2rem 2rem;
+   padding: 0 24px;
 }
 
 %pages-pads {
@@ -28,3 +28,5 @@ $radius-10: 10px;
       padding: 0 clamp(115px, calc(115px + (100vw - 1024px) * 0.0841346), 150px);
    }
 }
+
+

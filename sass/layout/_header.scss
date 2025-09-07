@@ -1,8 +1,10 @@
 
 header {
+   @extend %main-pads;
    background-color: $lighter-black;
    border-bottom: 1px solid $jet-grey;
-   padding: 1.5rem clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
+   padding-top: 2rem;
+   padding-bottom: 2rem;
    @media (min-width: 600px) {
       padding: 2rem clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
    }

@@ -1,12 +1,11 @@
 "use client"
 import Image from "next/image"
-import { useState } from "react"
+import { useState, useEffect} from "react"
 import { useCart } from "../context/cartContext";
 import { useData } from "../context/dataContext";
 import Confirmation from "../components/confirmation";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-
+import {useForm} from "react-hook-form"
 
 
 export default function Checkout() {
@@ -15,8 +14,14 @@ export default function Checkout() {
    const router = useRouter();
    const {cartItems} = useCart();
    const [isCheckout, updateIsCheckout] = useState(false);
-
-   
+   const {
+      register, 
+      handleSubmit, 
+      formState: {errors, isValid, isSubmitting},
+   } = useForm({mode: "onBlur"})
+   const onSubmit = (data: object) => {
+      console.log(data);
+   }
    useEffect(() => {
       if (isCheckout) {
          document.body.style.overflow = "hidden"; 
@@ -59,26 +64,72 @@ export default function Checkout() {
    return (
       <div className="checkoutPage">
          <button className="backBtn" onClick={() => router.back}>Go Back</button>
-         <div className="checkoutContainer">
+         <form onSubmit={handleSubmit(onSubmit)} className="checkoutContainer">
             <section className="checkout">
                <h1>CHECKOUT</h1>
                <span>BILLING DETAILS</span>
-               <label htmlFor="name">Name</label>
-               <input type="text" id="name" placeholder="Alexei Ward"/>
-               <label htmlFor="email">Email Address</label>
-               <input type="email" id="email" placeholder="alexi@mail.com"/>
-               <label htmlFor="phoneNumber">Phone Number</label>
-               <input type="number" id="phoneNumber" placeholder="+1 202-555-0136"/>
-
+               <div className="nameContainer">
+                  <label htmlFor="name">Name</label>
+                  <input {...register("name", {
+                     required: "Name is required"
+                  })} type="text" id="name" placeholder="Alexei Ward"/>
+                  <span className="errorMessage">{errors.name?.message as string}</span>
+               </div>
+               <div className="emailContainer">
+                  <label htmlFor="email">Email Address</label>
+                  <input {...register("email", {
+                     required: "Email is required",
+                     pattern: {
+                        value: /\S+@\S+\.\S+/,
+                        message: "Enter a valid email"
+                     }
+                  })} type="email" id="email" placeholder="alexi@mail.com"/>
+                  <span className="errorMessage">{errors.email?.message as string}</span>
+               </div>
+               <div className="pnContainer">
+                  <label htmlFor="phoneNumber">Phone Number</label>
+                  <input {...register("phoneNumber", {
+                     required: "PhoneNumber is required",
+                     pattern: {
+                        value: /^[0-9]{10,15}$/,
+                        message: "Enter a valid phone number",
+                     }
+                  })} type="tel" id="phoneNumber" placeholder="+1 202-555-0136"/>
+                  <span className="errorMessage">{errors.phoneNumber?.message as string}</span>
+               </div>
                <span>SHIPPTING INFO</span>
-               <label htmlFor="address">Your Address</label>
-               <input type="text" id="address" placeholder="1137 Williams Avenue"/>
-               <label htmlFor="zipCode">ZIP Code</label>
-               <input type="text" id="zipCode" placeholder="1001"/>
-               <label htmlFor="city">City</label>
-               <input type="text" id="city" placeholder="New York"/>
-               <label htmlFor="country">Country</label>
-               <input type="text" id="country" placeholder="United States"/>
+               <div className="addressContainer">
+                  <label htmlFor="address">Your Address</label>
+                  <input {...register("address", {
+                     required: "Address is required"
+                  })} type="text" id="address" placeholder="1137 Williams Avenue"/>
+                  <span className="errorMessage">{errors.address?.message as string}</span>
+               </div>
+               <div className="zipCodeContainer">
+                  <label htmlFor="zipCode">ZIP Code</label>
+                  <input {...register("zipCode", {
+                     required: "zipCode is required",
+                     pattern: {
+                     value: /^[0-9]{4,10}$/, 
+                     message: "Enter a valid ZIP Code",
+                     },
+                  })} type="text" id="zipCode" placeholder="1001"/>
+                  <span className="errorMessage">{errors.zipCode?.message as string}</span>
+               </div>
+               <div className="cityContainer">
+                  <label htmlFor="city">City</label>
+                  <input {...register("city", {
+                     required: "City is required"
+                  })} type="text" id="city" placeholder="New York"/>
+                  <span className="errorMessage">{errors.city?.message as string}</span>
+               </div>
+               <div className="countryContainer">
+                  <label htmlFor="country">Country</label>
+                  <input {...register("country", {
+                     required: "Country is required"
+                  })} type="text" id="country" placeholder="United States"/>
+                  <span className="errorMessage">{errors.country?.message as string}</span>
+               </div>
                <span>PAYMENT DETAILS</span>
                <div className="paymentContainer">
                      <strong>Payment Method</strong>
@@ -131,10 +182,10 @@ export default function Checkout() {
                   <p>GRAND TOTAL</p>
                   <span>$ {(total + 50).toLocaleString()}</span>
                </div>
-               <button className="btnOrange" onClick={() => updateIsCheckout(true)}>CONTINUE & PAY</button>
+               <button className="btnOrange" disabled={!isValid || isSubmitting} onClick={() => updateIsCheckout(true)}>CONTINUE & PAY</button>
             </section>
             {isCheckout && <Confirmation total={total + 50} />}
-         </div>
+         </form>
       </div>
    )
 }
