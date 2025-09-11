@@ -22,7 +22,7 @@
       background-color: $white;
       z-index: 999;
       padding: 2rem;
-      border-radius: $radius-10;
+      border-radius: $radius-8;
       overflow-y: auto;
       position: fixed;
       top: 50%;
@@ -86,15 +86,15 @@
             background-color: #f1f1f1;
             padding: 1.125rem 1.5rem 1.125rem 1rem;
             margin-top: 1.125rem;
-            border-top-left-radius: $radius-10;
-            border-top-right-radius: $radius-10;
+            border-top-left-radius: $radius-8;
+            border-top-right-radius: $radius-8;
             text-align: center;
             @media (min-width: 600px) {
                width: 55%;
                margin-top: 0;
                border-radius: 0;
-               border-top-left-radius: $radius-10;
-               border-bottom-left-radius: $radius-10;
+               border-top-left-radius: $radius-8;
+               border-bottom-left-radius: $radius-8;
             }
             .item {
                text-align:initial;
@@ -148,14 +148,14 @@
       background-color: $lighter-black;
       padding: 1.125rem 1.5rem;
       margin-bottom: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.0416), 1.75rem);
-      border-bottom-left-radius: $radius-10;
-      border-bottom-right-radius: $radius-10;
+      border-bottom-left-radius: $radius-8;
+      border-bottom-right-radius: $radius-8;
       @media (min-width: 600px) {
          width: 45%;
          margin-bottom: 0;
          border-radius: 0;
-         border-top-right-radius: $radius-10;
-         border-bottom-right-radius: $radius-10;
+         border-top-right-radius: $radius-8;
+         border-bottom-right-radius: $radius-8;
       }
       p {
          color: $white;

@@ -29,35 +29,26 @@
       }
     }
 
-    .menu {
+    .categories {
       position: fixed; 
-      top: 15%;
+      overflow-y: auto;
+      top: 94px;
       left: 50%;
       transform: translateX(-50%); 
       background-color: #fff;
-      width: 180px;
+      height: 753px;
+      max-height: 440px;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      padding: 15px;
+      padding: 84px 24px 35px;
       opacity: 0;
       pointer-events: none;
       box-shadow: 0 8px 16px rgba(0,0,0,0.2);
       transition: opacity 0.3s ease;
       border-radius: 5px;
       z-index: 1000;
-      &::before {
-        content: "";
-        position: fixed;
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: black;
-        top: 0;
-        left: 0;
-        opacity: 0.3;
-        z-index: -1;
-      }
+      margin: 0;
       a {
         text-align: left;
         padding: 8px 12px;
@@ -75,7 +66,7 @@
       }
     }
 
-    .toggleButton:checked ~ .menu {
+    .toggleButton:checked ~ .categories {
       opacity: 1;
       pointer-events: auto;
     }

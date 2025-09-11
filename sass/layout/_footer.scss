@@ -20,7 +20,7 @@ footer {
       margin-top: 0;
    }
    .logo, ul, p, strong {
-      margin-bottom: 3rem;
+      margin-bottom: 48px;
       @media (min-width: 600px) {
          margin-bottom: 2rem;
       }
@@ -32,7 +32,8 @@ footer {
          width: 100%;
       }
       .logo {
-         width: 45%;
+         width: 143px;
+         margin: 52px 0 48px;
          height: auto;
          @media (min-width: 600px) {
             width: 20%;
@@ -46,8 +47,10 @@ footer {
          content: "";
          position: absolute;
          background-color: $dark-tan;
-         width: 25%;
+         width: 101px;
          height: 4px;
+         left: 50%;
+         transform: translateX(-50%);
          top: 0;
          @media (min-width: 600px) {
             width: 12.5%;
@@ -61,7 +64,7 @@ footer {
       ul { 
          display: flex;
          flex-direction: column;
-         gap: 1.5rem;
+         gap: 16px;
          &.socialIcons {
             gap: 0;
          }
@@ -74,6 +77,8 @@ footer {
             font-weight: 600;
             padding: 0;
             letter-spacing: 2px;
+            height: fit-content;
+            font-size: 13px;
             @media (min-width: 600px) {
                font-size: clamp(0.6rem, calc(0.6rem + (100vw - 600px) * 0.018867 ), 1.1rem);
             }
@@ -87,10 +92,10 @@ footer {
       }
    }
    p {
-      color: $white;
+      @include paragraph-style-white;
       opacity: 50%;
-      font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.045), 1.6rem);
-      line-height: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0833), 2.75rem);
+      padding: 0 0.25rem;
+      margin-bottom: 48px;
       @media (min-width: 600px) {
          font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.020754 ), 1.3rem);
          line-height: clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.0283018 ), 2rem);
@@ -107,6 +112,7 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 38px;
       @media (min-width: 600px) {
          flex-direction: row;
          align-items: center;
@@ -114,10 +120,10 @@ footer {
          justify-content: space-between;
       }
       small {
-         color: $white;
-         opacity: 0.50;
-         line-height: 25px;
-         font-size: clamp(0.925rem, calc(0.925rem + (100vw - 360px) * 0.045), 1.6rem);
+         @include paragraph-style-white;
+         opacity: 50%;
+         font-weight: bold;
+         margin-bottom: 48px;
          @media (min-width: 600px) {
             font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.0245283 ), 1.4rem);
             margin-bottom: 0;
@@ -130,7 +136,7 @@ footer {
          display: flex;
          justify-content: space-between;
          align-items: center;
-         width: 32.5%;
+         width: 104px;
          margin-bottom: 0;
          gap: 15px;
          @media (min-width: 600px) {
@@ -147,7 +153,7 @@ footer {
             top: -100px;
          }
          a {
-            padding: 0;
+            width: fit-content;
             color: $white;
             &:hover {
                color: $dark-tan;

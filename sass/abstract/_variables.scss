@@ -11,12 +11,12 @@ $dark-grey: #979797;
 $white: #fff;
 $red: #cd2c2c;
 $radius-5: 5px;
-$radius-10: 10px;
+$radius-8: 8px;
 %sections-break {
    margin-bottom: clamp(5rem, calc(5rem + (100vw - 360px) * 0.1333 ) ,7rem);
 }
 %main-pads {
-   padding: 0 24px;
+   padding: 0 clamp(24px, calc(24px + (100vw - 360px) * 0.033333) ,32px);
 }
 
 %pages-pads {

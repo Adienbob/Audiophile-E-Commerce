@@ -17,8 +17,8 @@
       grid-column: 2;
       img {
          width: 100%;
-         border-radius: $radius-10;
-         margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
+         border-radius: $radius-8;
+         margin-bottom: 40px;
          @media (min-width: 1024px) {
             margin-bottom: 0;
          }
@@ -28,9 +28,12 @@
       grid-column: 1;
       grid-row: 1;
       h3 {
-         font-size: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
          margin-bottom: clamp(2rem, calc(2rem + (100vw - 360px) * 0.0666), 3rem);
          color: $jet-black;
+         font-size: clamp(28px, calc(28px + (100vw - 360px) * 0.041666), 38px);
+         letter-spacing: 1px;
+         font-weight: 800;
+         margin-bottom: 36px;
          @media (min-width: 600px) {
             font-size: clamp(2.5rem, calc(2.5rem + (100vw - 600px) * 0.066037 ), 4.25rem);
             letter-spacing: 1px;

@@ -2,6 +2,7 @@
 import Cart from './cart';
 import Link from "./links";
 import Image from "next/image";
+import Dropdown from "./categories";
 import { useState, useEffect, useRef } from "react";
 import { useCart } from "../context/cartContext";
 
@@ -37,13 +38,25 @@ export default function Header() {
             }
          }
       }
+      function handleBodyLock() {
+         const input = dropdownRef.current?.querySelector("input");
+            if (input) {
+               if (input.checked) {
+                  document.body.classList.add("bodyLock");
+               } else {
+                  document.body.classList.remove("bodyLock");
+               }
+         }
+      }
 
       if (isMobile) {
          document.addEventListener("mousedown", handleOutsideClick);
+         document.addEventListener("click", handleBodyLock)
       }
 
       return () => {
          document.removeEventListener("mousedown", handleOutsideClick)
+         document.removeEventListener("click", handleBodyLock)
       }
    }, [isMobile])
 
@@ -83,20 +96,7 @@ export default function Header() {
                   <div className='bot'></div>
                </label>
 
-               <ul className="menu">
-                  <li>
-                     <Link path='/'  className='HomeLink' >Home</Link>
-                  </li>
-                  <li>
-                     <Link path='/headphones'  className='headphonesLink'>Headphones</Link>
-                  </li>
-                  <li>
-                     <Link path='/speakers'  className='speakersLink'>Speakers</Link>
-                  </li>
-                  <li>
-                     <Link path='/earphones'  className='earphonesLink'>Earphones</Link>
-                  </li>
-               </ul>
+               <Dropdown />
             </div>
          </div>
          <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='Audiophile Logo' loading="eager" />

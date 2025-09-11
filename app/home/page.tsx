@@ -13,7 +13,7 @@ export default function Home() {
             </picture>
             <div className="hero">
                <span>NEW PRODUCT</span>
-               <h1>XX99 MARK II <strong>HEADPHONE</strong></h1>
+               <h1>XX99 MARK II <strong>HEADPHONES</strong></h1>
                <p>
                   Experience natural, lifelike audio and exceptional build quality
                   made for the passionate music enthusiast.
@@ -40,6 +40,11 @@ export default function Home() {
                </div>
             </div>
             <div className="ZX7-Product">
+               <picture>
+                  <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-speaker-zx7.webp" />
+                  <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-speaker-zx7.webp" />
+                  <img src="/assets/home/mobile/image-speaker-zx7.webp" alt="zx7 speaker image" loading="lazy" decoding="async" />
+               </picture>
                <div className="details">
                   <h2>ZX7 SPEAKER</h2>
                   <Button className="btnTransparent" path="/products/zx7-speaker">

@@ -49,7 +49,7 @@ header {
          }
       }
       .logo {
-         width: 45%;
+         width: clamp(143px, calc(143px + (100vw - 600px) * 0.166666), 173px);
          height: auto;
          @media (min-width: 600px) {
             width: clamp(150px, calc(150px + (100vw - 600px) * 0.23584), 250px);
@@ -74,8 +74,8 @@ header {
             margin: 0;
          }
          img {
-            width: clamp(23px, calc(23px + (100vw - 360px) * 0.0625 ), 38px);
-            height: clamp(20px, calc(20px + (100vw - 360px) * 0.0625 ), 35px);
+            width: clamp(23px, calc(23px + (100vw - 600px) * 0.029166 ), 30px);
+            height: clamp(20px, calc(20px + (100vw - 600px) * 0.029166 ), 27px);
             position: relative !important;
             @media (min-width: 600px) {
                width: clamp(23px, calc(23px + (100vw - 600px) * 0.011792 ), 28px);

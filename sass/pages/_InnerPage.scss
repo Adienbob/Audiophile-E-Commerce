@@ -1,11 +1,10 @@
 
 .productInner {
-   @extend %pages-pads;
+   @extend %main-pads;
    margin: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.0333), 2rem) 0;
    @media (min-width: 600px) {
       margin: 2.5rem 0;
       a.backBtn {
-         font-size: 0.9375rem;
          font-weight: 500;
          @media (min-width: 600px) {
             font-size: clamp(1rem, calc(1rem + (100vw - 360px) * 0.004716 ) ,1.125rem);
@@ -49,9 +48,10 @@
          h1 {
             text-transform: uppercase;
             color: $lighter-black;
-            font-size: clamp(1.82rem, calc(1.82rem + (100vw - 360px) * 0.0986 ) ,3.3rem);
+            font-size: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.06666 ) ,2.75rem);
             margin: 1.5rem 0;
             letter-spacing: 1px;
+            line-height: clamp(38.25px, calc(38.25px + (100vw - 360px) * 0.0625 ) ,53.25px);
             @media (min-width: 600px) {
                font-size: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.037735 ) ,3rem);
                line-height: 3.5rem;
@@ -83,8 +83,12 @@
                margin-left: 0.25rem;
             }
          }
+         button {
+            margin: 0;
+         }
          .quantityButton {
             @include quantityButton;
+            margin: 0;
          }
       }
    }
@@ -163,20 +167,13 @@
    .productGallary {
       @extend %sections-break;
       display: grid;
-      grid-template-rows: repeat(3, (25% 25% 50%) - 3rem);
-      gap: 1rem;
+      grid-template-rows: repeat(2, clamp(170px, calc(170px + (100vw - 360px) * 0.708333 ) ,340px)) clamp(353px, calc(353px + (100vw - 360px) * 0.6125 ) ,500px);
+      gap: 1.25rem;
       @media (min-width: 600px) {
          grid-template-columns: 40% 57%;
          grid-template-rows: auto auto;
          gap: 20px 18px;
          height: fit-content;
-         div {
-            width: 100%;
-            height: 100%;
-            img {
-               @include productImge-style;
-            }
-         }
          .second {
             grid-row: 2;
             grid-column: 1;
@@ -185,6 +182,9 @@
             grid-row: span 2;
             grid-column: 2;
          }
+      }
+      img {
+         @include productImge-style;
       }
    }
    .suggestedProducts {
@@ -224,7 +224,7 @@
             img {
                width: 100%;
                height: 100%;
-               border-radius: $radius-10;
+               border-radius: $radius-8;
             }
             h5 {
                text-transform: uppercase;
@@ -253,6 +253,7 @@
    }
    .description,
    .categories {
+      padding: 0;
       @media (min-width: 600px) {
          padding: 0;
          div {

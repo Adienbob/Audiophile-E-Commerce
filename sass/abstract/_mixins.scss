@@ -1,8 +1,8 @@
 @mixin paragraph-style {
    color: $jet-black;
-   font-size: clamp(13.5px, calc(0.9375rem + (100vw - 360px) * 0.04375) ,24px);
-   line-height: 1.66;
-   font-weight: 500;
+   line-height: 25px;
+   font-size: 15px;
+   font-weight: 600;
    opacity: 50%;
    @media (min-width: 600px) {
       font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 600px) * 0.0247641 ) , 25.5px);
@@ -13,9 +13,17 @@
       text-align: left;
    }
 }
+@mixin paragraph-style-white {
+   color: $white;
+   opacity: 75%;
+   font-size: 15px;
+   font-weight: 400;
+   line-height: 25px;
+   padding: 0 1rem;
+}
 
 @mixin productImge-style {
-   border-radius: $radius-10;
+   border-radius: $radius-8;
    width: 100%;
    height: 100%;
    margin-bottom: 1rem;
@@ -60,9 +68,9 @@
    }
    .productsContainer {
       @extend %pages-pads;
-      margin-top: clamp(3rem, calc(3rem + (100vw - 360px) * 0.2 ), 6rem);
+      margin-top: clamp(4rem, calc(4rem + (100vw - 360px) * 0.2 ), 7rem);
       display: grid;
-      gap: 7rem;
+      gap: clamp(7rem, calc(7rem + (100vw - 360px) * 0.2 ), 10rem);
       @media (min-width: 600px) {
          margin-top: clamp(6rem, calc(6rem + (100vw - 600px) * 0.075471 ) ,8rem);
       }
@@ -96,7 +104,9 @@
             }
          }
          .productDetails {
-            margin: 1rem 0;
+            margin-top: clamp(32px, calc(32px + (100vw - 360px) * 0.066666), 48px);
+            display: grid;
+            gap: clamp(24px, calc(24px + (100vw - 360px) * 0.033333), 32px);
             @media (min-width: 600px) {
                margin: clamp(2.5rem, calc(2.5rem + (100vw - 600px) * 0.037735 ) ,3.5rem) 0 clamp(1rem, calc(1rem + (100vw - 600px) * 0.037735 ) ,2rem);
             }
@@ -110,7 +120,6 @@
                font-size: clamp(1.75rem, calc(1.75rem + (100vw - 360px) * 0.07916 ) ,2.75rem);
                letter-spacing: 2px;
                text-transform: uppercase;
-               margin: 1.5rem clamp(1rem, calc(1rem + (100vw - 360px) * 0.133 ) ,3rem);
                @media (min-width: 600px) {
                   font-size: clamp(2.5rem, calc(2.5rem + (100vw - 600px) * 0.066037 ) ,4.25rem);
                   margin: 1.5rem 5.75rem;
@@ -126,7 +135,6 @@
             }
             p {
                @include paragraph-style;
-               margin-bottom: clamp(3rem, calc(3rem + (100vw - 360px) * 0.133 ) , 5rem);
                padding: 0 clamp(0.1rem, calc(0.1rem + (100vw - 360px) * 0.06 ) , 1rem);
                @media (min-width: 600px) {
                   margin-bottom: clamp(2rem, calc(2rem + (100vw - 600px) * 0.075471 ) ,4rem);
@@ -143,8 +151,11 @@
          }
       }
    }
+   .categories
+   ,.description {
+      margin: 0;
+   }
    .categories {
-      margin: 0; 
       @media (min-width: 600px) {
          margin: clamp(1rem, calc(1rem + (100vw - 600px) * 0.1132075 ) ,4rem) 0;
       }

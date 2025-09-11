@@ -23,7 +23,7 @@
       section {
          background-color: $white;
          padding: 2rem;
-         border-radius: $radius-10;
+         border-radius: $radius-8;
          @media (min-width: 600px) {
             padding: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ) ,3rem);
          }
@@ -76,7 +76,7 @@
          }
          input {
             padding: clamp(1rem, calc(1rem + (100vw - 360px) * 0.0333), 1.5rem);
-            border-radius: $radius-10;
+            border-radius: $radius-8;
             border: 1px solid $grey;
             margin-bottom: 1rem;
             @media (min-width: 600px) {
@@ -104,7 +104,7 @@
                display: flex;
                align-items: center;
                padding: 1rem;
-               border-radius: $radius-10;
+               border-radius: $radius-8;
                border: 1px solid $grey;
                margin-bottom: 1rem;
                @media (min-width: 600px) {

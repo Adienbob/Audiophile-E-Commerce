@@ -4,5 +4,8 @@
    box-sizing: border-box;
    font-family: $type-manrope;
    list-style: none;
+   .bodyLock {
+      overflow: hidden;
+   }
 }
 
