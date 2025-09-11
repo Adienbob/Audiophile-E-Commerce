@@ -185,8 +185,10 @@
 @mixin quantityButton {
    background-color: $light-grey;
    width: fit-content;
-   font-size: clamp(0.8rem, calc(0.8rem + (100vw - 360px) * 0.0266), 1.25rem);
+   display: flex;
+   font-size: clamp(15px, calc(15px + (100vw - 360px) * 0.0125 ) ,18px);
    font-weight: 800;
+   align-items: center;
    @media (min-width: 600px) {
       font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 600px) * 0.021226), 1.5rem);
    }
@@ -194,9 +196,9 @@
       font-size: 0.9375rem;
    }
    span {
-      background-color: inherit;
-      text-align: center;
       padding: clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.05), 1.5rem) clamp(0.5rem, calc(0.5rem + (100vw - 360px) * 0.0833), 1.75rem);
+      padding: 0.75rem 0.5rem;
+      width: fit-content;
       @media (min-width: 600px) {
          padding: clamp(1rem, calc(1rem + (100vw - 600px) * 0.009433), 1.25rem) clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.0283018), 2rem);
       }
@@ -210,6 +212,7 @@
       transition: 0.3s;
       color: $lighter-black;
       padding: clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.05), 1.5rem) clamp(1rem, calc(1rem + (100vw - 360px) * 0.0833), 2.25rem);
+      width: fit-content;
       cursor: pointer;
       font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.0275 ) ,1.35rem);
       @media (min-width: 600px) {

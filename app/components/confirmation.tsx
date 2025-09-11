@@ -58,7 +58,7 @@ export default function Confirmation({total}: confirmationProps) {
    return (
       <div className="confirmationOverlay">
          <div className="confirmation">
-            <Image width={64} height={64} src="/assets/checkout/icon-order-confirmation.svg" alt="Order confirmation icon" />
+            <Image width={64} height={64} src="/assets/checkout/icon-order-confirmation.svg" className="icon" alt="Order confirmation icon" />
             <h3>THANK YOU <br /> FOR YOUR ORDER</h3>
             <p>You will receive an email confirmation shortly.</p>
             <div className="container">
@@ -76,7 +76,7 @@ export default function Confirmation({total}: confirmationProps) {
                   <span>$ {total.toLocaleString()}</span>
                </div>
             </div>
-               <Link href="/" onClick={clearCart} className="btnOrange">BACK TO HOME</Link>
+            <Link href="/" onClick={clearCart} className="btnOrange">BACK TO HOME</Link>
          </div>
       </div>
    )

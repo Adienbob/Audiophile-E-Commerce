@@ -79,6 +79,7 @@
             border-radius: $radius-8;
             border: 1px solid $grey;
             margin-bottom: 1rem;
+            width: 100%;
             @media (min-width: 600px) {
                width: 60%;
             }
@@ -137,6 +138,7 @@
             }
             p {
                @include paragraph-style;
+               font-weight: 500;
             }
          }
          .emoneyDescription {
@@ -168,6 +170,7 @@
          div {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             &.product {
                align-items: center;
                font-weight: 800;
@@ -208,7 +211,7 @@
             p {
                @include paragraph-style;
                font-size: clamp(0.9375rem, calc(0.9375rem + (100vw - 360px) * 0.0375), 1.5rem);
-               line-height: 3rem;
+               line-height: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.1), 3rem);
                @media (min-width: 600px) {
                   line-height: clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735), 3rem);
                   
@@ -224,11 +227,10 @@
                   color: $dark-tan;
                }
             }
-            button.btnOrange {
-               display: block;
-               width: 100%;
-               font-weight: 800;
-            }
+         }
+         button.btnOrange {
+            width: 100%;
+            font-weight: 800;
          }
       }
    }

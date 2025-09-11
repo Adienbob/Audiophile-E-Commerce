@@ -50,7 +50,7 @@
          }
       }
       h3 {
-         font-size: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.05 ), 2.25rem);
+         font-size: clamp(1.5rem, calc(1.5rem + (100vw - 360px) * 0.03333 ), 2rem);
          line-height: 1.15;
          margin-bottom: 1.125rem;
          @media (min-width: 600px) {
@@ -143,34 +143,39 @@
             }
          }
       }
-   }
-   .grandTotal {
-      background-color: $lighter-black;
-      padding: 1.125rem 1.5rem;
-      margin-bottom: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.0416), 1.75rem);
-      border-bottom-left-radius: $radius-8;
-      border-bottom-right-radius: $radius-8;
-      @media (min-width: 600px) {
-         width: 45%;
-         margin-bottom: 0;
-         border-radius: 0;
-         border-top-right-radius: $radius-8;
+      .grandTotal {
+         background-color: $lighter-black;
+         padding: 1.125rem 1.5rem;
+         margin-bottom: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.0416), 1.75rem);
+         border-bottom-left-radius: $radius-8;
          border-bottom-right-radius: $radius-8;
-      }
-      p {
-         color: $white;
-         margin-bottom: 0.5rem;
-      }
-      span {
-         color: $white;
-         font-size: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.0316), 1.6rem);
-         font-weight: 800;
          @media (min-width: 600px) {
-            font-size: clamp(1.125rem, calc(1.125rem + (100vw - 600px) * 0.0283018), 1.875rem);
+            width: 45%;
+            margin-bottom: 0;
+            border-radius: 0;
+            border-top-right-radius: $radius-8;
+            border-bottom-right-radius: $radius-8;
          }
-         @media (min-width: 1024px) {
-            font-size: 1.125rem;
+         p {
+            color: $white;
+            margin-bottom: 0.5rem;
          }
+         span {
+            color: $white;
+            font-size: clamp(1.125rem, calc(1.125rem + (100vw - 360px) * 0.0316), 1.6rem);
+            font-weight: 800;
+            @media (min-width: 600px) {
+               font-size: clamp(1.125rem, calc(1.125rem + (100vw - 600px) * 0.0283018), 1.875rem);
+            }
+            @media (min-width: 1024px) {
+               font-size: 1.125rem;
+            }
+         }
+      }
+      .btnOrange {
+         width: 100%;
+         align-content: center;
+         text-align: center;
       }
    }
 }

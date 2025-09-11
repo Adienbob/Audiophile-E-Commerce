@@ -1,4 +1,3 @@
-@import "../abstract/variables";
 .cartOverlay {
    position: absolute;
    z-index: 999;
@@ -95,7 +94,7 @@
                   }
                }
                .details {
-                  margin-left: 0.5rem;
+                  margin-left: clamp(0.5rem, calc(0.5rem + (100vw - 360px) * 0.03333), 1rem);
                   @media (min-width: 600px) {
                      margin-left: clamp(4rem, calc(4rem + (100vw - 600px) * 0.1509433), 8rem);
                   }
@@ -122,6 +121,14 @@
             }
             .productBtn {
                @include quantityButton;
+               span {
+                  padding: clamp(0.5rem, calc(0.5rem + (100vw - 360px) * 0.033333), 1rem) clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.033333), 1.25rem);
+                  font-size: clamp(14px, calc(14px + (100vw - 360px) * 0.016666), 18px);
+               }
+               button {
+                  font-size: clamp(14px, calc(14px + (100vw - 360px) * 0.016666), 18px);
+                  padding: clamp(0.5rem, calc(0.5rem + (100vw - 360px) * 0.033333), 1rem) clamp(0.75rem, calc(0.75rem + (100vw - 360px) * 0.033333), 1.25rem);
+               }
                @media (min-width: 600px) {
                   span {
                      padding: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.0188679), 1.25rem) clamp(1rem, calc(1rem + (100vw - 600px) * 0.0283018), 1.75rem);
@@ -164,7 +171,6 @@
             }
          }
          a {
-            display: block;
             width: 100%;
          }
       }
