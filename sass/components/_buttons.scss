@@ -18,13 +18,17 @@ a, button:not(aside button, .items button, header button, footer a) {
    }
    @media (min-width: 1024px) {
       font-size: 13px;
-      padding: 0.9375rem 1.9375rem;
+      width: 160px;
+      height: 48px;
    }
    &.btnOrange {
       background-color: $dark-tan;
       color: $white;
       border: none;
       margin: 0 auto;
+      @media (min-width: 1024px) {
+         margin: 0;
+      }
    }
    &.btnOrange:hover {
       background-color: $light-tan;
@@ -39,6 +43,7 @@ a, button:not(aside button, .items button, header button, footer a) {
    &.btnBlack {
       background-color: $jet-black;
       color: $white;
+      text-align: center;
    }
    &.btnBlack:hover {
       background-color: $lighter-black;
@@ -62,5 +67,14 @@ a, button:not(aside button, .items button, header button, footer a) {
       &:hover {
          text-decoration: underline;
       }
+   }
+}
+
+.summary button.btnOrange,
+.confirmation a.btnOrange,
+.cartBody a.btnOrange {
+   width: 100%;
+   @media (min-width: 600px) and (max-width: 1023px) {
+      font-size:clamp(13px, calc(13px + (100vw - 600px) * 0.0117924), 18px);
    }
 }

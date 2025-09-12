@@ -6,7 +6,7 @@ import Link from "next/link"
 export default function Category() {
 
    return (
-      <div className="categories">
+      <nav className="categories">
          <div className="headphones">
             <Image 
                className="productImage" 
@@ -43,6 +43,6 @@ export default function Category() {
             <span className="categoryName">EARPHONES</span>
             <Link className="btnDarkGrey" href="/earphones">SHOP <Image className="arrow" width={8} height={12} src="/assets/shared/desktop/icon-arrow-right.svg" alt="Arrow Icon" loading="eager" decoding="async" /></Link> 
          </div>
-      </div>
+      </nav>
    )
 }

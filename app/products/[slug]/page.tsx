@@ -12,11 +12,11 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
    const product = (useData().find((item) => item.slug === slug))
    if (!product) return <div>Product Not Found</div>;
    return (
-      <div className="productInner">
+      <main className="productInner">
             <Button className="backBtn" path={`/${product.category}`}>
                Go Back
             </Button>
-         <section className="productDetails">
+         <article className="productDetails">
             <div className="imageContainer">
                <picture>
                   <source media="(min-width: 1024px)" srcSet={product.image.desktop} />
@@ -31,8 +31,8 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                <strong className="price">$<span>{product.price.toLocaleString()}</span></strong>
                <QuantityButton id={product.id}/>
             </div>
-         </section>
-         <article>
+         </article>
+         <section>
             <div className="productFeatures">
                <h2>FEATURES</h2>
                <p>{product.features}</p>
@@ -45,8 +45,8 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                   ))}
                </div>
             </div>
-         </article>
-         <div className="productGallary">
+         </section>
+         <section className="productGallary">
             <div className="first">
                <picture>
                   <source media="(min-width: 1024px)" srcSet={product.gallery.first.desktop} />
@@ -68,12 +68,12 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                   <img src={product.gallery.third.mobile} alt={product.name} loading="lazy" decoding="async" />
                </picture>
             </div>
-         </div>
-         <div className="suggestedProducts">
+         </section>
+         <section className="suggestedProducts">
             <h4>YOU MAY ALSO LIKE</h4>
             <div className="items">
                {product.others.map((item) => (
-                  <div key={item.name} className="item">
+                  <article key={item.name} className="item">
                      <picture>
                         <source media="(min-width: 1024px)" srcSet={item.image.desktop} />
                         <source media="(min-width: 600px)" srcSet={item.image.tablet} />
@@ -81,12 +81,12 @@ export default function ProductInner({ params }: { params: Promise<{ slug: strin
                      </picture>
                      <h5>{item.name}</h5>
                      <Button className="btnOrange" path={`/products/${item.slug}`}>SEE PRODUCT</Button>
-                  </div>
+                  </article>
                ))}
             </div>
-         </div>
+         </section>
          <Category />
          <Description />
-      </div>
+      </main>
    )
 }

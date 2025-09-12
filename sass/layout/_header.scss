@@ -39,6 +39,7 @@ header {
                padding: 0;
                font-size: 13px;
                letter-spacing: 2px;
+               width: fit-content;
                &:hover {
                   color: $dark-tan;
                }

@@ -16,7 +16,10 @@
          }
       }
    }
-   section {
+   @media (min-width: 1024px) {
+      margin-bottom: 150px;
+   }
+   .productDetails {
       @extend %sections-break;
       @media (min-width: 600px) {
          display: grid;

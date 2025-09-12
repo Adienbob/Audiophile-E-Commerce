@@ -4,8 +4,8 @@ import Button from "../components/links";
 
 export default function Home() {
    return (
-      <div className="homePage">
-         <div className="heroContainer">
+      <main className="homePage">
+         <section className="heroContainer">
             <picture>
                <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-hero.webp" />
                <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-hero.webp" />
@@ -22,10 +22,10 @@ export default function Home() {
                   SEE PRODUCT
                </Button>
             </div>
-         </div>
+         </section>
          <Category />
-         <div className="featuredProducts">
-            <div className="ZX9-Product">
+         <section className="featuredProducts">
+            <article className="ZX9-Product">
                <picture>
                   <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-speaker-zx9.webp" />
                   <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-speaker-zx9.webp" />
@@ -38,8 +38,8 @@ export default function Home() {
                      SEE PRODUCT
                   </Button>
                </div>
-            </div>
-            <div className="ZX7-Product">
+            </article>
+            <article className="ZX7-Product">
                <picture>
                   <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-speaker-zx7.webp" />
                   <source media="(min-width: 600px)" srcSet="/assets/home/tablet/image-speaker-zx7.webp" />
@@ -51,8 +51,8 @@ export default function Home() {
                      SEE PRODUCT
                   </Button>
                </div>
-            </div>
-            <div className="YX1-Product">
+            </article>
+            <article className="YX1-Product">
                <div className="imgContainer">
                   <picture>
                      <source media="(min-width: 1024px)" srcSet="/assets/home/desktop/image-earphones-yx1.webp" />
@@ -66,9 +66,9 @@ export default function Home() {
                      SEE PRODUCT
                   </Button>
                </div>
-            </div>
-         </div>
+            </article>
+         </section>
          <Description />
-      </div>
+      </main>
    )
 }

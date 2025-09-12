@@ -10,9 +10,9 @@ export default function Headphones() {
    const data = useData().filter((product) => product.category === "headphones");
 
    return (
-      <div className="headphonesPage">
+      <main className="headphonesPage">
          <h1>HEADPHONES</h1>
-         <div className="productsContainer">
+         <section className="productsContainer">
             {data.toReversed().map((product, index) => (
                <Product 
                   key={product.id}
@@ -29,7 +29,7 @@ export default function Headphones() {
             }
             <Category />
             <Description />
-         </div>
-      </div>
+         </section>
+      </main>
    )
 }

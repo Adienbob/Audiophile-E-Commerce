@@ -11,9 +11,9 @@ export default function Earphones() {
    const data = useData().filter((product) => product.category === "earphones");
 
    return (
-      <div className="earphonesPage">
+      <main className="earphonesPage">
          <h1>EARPHONES</h1>
-         <div className="productsContainer">
+         <section className="productsContainer">
             {data.map((product, index) => (
                <Product 
                   key={product.id}
@@ -28,9 +28,9 @@ export default function Earphones() {
                />
             ))
             }
-         </div>
+         </section>
          <Category />
          <Description />
-      </div>
+      </main>
    )
 }

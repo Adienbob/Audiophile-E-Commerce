@@ -1,6 +1,6 @@
 
 footer {
-   @extend %pages-pads;
+   @extend %main-pads;
    background-color: $lighter-black;
    color: white;
    display: flex;
@@ -15,7 +15,8 @@ footer {
       text-align: left;
    }
    @media (min-width: 1024px) {
-      padding: 5rem clamp(100px, calc(100px + (100vw - 1024px) * 0.1201923 ), 150px);
+      padding-top: 5rem;
+      padding-bottom: 5rem;
       margin-top: 0;
    }
    &::before {
@@ -28,10 +29,10 @@ footer {
       transform: translateX(-50%);
       top: 0;
       @media (min-width: 600px) {
-         left: clamp(82px, calc(82px + (100vw - 600px) * 0.037735 ), 98px);
+         left: clamp(80px, calc(80px + (100vw - 600px) * 0.023584 ), 90px);
       }
       @media (min-width: 1024px) {
-         left: clamp(100px, calc(100px + (100vw - 1024px) * 0.1201923 ), 150px);
+         left: clamp(150px, calc(150px + (100vw - 1024px) * 0.1201923 ), 200px);
       }
    }
    .logo, ul, p, strong {
@@ -45,14 +46,18 @@ footer {
          display: flex;
          justify-content: space-between;
          width: 100%;
+         margin-bottom: 36px;
       }
       .logo {
-         width: 143px;
          margin: 52px 0 48px;
+         width: 143px;
          height: auto;
          @media (min-width: 600px) {
             margin: clamp(60px, calc(60px + (100vw - 600px) * 0.070754 ), 90px) 0 clamp(32px, calc(32px + (100vw - 600px) * 0.056603 ), 56px);
             width: clamp(143px, calc(143px + (100vw - 600px) * 1.41509 ), 203px);
+         }
+         @media (min-width: 1024px) {
+            margin: 0;
          }
       }
       ul { 
@@ -61,6 +66,10 @@ footer {
          gap: 16px;
          @media (min-width: 600px) {
             gap: 34px;
+         }
+         @media (min-width: 1024px) {
+            align-self: center;
+            margin: 0;
          }
          &.socialIcons {
             gap: 0;
@@ -92,7 +101,6 @@ footer {
    p {
       @include paragraph-style-white;
       opacity: 50%;
-      padding: 0 0.25rem;
       margin-bottom: 48px;
       padding: 0;
       @media (min-width: 600px) {

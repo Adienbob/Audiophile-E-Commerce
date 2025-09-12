@@ -1,6 +1,9 @@
 
 .homePage {
    text-align: center;
+   @media (min-width: 1024px) {
+      margin-bottom: 150px;
+   }
    .heroContainer {
       .background {
          position: absolute;
@@ -104,6 +107,7 @@
       }
       @media (min-width: 1024px) {
          grid-template-rows: clamp(510px, calc(510px + (100vw - 1024px) * 0.120192), 560px) repeat(2, clamp(270px, calc(270px + (100vw - 1024px) * 0.120192), 320px));
+         
       }
       div {
          @media (min-width: 600px) {
@@ -252,11 +256,10 @@
             font-size: clamp(24px, calc(24px + (100vw - 360px) * 0.083333), 44px);
             @media (min-width: 600px) {
                margin: 0;
-               padding: 101px clamp(47px, calc(47px + (100vw - 600px) * 0.040094), 64px);
                padding: clamp(60px, calc(60px + (100vw - 600px) * 0.096698), 101px) clamp(47px, calc(47px + (100vw - 600px) * 0.040094), 64px);
             }
             @media (min-width: 1024px) {
-               padding: clamp(2rem, calc(2rem + (100vw - 1024px) * 0.0769230), 4rem) 0 0 5rem ;
+               padding: clamp(76px, calc(76px + (100vw - 1024px) * 0.060096), 101px) clamp(47px, calc(47px + (100vw - 1024px) * 0.040865), 64px);
             }
             h2{
                color: $lighter-black;

@@ -61,9 +61,6 @@
             font-size: 1.5rem;
          }
       }
-      a {
-         display: block;
-      }
       p {
          @include paragraph-style;
       }
@@ -170,14 +167,6 @@
             @media (min-width: 1024px) {
                font-size: 1.125rem;
             }
-         }
-      }
-      .btnOrange {
-         width: 100%;
-         align-content: center;
-         text-align: center;
-         @media (min-width: 600px) {
-            font-size:clamp(13px, calc(13px + (100vw - 600px) * 0.0117924), 18px);
          }
       }
    }

@@ -2,7 +2,7 @@
 export default function description() {
 
    return (
-      <div className="description">
+      <section className="description">
          <picture>
             <source media="(min-width: 1024px)" srcSet="/assets/shared/desktop/image-best-gear.webp"/>
             <source media="(min-width: 600px)" srcSet="/assets/shared/tablet/image-best-gear.webp"/>
@@ -20,6 +20,6 @@ export default function description() {
                audio equipment.
             </p>
          </div>
-      </div>
+      </section>
    )
 }

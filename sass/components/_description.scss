@@ -10,7 +10,7 @@
       text-align: left;
       gap: clamp(75px, calc(75px + (100vw - 1024px) * 0.1201923 ) , 125px);
       align-items: center;
-      margin: 150px 0;
+      margin-top: 150px;
    }
    picture {
       grid-column: 2;
