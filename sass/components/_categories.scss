@@ -4,11 +4,12 @@
    margin-bottom: 120px;
    display: grid;
    gap: clamp(68px, calc(68px + (100vw - 360px) * 0.041666), 78px);
-   @extend %pages-pads;
+   @extend %main-pads;
    @media (min-width: 600px) {
       display: flex;
-      gap: 0.75rem;
-      margin: 0;
+      gap: clamp(10px, calc(10px + (100vw - 600px) * 0.0117924), 15px);
+      margin-top: 148px;
+      margin-bottom: 96px;
    }
    @media (min-width: 1024px) {
       gap: 30px;
@@ -29,9 +30,9 @@
          height: clamp(157.5px, calc(157.5px + (100vw - 360px) * 0.041666), 167.5px);
          z-index: 1;
          @media (min-width: 600px) {
-            width: clamp(70%, calc(70% + (100vw - 600px) * -0.0235849), 85%);
-            height: clamp(70%, calc(70% + (100vw - 600px) * 0.070754 ), 100%);
-            transform: translate(0, clamp(-120%, calc(-120% + (100vw - 600px) * 0.506), -100%));
+            width: clamp(140px, calc(140px + (100vw - 600px) * 0.165094 ), 210px);
+            height: clamp(155px, calc(155px + (100vw - 600px) * 0.047169 ), 175px);
+            transform: translate(0, clamp(-65px, calc(-55px + (100vw - 600px) * -0.023584 ), -55px));
          }
          @media (min-width: 1024px) {
             width: 193px;
@@ -64,6 +65,7 @@
             color: $dark-tan;
          }
          @media (min-width: 600px) {
+            width: fit-content;
             font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.018867 ), 1.25rem);
          }
          @media (min-width: 1024px) {

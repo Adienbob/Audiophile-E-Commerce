@@ -17,6 +17,9 @@ $radius-8: 8px;
 }
 %main-pads {
    padding: 0 clamp(24px, calc(24px + (100vw - 360px) * 0.033333) ,32px);
+   @media (min-width: 600px) {
+      padding: 0 clamp(30px, calc(30px + (100vw - 600px) * 0.023584) ,40px);
+   }
 }
 
 %pages-pads {

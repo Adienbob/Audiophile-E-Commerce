@@ -1,6 +1,5 @@
 
 .mobileLinks {
-  position: relative;
   z-index: 10;
   width: 1.5rem;
 
@@ -15,6 +14,20 @@
       height: 22px;
       cursor: pointer;
       z-index: 20;
+      &::before {
+        content: "";
+        transition: opacity 0.3s ease;
+        background-color: $jet-black;
+        opacity: 0;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        @media (min-width: 600px) {
+          height: clamp(400px, calc(400px + (100vw - 600px) * 0.4716981) ,600px);
+          
+        }
+      }
 
       div {
         width: 100%;
@@ -49,6 +62,15 @@
       border-radius: 5px;
       z-index: 1000;
       margin: 0;
+      @media (min-width: 600px) {
+        padding: 0 clamp(30px, calc(30px + (100vw - 600px) * 0.023584) ,40px);
+        max-height: clamp(360px, calc(360px + (100vw - 600px) * 0.330188 ) , 500px);
+        flex-direction: row;
+        align-items: center;
+        div {
+          height: fit-content;
+        }
+      }
       a {
         text-align: left;
         padding: 8px 12px;
@@ -72,6 +94,9 @@
     }
 
     .toggleButton:checked + .hamburger {
+      &::before {
+        opacity: 0.3;
+      }
       .top {
         transform: translateY(8px) rotate(45deg);
       }

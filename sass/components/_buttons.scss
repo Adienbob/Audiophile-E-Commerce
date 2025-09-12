@@ -4,10 +4,17 @@ a, button:not(aside button, .items button, header button, footer a) {
    letter-spacing: 1px;
    font-size: clamp(13px, calc(13px + (100vw - 360px) * 0.00416666 ), 14px);
    font-weight: bold;
+   width: clamp(160px, calc(160px + (100vw - 360px) * 0.1041666 ), 185px);
+   height: clamp(48px, calc(48px + (100vw - 360px) * 0.041666 ), 58px);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
    cursor: pointer;
    @media (min-width: 600px) {
-      font-size: clamp(0.8125rem, calc(0.8125rem + (100vw - 600px) * 0.0259433 ), 1.5rem);
-      padding: clamp(15px, calc(15px + (100vw - 600px) * 0.0117924 ), 20px) clamp(30px, calc(30px + (100vw - 600px) * 0.0353773 ), 45px);
+      width: clamp(160px, calc(160px + (100vw - 600px) * 0.106132 ), 205px);
+      height: clamp(48px, calc(48px + (100vw - 600px) * 0.047169 ), 68px);
+      font-size: clamp(13px, calc(13px + (100vw - 600px) * 0.0047169 ), 15px);
    }
    @media (min-width: 1024px) {
       font-size: 13px;
@@ -54,13 +61,4 @@ a, button:not(aside button, .items button, header button, footer a) {
          text-decoration: underline;
       }
    }
-}
-
-button:not(aside button, .items button, header button),
-a.btnOrange {
-   width: clamp(160px, calc(160px + (100vw - 360px) * 0.1041666 ), 185px);
-   height: clamp(48px, calc(48px + (100vw - 360px) * 0.041666 ), 58px);
-   display: flex;
-   justify-content: center;
-   align-items: center;
 }

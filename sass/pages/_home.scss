@@ -10,8 +10,8 @@
          top: 0;
          left: 0;
          @media (min-width: 600px) {
-            height: clamp(500px, calc(500px + (100vw - 600px) * 0.4009433), 670px);
-            top: 7%;
+            top: 50px;
+            height: calc(100vh - 50px);
          }
          @media (min-width: 1024px) {
             width: 100%;
@@ -27,9 +27,6 @@
          flex-direction: column;
          padding: 0 1rem;
          height: 85vh;
-         @media (min-width: 600px) {
-            margin-bottom: clamp(0rem, calc(0rem + (100vw - 600px) * 0.226415), 6rem);
-         }
          @media (min-width: 1024px) {
             align-items: flex-start;
             padding: 0; 
@@ -96,13 +93,13 @@
       }
    }
    .featuredProducts {
-      @extend %pages-pads;
+      @extend %main-pads;
       display: grid;
       gap: 1.5rem;
       @media (min-width: 600px) {
          display: grid;
          grid-template-columns: repeat(2, 1fr);
-         grid-template-rows: repeat(4, clamp(260px, calc(260px + (100vw - 600px) * 0.51886), 480px));
+         grid-template-rows: clamp(340px, calc(340px + (100vw - 600px) * 0.801886), 680px) repeat( 2, clamp(250px, calc(250px + (100vw - 600px) * 0.2122641), 340px));
          gap: 2rem;
       }
       @media (min-width: 1024px) {
@@ -157,7 +154,7 @@
                @media (min-width: 600px) {
                   width: clamp(152.5px, calc(152.5px + (100vw - 600px) * 0.25353), 260px);
                   margin-top: clamp(3rem, calc(3rem + (100vw - 600px) * 0.03773), 4rem);
-                  margin-bottom: clamp(2.25rem, calc(2.25rem + (100vw - 600px) * 0.1226415), 4.5rem);
+                  margin-bottom: clamp(2.25rem, calc(2.25rem + (100vw - 600px) * 0.122641), 5.5rem);
                }
                @media (min-width: 1024px) {
                   width: clamp(325px, calc(325px + (100vw - 1024px) * 0.2043269), 410px);
@@ -167,8 +164,10 @@
             }
          }
          .details {
+            @media (min-width: 600px) {
+               width: clamp(380px, calc(380px + (100vw - 600px) * 0.400943), 550px);
+            }
             @media (min-width: 1024px) {
-               width: 50%;
                width: 349px;
                display: flex;
                flex-direction: column;
@@ -178,16 +177,17 @@
             }
             h2 {
                color: $white;
-               padding: clamp(3rem, calc(3rem + (100vw - 360px) * 0.333333), 8rem);
-               margin-bottom: 14px;
+               padding: 0 clamp(3rem, calc(3rem + (100vw - 360px) * 0.333333), 8rem);
+               margin-bottom: clamp(18px, calc(18px + (100vw - 360px) * 0.05833), 32px);
                font-weight: 800;
                font-size: clamp(36px, calc(36px + (100vw - 360px) * 0.0416666), 46px);
                line-height: clamp(40px, calc(40px + (100vw - 360px) * 0.0416666), 50px);
                letter-spacing: 1.29px;
                @media (min-width: 600px) {
-                  font-size: clamp(3rem, calc(3rem + (100vw - 600px) * 0.11320), 6rem);
-                  padding: 0 clamp(10rem, calc(10rem + (100vw - 600px) * 0.18867), 15rem);
-                  line-height: clamp(3.25rem, calc(3.25rem + (100vw - 600px) * 0.10377), 6rem);
+                  font-size: clamp(56px, calc(56px + (100vw - 600px) * 0.0754716), 88px);
+                  padding: 0;
+                  margin: 0;
+                  line-height: clamp(56px, calc(56px + (100vw - 600px) * 0.084905), 92px);
                }
                @media (min-width: 1024px) {
                   font-size: 56px;
@@ -196,27 +196,26 @@
                }
             }
             p {
-               color: $white;
-               opacity: 0.75;
-               font-size: clamp(15px, calc(15px + (100vw - 360px) * 0.008333), 17px);
-               font-weight: 400;
-               line-height: 25px;
-               padding: clamp(1rem, calc(1rem + (100vw - 360px) * 0.133333), 3rem);
+               @include paragraph-style-white;
+               font-size: clamp(15px, calc(15px + (100vw - 360px) * 0.020833), 20px);
+               padding: 0 clamp(1rem, calc(1rem + (100vw - 360px) * 0.2), 4rem);
+               line-height: clamp(25px, calc(25px + (100vw - 360px) * 0.020833), 30px);
                @media (min-width: 600px) {
-                  font-size: clamp(0.75rem, calc(0.75rem + (100vw - 600px) * 0.03018), 1.55rem);
-                  padding: 0 clamp(8rem, calc(8rem + (100vw - 600px) * 0.15094), 12rem);
-                  line-height: clamp(1.25rem, calc(1.25rem + (100vw - 600px) * 0.9433), 2.5rem);
-                  margin: clamp(1rem, calc(1rem + (100vw - 600px) * 0.37735), 2rem) 0 clamp(24px, calc(63px - 3.77vw), 40px);
+                  font-weight: 500;
+                  padding: 0 1rem;
+                  margin: clamp(1rem, calc(1rem + (100vw - 600px) * 0.0377358), 2rem) 0 clamp(1rem, calc(1rem + (100vw - 600px) * 0.0754716), 3rem);
                }
                @media (min-width: 1024px) {
                   padding: 0;
-                  @include paragraph-style;
-                  color: $white;
                   margin: 1.5rem 0;
                }
             }
             a {
                margin: 1.5rem auto 55px;
+               display: block;
+               @media (min-width: 600px) {
+                  margin: 0 auto;
+               }
                @media (min-width: 1024px) {
                   align-self: flex-start;
                   margin: 0;
@@ -230,12 +229,9 @@
          display: flex;
          align-items: center;
          width: 100%;
-         height: 320px;
          @media (min-width: 600px) {
             grid-row: 3 / 4;
             grid-column: 1 / 3;
-            background-image: url("/assets/home/tablet/image-speaker-zx7.webp");
-            background-size: 100% 100%;
          }
          @media (min-width: 1024px) {
             grid-row: 2;
@@ -252,10 +248,12 @@
          .details {
             text-align: left;
             margin: 101px 0;
+            margin-left: clamp(18px, calc(18px + (100vw - 360px) * 0.125), 48px);
             font-size: clamp(24px, calc(24px + (100vw - 360px) * 0.083333), 44px);
             @media (min-width: 600px) {
-               padding: clamp(3rem, calc(3rem + (100vw - 600px) * 0.11320), 6rem) 0 0 clamp(2.5rem, calc(2.5rem + (100vw - 360px) * 0.09433), 5rem);
-               margin: auto;
+               margin: 0;
+               padding: 101px clamp(47px, calc(47px + (100vw - 600px) * 0.040094), 64px);
+               padding: clamp(60px, calc(60px + (100vw - 600px) * 0.096698), 101px) clamp(47px, calc(47px + (100vw - 600px) * 0.040094), 64px);
             }
             @media (min-width: 1024px) {
                padding: clamp(2rem, calc(2rem + (100vw - 1024px) * 0.0769230), 4rem) 0 0 5rem ;
@@ -268,8 +266,7 @@
                font-weight: 800;
                margin-bottom: 32px;
                @media (min-width: 600px) {
-                  font-size: clamp(1.5rem, calc(1.5rem + (100vw - 600px) * 0.04150), 2.6rem);
-                  margin: 0 0 clamp(2.5rem, calc(2.5rem + (100vw - 600px) * 0.07547), 4.5rem);
+                  font-size: clamp(24px, calc(24px + (100vw - 600px) * 0.028301), 36px);
                }
                @media (min-width: 1024px) {
                   letter-spacing: 2px;
@@ -284,10 +281,10 @@
          grid-template-rows: repeat(2, 1fr);
          gap: 24px;
          @media (min-width: 600px) {
-            gap: 0.5rem;
-            grid-row: 4;
+            gap: clamp(0.5rem, calc(0.5rem + (100vw - 600px) * 0.0188679), 1rem);
             grid-column: 1 / 3;
             grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: clamp(250px, calc(250px + (100vw - 600px) * 0.212264), 340px);
          }
          @media (min-width: 1024px) {
             gap: 30px;
@@ -296,12 +293,10 @@
          }
          .imgContainer {
             @media (min-width: 1024px) {
-               height: clamp(270px, calc(270px + (100vw - 1024px) * 0.1201923), 320px);;
+               height: clamp(270px, calc(270px + (100vw - 1024px) * 0.1201923), 320px);
             }
             img {
-               width: 100%;
-               height: 100%;
-               border-radius: $radius-8;
+               @include productImge-style;
             }
          }
          .details {
@@ -325,7 +320,8 @@
                font-size: clamp(28px, calc(28px + (100vw - 360px) * 0.020833), 33px);
                letter-spacing: 2px;
                @media (min-width: 600px) {
-                  font-size: clamp(1.5rem, calc(1.5rem + (100vw - 600px) * 0.04150), 2.6rem);
+                  text-align: left;
+                  font-size: clamp(24px, calc(24px + (100vw - 600px) * 0.028301), 36px);
                }
                @media (min-width: 1024px) {
                   letter-spacing: 2px;
@@ -334,9 +330,5 @@
             }
          }
       }
-   }
-   .categories, 
-   .description {
-      @extend %pages-pads;
    }
 }

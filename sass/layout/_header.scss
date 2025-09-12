@@ -5,9 +5,6 @@ header {
    border-bottom: 1px solid $jet-grey;
    padding-top: 2rem;
    padding-bottom: 2rem;
-   @media (min-width: 600px) {
-      padding: 2rem clamp(2rem, calc(2rem + (100vw - 600px) * 0.037735 ), 3rem);
-   }
    @media (min-width: 1024px) {
       padding: 2rem clamp(115px, calc(115px + (100vw - 1024px) * 0.08413461 ), 150px);
       border-bottom: none;
@@ -52,8 +49,8 @@ header {
          width: clamp(143px, calc(143px + (100vw - 600px) * 0.166666), 173px);
          height: auto;
          @media (min-width: 600px) {
-            width: clamp(150px, calc(150px + (100vw - 600px) * 0.23584), 250px);
-            margin-left: 2rem;
+            width: clamp(143px, calc(143px + (100vw - 600px) * 0.0943396), 183px);
+            margin-left: 32px;
          }
          @media (min-width: 1024px) {
             margin: 0;
