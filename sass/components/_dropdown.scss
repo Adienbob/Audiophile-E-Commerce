@@ -16,9 +16,10 @@
       z-index: 20;
       &::before {
         content: "";
-        transition: opacity 0.3s ease;
+        transition: display 0.3s ease;
         background-color: $jet-black;
-        opacity: 0;
+        opacity: 0.3;
+        display: none;
         left: 0;
         width: 100%;
         position: absolute;
@@ -95,7 +96,7 @@
 
     .toggleButton:checked + .hamburger {
       &::before {
-        opacity: 0.3;
+        display: block;
       }
       .top {
         transform: translateY(8px) rotate(45deg);

@@ -52,9 +52,10 @@ footer {
 }
 .mobileLinks .dropdownMenu .hamburger::before {
   content: "";
-  transition: opacity 0.3s ease;
+  transition: display 0.3s ease;
   background-color: #000;
-  opacity: 0;
+  opacity: 0.3;
+  display: none;
   left: 0;
   width: 100%;
   position: absolute;
@@ -130,7 +131,7 @@ footer {
   pointer-events: auto;
 }
 .mobileLinks .dropdownMenu .toggleButton:checked + .hamburger::before {
-  opacity: 0.3;
+  display: block;
 }
 .mobileLinks .dropdownMenu .toggleButton:checked + .hamburger .top {
   transform: translateY(8px) rotate(45deg);
@@ -287,6 +288,10 @@ a.backBtn, button:not(aside button, .items button, header button, footer a).back
   padding: 0;
   color: #979797;
   border: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 a.backBtn:hover, button:not(aside button, .items button, header button, footer a).backBtn:hover {
   text-decoration: underline;
@@ -524,6 +529,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button, footer a
 @media (min-width: 600px) {
   .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details {
     margin-left: clamp(4rem, 4rem + (100vw - 600px) * 0.1509433, 8rem);
+    margin-left: 3rem;
   }
 }
 @media (min-width: 1024px) {
@@ -538,7 +544,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button, footer a
 }
 @media (min-width: 600px) {
   .cartOverlay .cartContainer .cartBody .cartItem .productDetails .details span {
-    font-size: clamp(1rem, 1rem + (100vw - 600px) * 0.0283018, 1.75rem);
+    font-size: clamp(0.9375rem, 0.9375rem + (100vw - 600px) * 0.0212264, 1.5rem);
     letter-spacing: 0.5px;
   }
 }
@@ -690,7 +696,7 @@ a.backBtn:hover, button:not(aside button, .items button, header button, footer a
 }
 @media (min-width: 600px) {
   .cartOverlay .cartContainer .cartBody .totalPrice span {
-    font-size: clamp(1rem, 1rem + (100vw - 600px) * 0.0283018, 1.75rem);
+    font-size: clamp(1.125rem, 1.125rem + (100vw - 600px) * 0.042452, 2.25rem);
   }
 }
 @media (min-width: 1024px) {
@@ -700,6 +706,11 @@ a.backBtn:hover, button:not(aside button, .items button, header button, footer a
 }
 .cartOverlay .cartContainer .cartBody a {
   width: 100%;
+}
+@media (min-width: 600px) {
+  .cartOverlay .cartContainer .cartBody a {
+    font-size: clamp(13px, 13px + (100vw - 600px) * 0.0117924, 18px);
+  }
 }
 
 header {
@@ -2271,6 +2282,11 @@ footer .copyrightAndIcons .socialIcons a:hover {
   align-content: center;
   text-align: center;
 }
+@media (min-width: 600px) {
+  .confirmationOverlay .confirmation .btnOrange {
+    font-size: clamp(13px, 13px + (100vw - 600px) * 0.0117924, 18px);
+  }
+}
 
 .homePage {
   text-align: center;
@@ -3049,5 +3065,9 @@ footer .copyrightAndIcons .socialIcons a:hover {
 }
 .checkoutPage .checkoutContainer .summary button.btnOrange {
   width: 100%;
-  font-weight: 800;
+}
+@media (min-width: 600px) {
+  .checkoutPage .checkoutContainer .summary button.btnOrange {
+    font-size: clamp(13px, 13px + (100vw - 600px) * 0.0117924, 18px);
+  }
 }/*# sourceMappingURL=main.css.map */

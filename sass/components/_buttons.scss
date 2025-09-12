@@ -57,6 +57,8 @@ a, button:not(aside button, .items button, header button, footer a) {
       padding: 0;
       color: $dark-grey;
       border: none;
+      width: fit-content;
+      height: fit-content;
       &:hover {
          text-decoration: underline;
       }
