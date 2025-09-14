@@ -2349,6 +2349,7 @@ footer .copyrightAndIcons .socialIcons a:hover {
 }
 @media (min-width: 1024px) {
   .homePage .heroContainer .background {
+    height: 100vh;
     transform: translateY(-112px);
   }
 }
