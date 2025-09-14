@@ -2,10 +2,28 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font-family: $type-manrope;
    list-style: none;
+   body {
+      font-family: var(--font-Manrope-sans), sans-serif;
+   }
    .bodyLock {
       overflow: hidden;
+   }
+   .desktopLinks {
+      display: none;
+   }
+
+   .mobileLinks {
+      display: block; 
+   }
+
+   @media (min-width: 1024px) {
+      .mobileLinks {
+         display: none;
+      }
+      .desktopLinks {
+         display: flex;
+      }
    }
 }
 

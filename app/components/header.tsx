@@ -62,25 +62,20 @@ export default function Header() {
 
    function DesktopLinks() {
       return (
-         <>
-         <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='Audiophile Logo' loading="eager"/>
-         <div className='desktopLinks'>
-            <ul>
-               <li>
-                  <Link className='HomeLink' path='/'>Home</Link>
-               </li>
-               <li>
-                  <Link className='headphonesLink' path='/headphones'>Headphones</Link>
-               </li>
-               <li>
-                  <Link className='speakersLink' path='/speakers'>Speakers</Link>
-               </li>
-               <li>
-                  <Link className='earphonesLink' path='/earphones'>Earphones</Link>
-               </li>
-            </ul>
-         </div>
-         </>
+         <ul className="desktopLinks">
+            <li>
+               <Link className='HomeLink' path='/'>Home</Link>
+            </li>
+            <li>
+               <Link className='headphonesLink' path='/headphones'>Headphones</Link>
+            </li>
+            <li>
+               <Link className='speakersLink' path='/speakers'>Speakers</Link>
+            </li>
+            <li>
+               <Link className='earphonesLink' path='/earphones'>Earphones</Link>
+            </li>
+         </ul>
       )
    }
 
@@ -99,7 +94,6 @@ export default function Header() {
                <Dropdown />
             </div>
          </div>
-         <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='Audiophile Logo' loading="eager" />
          </>
       )
    }
@@ -108,9 +102,11 @@ export default function Header() {
       <>
       <header>
          <nav>
-            {isMobile ? <MobileLinks /> : <DesktopLinks />}
+            <MobileLinks />
+            <Image className='logo' width={143} height={25} src="/assets/shared/desktop/logo.svg" alt='Audiophile Logo' loading="eager"/>
+            <DesktopLinks />
             <button onClick={() => setIsCartOpen(prev => !prev)} aria-label='Cart button' className="cartIconButton">
-               <Image width={23} height={20} src="/assets/shared/desktop/icon-cart.svg" alt='Cart Icon' />
+               <Image width={23} height={20} src="/assets/shared/desktop/icon-cart.svg" alt='Cart Icon' loading='eager' />
                {cartItems.length >= 1 && (
                   <p>{cartItems.length}</p>
                )}

@@ -10,6 +10,8 @@ const manrope = Manrope({
   variable: "--font-Manrope-sans",
   weight: ['400', '600', '700'],
   subsets: ["latin"],
+  preload: true,
+  display: "swap"
 });
 
 
@@ -24,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${manrope.variable}`}>
+    <html lang="en" className={`${manrope.variable}`}>
+      <body>
         <CartProvider>
           <DataProvider>
             <Header />

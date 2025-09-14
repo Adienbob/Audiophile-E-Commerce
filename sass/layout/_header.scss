@@ -5,6 +5,8 @@ header {
    border-bottom: 1px solid $jet-grey;
    padding-top: 2rem;
    padding-bottom: 2rem;
+   z-index: 1;
+   position: relative;
    @media (min-width: 1024px) {
       padding: 2rem clamp(115px, calc(115px + (100vw - 1024px) * 0.08413461 ), 150px);
       border-bottom: none;
@@ -30,8 +32,7 @@ header {
       @media (min-width: 1024px) {
          justify-content: space-between;
          height: 100%;
-         ul {
-            display: flex;
+         .desktopLinks {
             gap: 25px;
             a {
                text-transform: uppercase;
@@ -88,6 +89,7 @@ header {
             position: absolute;
             top: clamp(-15.5px, calc(-13.5px + (100vw - 360px) * -0.00833), -13.5px);
             left: 15px;
+            width: 22px;
             background-color: $dark-tan;
             border-radius: 50%;
             font-size: clamp(13px, calc(13px + (100vw - 360px) * 0.004166 ), 14px);

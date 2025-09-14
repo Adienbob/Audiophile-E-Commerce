@@ -20,11 +20,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Manrope", sans-serif;
   list-style: none;
+}
+* body {
+  font-family: var(--font-Manrope-sans), sans-serif;
 }
 * .bodyLock {
   overflow: hidden;
+}
+* .desktopLinks {
+  display: none;
+}
+* .mobileLinks {
+  display: block;
+}
+@media (min-width: 1024px) {
+  * .mobileLinks {
+    display: none;
+  }
+  * .desktopLinks {
+    display: flex;
+  }
 }
 
 a, button:not(aside button, .items button, header button, footer a) {
@@ -721,6 +737,8 @@ header {
   border-bottom: 1px solid #4c4c4c;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  z-index: 1;
+  position: relative;
 }
 @media (min-width: 1024px) {
   header {
@@ -754,11 +772,10 @@ header nav {
     justify-content: space-between;
     height: 100%;
   }
-  header nav ul {
-    display: flex;
+  header nav .desktopLinks {
     gap: 25px;
   }
-  header nav ul a {
+  header nav .desktopLinks a {
     text-transform: uppercase;
     color: #fff;
     padding: 0;
@@ -767,7 +784,7 @@ header nav {
     width: -moz-fit-content;
     width: fit-content;
   }
-  header nav ul a:hover {
+  header nav .desktopLinks a:hover {
     color: #d87d4a;
   }
 }
@@ -826,6 +843,7 @@ header nav .cartIconButton p {
   position: absolute;
   top: clamp(-15.5px, -13.5px + (100vw - 360px) * -0.00833, -13.5px);
   left: 15px;
+  width: 22px;
   background-color: #d87d4a;
   border-radius: 50%;
   font-size: clamp(13px, 13px + (100vw - 360px) * 0.004166, 14px);
@@ -2308,35 +2326,41 @@ footer .copyrightAndIcons .socialIcons a:hover {
     margin-bottom: 150px;
   }
 }
+.homePage .heroContainer {
+  position: relative;
+  height: calc(100vh - 94px);
+}
+@media (min-width: 1024px) {
+  .homePage .heroContainer {
+    height: calc(100vh - 112px);
+  }
+}
 .homePage .heroContainer .background {
-  position: absolute;
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 30px);
   z-index: -1;
-  top: 0;
-  left: 0;
+  transform: translateY(-64px);
 }
 @media (min-width: 600px) {
   .homePage .heroContainer .background {
-    top: 50px;
     height: calc(100vh - 50px);
+    transform: translateY(-44px);
   }
 }
 @media (min-width: 1024px) {
   .homePage .heroContainer .background {
-    width: 100%;
-    height: 100%;
-    top: 0;
+    transform: translateY(-112px);
   }
 }
 .homePage .heroContainer .hero {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 0 1rem;
   height: 85vh;
+  top: 0;
+  position: absolute;
 }
 @media (min-width: 1024px) {
   .homePage .heroContainer .hero {
