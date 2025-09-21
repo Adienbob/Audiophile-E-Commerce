@@ -32,7 +32,7 @@ footer {
          left: clamp(80px, calc(80px + (100vw - 600px) * 0.023584 ), 90px);
       }
       @media (min-width: 1024px) {
-         left: clamp(150px, calc(150px + (100vw - 1024px) * 0.1201923 ), 200px);
+         left: clamp(165px, calc(165px + (100vw - 1024px) * 0.084134 ), 200px);
       }
    }
    .logo, ul, p, strong {

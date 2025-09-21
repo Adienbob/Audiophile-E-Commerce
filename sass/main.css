@@ -905,7 +905,7 @@ footer::before {
 }
 @media (min-width: 1024px) {
   footer::before {
-    left: clamp(150px, 150px + (100vw - 1024px) * 0.1201923, 200px);
+    left: clamp(165px, 165px + (100vw - 1024px) * 0.084134, 200px);
   }
 }
 footer .logo, footer ul, footer p, footer strong {
